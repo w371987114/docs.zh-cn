@@ -3,12 +3,12 @@ title: 前端客户端通信
 description: 了解前端客户端如何与云本机系统进行通信
 author: robvet
 ms.date: 01/19/2021
-ms.openlocfilehash: 089f55f8f6b9320fe552602eb40bb83be28f119b
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: b28fd05aded652057deecd6814199e0360202a07
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506235"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604510"
 ---
 # <a name="front-end-client-communication"></a>前端客户端通信
 
@@ -43,7 +43,7 @@ ms.locfileid: "99506235"
 
 必须小心，使 API 网关保持简单快捷。 通常，业务逻辑会在网关之外。 复杂的网关风险成为瓶颈，最终成为单体架构本身。 较大的系统通常会公开多个 API 网关，并按客户端类型 (移动、web、桌面) 或后端功能。 前端模式的 [后端](/azure/architecture/patterns/backends-for-frontends) 提供了实现多个网关的方向。 模式如图4-4 所示。
 
-![API 网关模式](./media/backend-for-frontend-pattern.png)
+![前端模式](./media/backend-for-frontend-pattern.png)
 
 **图 4-4.** 前端模式
 
@@ -63,7 +63,7 @@ ms.locfileid: "99506235"
 | 请求聚合 | 授权 |
 | 服务发现 (与 Consul 和 Eureka)  | 限制 |
 | 负载平衡 | 日志记录、跟踪 |
-| Caching | 标头/查询字符串转换 |
+| 缓存 | 标头/查询字符串转换 |
 | 相关 Pass-Through | 自定义中间件 |
 | 服务质量 | 重试策略 |
 

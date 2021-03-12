@@ -3,12 +3,12 @@ title: Dapr publish & 订阅构建基块
 description: Dapr publish 的说明 & 订阅构造块以及如何应用它
 author: edwinvw
 ms.date: 02/07/2021
-ms.openlocfilehash: 3d00c5a3171dd5a7287d07675f5a3742697e784b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 4cb249bafc8241eb54153be2605c33d0a3adb619
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102401229"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604679"
 ---
 # <a name="the-dapr-publish--subscribe-building-block"></a>Dapr publish & 订阅构建基块
 
@@ -293,7 +293,7 @@ scopes:
 
 ## <a name="reference-application-eshopondapr"></a>引用应用程序： eShopOnDapr
 
-随附的 [eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr) 应用提供端到端参考体系结构，用于构造实现 Dapr 的微服务应用程序。 eShopOnDapr 是在几年前创建的广泛流行的 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainer) 应用程序的演变。 这两个版本都使用发布/订阅模式来跨微服务传达 [集成事件](https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/#integration-events) 。 集成事件包括：
+随附的 [eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr) 应用提供端到端参考体系结构，用于构造实现 Dapr 的微服务应用程序。 eShopOnDapr 是在几年前创建的广泛流行的 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 应用程序的演变。 这两个版本都使用发布/订阅模式来跨微服务传达 [集成事件](https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/#integration-events) 。 集成事件包括：
 
 - 当用户签出购物篮时。
 - 订单的付款已成功。

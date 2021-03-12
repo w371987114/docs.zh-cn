@@ -4,12 +4,12 @@ description: 了解如何使用 F# 交互窗口 (dotnet fsi) 在控制台以交�
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: fe48d4d7de92eea800a489b12342e3ae181e8cb1
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 200caf6be5977e4a4d11bda8ba57f276cb4f5ff6
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99426966"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605121"
 ---
 # <a name="interactive-programming-with-f"></a>使用 F\# 进行交互式编程
 
@@ -137,7 +137,7 @@ printfn $"{f (dsharp.tensor 1.2)}"
 > [!NOTE]
 > 目前对使用框架引用的脚本（例如 `Microsoft.NET.Sdk.Web` 或 `Microsoft.NET.Sdk.WindowsDesktop`）有限制。 Saturn、Giraffe、WinForms 等包不可用。 问题 [#9417](https://github.com/dotnet/fsharp/issues/9417) 中正在跟踪此问题。
 
-有关详细信息，请参阅[包管理扩展性和其他扩展](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)。
+有关详细信息，请参阅[包管理扩展性和其他扩展](https://fsharp.github.io/FSharp.Compiler.Service/reference/Microsoft.DotNet.DependencyManager.html)。
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>使用 F# 交互窗口引用磁盘上的程序集
 

@@ -2,12 +2,12 @@
 title: 将 eShopOnContainers 部署到 Azure
 description: 使用 Azure Kubernetes 服务、Helm 和 DevSpaces 部署 eShopOnContainers 应用程序。
 ms.date: 01/19/2021
-ms.openlocfilehash: 8fc1343eac7f03c984c3a279d5a8c7908e37f0d1
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: da68fa1510841b6cef9117b6d84e7ed30c565698
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505786"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604562"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>将 eShopOnContainers 部署到 Azure
 
@@ -55,7 +55,7 @@ spec:
 
 你将在/k8s/helm 文件夹中找到 eShopOnContainers helm 图。 图2-6 显示了如何将应用程序的不同组件组织到 helm 用于定义和管理部署的文件夹结构中。
 
-![eShopOnContainers 体系结构 ](./media/eshoponcontainers-helm-folder.png)
+![EShopOnContainers helm 文件夹 ](./media/eshoponcontainers-helm-folder.png)
  **图 2-6**。 EShopOnContainers helm 文件夹。
 
 使用命令安装每个单独的组件 `helm install` 。 eShop 包括一个 "部署全部" 脚本，该脚本循环遍历并使用各自的 helm 图表安装组件。 结果就是一个可重复执行的过程，该过程与源代码管理中的应用程序进行了版本控制，团队中的任何人都可以使用单行脚本命令将其部署到 AKS 群集。
@@ -70,12 +70,12 @@ spec:
 
 在图2-7 中，可以看到，开发人员 Susie 已将自行车微服务的更新版本部署到了其开发人员空间。 然后，她就可以使用自定义 URL 以其空间的名称开头 (susie.s.dev.myapp.eus.azds.io) 来测试她的更改。
 
-![eShopOnContainers 体系结构 ](./media/azure-devspaces-one.png)
- **图 2-7**。 开发人员 Susie 将部署自己的自行车微服务版本并对其进行测试。
+![显示自行车微服务 ](./media/azure-devspaces-one.png)
+ **图 2-7** 的 eShopOnContainers 体系结构。 开发人员 Susie 将部署自己的自行车微服务版本并对其进行测试。
 
 同时，开发人员 John 正在自定义预订微服务，并需要对其更改进行测试。 他将其更改部署到自己的开发空间，而不会与 Susie 的更改发生冲突，如图2-8 所示。 John 然后使用自己的 URL 测试其更改，该 URL 以其空间的名称作为前缀 (john.s.dev.myapp.eus.azds.io) 。
 
-![eShopOnContainers 体系结构 ](./media/azure-devspaces-two.png)
+![显示 John 的保留版本的 eShopOnContainers 体系结构微服务 ](./media/azure-devspaces-two.png)
  **图 2-8**。 开发人员 John 部署自己的保留版本微服务，并对其进行测试，而不会与其他开发人员发生冲突。
 
 使用 Azure Dev Spaces，团队可以直接使用 AKS，同时对其更改进行单独的更改、部署和测试。 此方法减少了单独专用托管环境的需要，因为每个开发人员都有效地拥有自己的 AKS 环境。 开发人员可以使用其 CLI 来处理 Azure Dev Spaces 或启动其应用程序，以便直接从 Visual Studio Azure Dev Spaces。 [了解有关 Azure Dev Spaces 工作和配置的详细信息。](/azure/dev-spaces/how-dev-spaces-works)

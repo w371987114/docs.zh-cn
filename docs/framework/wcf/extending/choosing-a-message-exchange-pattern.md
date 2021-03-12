@@ -3,12 +3,12 @@ description: 了解详细信息：选择消息交换模式
 title: 选择消息交换模式
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: c452a65e4d4108123deaab93be9bd825127eba70
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c0849ddb16596ebd6e064bb39f0727ac51642eb7
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99685850"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605355"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>选择消息交换模式
 
@@ -30,7 +30,7 @@ ms.locfileid: "99685850"
   
      通过双工 MEP，客户端可以发送任意数目的消息，并以任意顺序接收消息。 双工 MEP 就像电话通话，所说的每一个字都是一条消息。 由于在这种 MEP 中两端都可发送和接收，因此，由客户端和服务通道实现的接口为 <xref:System.ServiceModel.Channels.IDuplexChannel>。  
   
- ![选择消息交换模式](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![显示三个基本消息交换模式的流程图](./media/wcfc-basicthreemepsc.gif)  
 三种基本的消息交换模式。 从上到下：数据报、请求-响应和双工。  
   
  其中每个 Mep 还可以支持 *会话*。 会话（和 类型的 的实现）会将通道上发送和接收的所有消息关联在一起。 请求-响应模式是一种由两个消息组成的独立会话，因为请求和响应是相关的。 与此形成对照的是，支持会话的请求-响应模式意味着该通道上的所有请求-响应对都是相关的。 这使您总共有六种 MEP 可以选择：  
@@ -56,7 +56,7 @@ ms.locfileid: "99685850"
   
  在通道目标模型中，每个逻辑会话都表现为一个会话通道的实例。 因此，由客户端创建并在服务端接受的每个新会话都与每一端的一个新会话通道相对应。 下面的关系图的上部显示无会话通道的结构，下部显示会话通道的结构。  
   
- ![选择消息交换模式](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![显示无会话和会话通道的结构的流程图](./media/wcfc-sessionandsessionlesschannelsc.gif)  
   
  客户端创建新的会话通道并发送消息。 在服务端，通道侦听器收到此消息并检测到它属于新会话，于是就创建新的会话通道，并将其交给应用程序（以响应在通道侦听器上调用 AcceptChannel 的应用程序）。 然后应用程序会收到此消息，以及通过同一个会话通道在同一个会话中发送的所有后续消息。  
   
@@ -98,6 +98,6 @@ ms.locfileid: "99685850"
   
 - 当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 时，应立即终止会话而不必执行 I/O。 同样，这可能意味着不执行任何操作，或者可能涉及中止一个网络连接或某个其他资源。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [通道模型概述](channel-model-overview.md)

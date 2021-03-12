@@ -4,12 +4,12 @@ description: 说明可观察性构建基块及其功能、优点以及如何应�
 author: edwinvw
 ms.date: 02/07/2021
 ms.reviewer: robvet
-ms.openlocfilehash: c7c941625f5867ad58eee602bfc42183bee87183
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6add36b2030c3061ee522604b2e07f05875b98a9
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401213"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604705"
 ---
 # <a name="the-dapr-observability-building-block"></a>Dapr 可观察性构建基块
 
@@ -40,7 +40,7 @@ Dapr 可观察性构建基块将可观察性与应用程序分离。 它自动�
 
 Dapr 的 [挎斗体系结构](dapr-at-20000-feet.md#sidecar-architecture) 启用内置可观察性功能。 服务通信时，Dapr 分支会截获流量并提取跟踪、指标和日志记录信息。 遥测以开放标准格式发布。 默认情况下，Dapr 支持 [OpenTelemetry](https://opentelemetry.io/) 和 [Zipkin](https://zipkin.io/)。
 
-Dapr 提供可将遥测发布到不同后端监视工具的 [收集](https://docs.dapr.io/operations/monitoring/open-telemetry-collector/) 器。 这些工具提供了 Dapr 遥测用于分析和查询。 图9-1 显示了 Dapr 可观察性体系结构：
+Dapr 提供可将遥测发布到不同后端监视工具的 [收集](https://docs.dapr.io/operations/monitoring/tracing/open-telemetry-collector/) 器。 这些工具提供了 Dapr 遥测用于分析和查询。 图9-1 显示了 Dapr 可观察性体系结构：
 
 ![Dapr 可观察性体系结构](media/observability/observability-architecture.png)
 
@@ -274,7 +274,7 @@ apiVersion: dapr.io/v1alpha1
 
 Dapr 为 Dapr 系统服务及其运行时生成一组大量指标。 示例包括：
 
-| 指标                                         | 源 | 描述                                                  |
+| 指标                                         | 源 | 说明                                                  |
 | ---------------------------------------------- | :----: | ------------------------------------------------------------ |
 | dapr_operator_service_created_total            | 系统 | Dapr Operator service 创建的 Dapr 服务总数。 |
 | dapr_injector_sidecar_injection/requests_total | 系统 | Dapr Sidecar-Injector 服务收到的挎斗注入请求总数。 |
@@ -285,7 +285,7 @@ Dapr 为 Dapr 系统服务及其运行时生成一组大量指标。 示例包�
 | dapr_http_server_request_count     | 运行时 | HTTP 服务器中启动的 HTTP 请求数。           |
 | dapr_http/client/sent_bytes        | 运行时 | 请求正文中发送的总字节数 (不包括 HTTP 客户端) 的标头。 |
 
-有关可用指标的详细信息，请参阅 [Dapr 指标文档](https://docs.dapr.io/developing-applications/building-blocks/observability/metrics)。
+有关可用指标的详细信息，请参阅 [Dapr 指标文档](https://docs.dapr.io/operations/monitoring/metrics/)。
 
 #### <a name="configure-dapr-metrics"></a>配置 Dapr 指标
 
@@ -312,7 +312,7 @@ spec:
 
 ![显示 Dapr 系统服务指标的 Grafana 仪表板](media/observability/grafana-sample.png)
 
-Dapr 文档包含 [用于安装 Prometheus 和 Grafana 的教程](https://docs.dapr.io/operations/monitoring/grafana/)。
+Dapr 文档包含 [用于安装 Prometheus 和 Grafana 的教程](https://docs.dapr.io/operations/monitoring/metrics/grafana/)。
 
 ### <a name="logging"></a>Logging
 
@@ -322,11 +322,11 @@ Dapr 文档包含 [用于安装 Prometheus 和 Grafana 的教程](https://docs.d
 
 Dapr 发出结构化日志记录。 每个日志条目都具有以下格式：
 
-| 字段    | 描述                                          | 示例                             |
+| 字段    | 说明                                          | 示例                             |
 | -------- | ---------------------------------------------------- | ----------------------------------- |
 | time     | ISO8601 格式的时间戳                          | `2021-01-10T14:19:31.000Z`          |
 | 级别    | 条目 (`debug` \| `info` \| `warn` \| `error`) 级别   | `info`                              |
-| type     | 日志类型                                             | `log`                               |
+| 类型     | 日志类型                                             | `log`                               |
 | msg      | 日志消息                                          | `metrics server started on :62408/` |
 | scope    | 日志范围                                        | `dapr.runtime`                      |
 | instance | Dapr 运行的主机名                             | TSTSRV01                            |
@@ -381,7 +381,7 @@ helm install dapr dapr/dapr --namespace dapr-system --set global.logAsJson=true
 
 #### <a name="collect-logs"></a>收集日志
 
-Dapr 发出的日志可以送入监视后端进行分析。 日志收集器是一个组件，用于从系统收集日志并将其发送到监视后端。 常用日志收集器是 [Fluentd](https://www.fluentd.org/)。 请参阅 Dapr 文档中的 [操作方法：设置 Fluentd、弹性搜索和 Kibana In Kubernetes](https://docs.dapr.io/operations/monitoring/fluentd/) 。 本文包含有关将 Fluentd 设置为日志收集器和 [ELK 堆栈](https://www.elastic.co/elastic-stack) (弹性搜索和 Kibana) 为监视后端的说明。
+Dapr 发出的日志可以送入监视后端进行分析。 日志收集器是一个组件，用于从系统收集日志并将其发送到监视后端。 常用日志收集器是 [Fluentd](https://www.fluentd.org/)。 请参阅 Dapr 文档中的 [操作方法：设置 Fluentd、弹性搜索和 Kibana In Kubernetes](https://docs.dapr.io/operations/monitoring/logging/fluentd/) 。 本文包含有关将 Fluentd 设置为日志收集器和 [ELK 堆栈](https://www.elastic.co/elastic-stack) (弹性搜索和 Kibana) 为监视后端的说明。
 
 ### <a name="health-status"></a>运行状况
 

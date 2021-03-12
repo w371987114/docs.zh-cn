@@ -5,12 +5,12 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 1f20384f16b3b5b898f926258d76a6a2773eaaa1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 788161db2e38dc942b0c638128f8599b0436c8fd
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280619"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604575"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>如何：通过 MMC 管理单元查看证书
 
@@ -51,7 +51,7 @@ ms.locfileid: "96280619"
   
 6. 在 " **添加或删除管理单元** " 窗口中，选择 **"确定"**。  
   
-    ![添加证书管理单元](./media/mmc-certificate-snap-in-selected.png)
+    ![突出显示 "确定" 按钮的 "添加或删除管理单元" 窗口](./media/mmc-certificate-snap-in-selected.png)
 
 7. 可选：在 " **文件** " 菜单中，选择 " **保存** " 或 " **另存为** " 以保存 MMC 控制台文件以供以后使用。  
 

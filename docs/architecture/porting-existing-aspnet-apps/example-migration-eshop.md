@@ -3,12 +3,12 @@ title: EShop 到 ASP.NET Core 的迁移示例
 description: 使用示例在线商店应用作为参考，将现有的 ASP.NET MVC 应用迁移到 ASP.NET Core 的演练。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 83110909632e4eb433e1fabaedf3490ce594e12e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 498eb3b11c44381ff6d261b37caed15a2698b166
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401085"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605251"
 ---
 # <a name="example-migration-of-eshop-to-aspnet-core"></a>EShop 到 ASP.NET Core 的迁移示例
 
@@ -26,7 +26,7 @@ ms.locfileid: "102401085"
 
 ## <a name="run-apiport-to-identify-problematic-apis"></a>运行 *ApiPort* 以识别有问题的 api
 
-准备迁移的第一步是运行 *ApiPort* 工具。 该工具识别应用程序调用的 .NET Framework Api 的数量，其中有多少 .NET Standard 或 .NET Core 等效项。 主要关注自己的应用程序逻辑，而不是第三方依赖项，并注意 `System.Web` 需要移植的依赖项。 ApiPort 工具是在上一章 [了解和更新依赖项](/understand-update-dependencies.md)中引入的。
+准备迁移的第一步是运行 *ApiPort* 工具。 该工具识别应用程序调用的 .NET Framework Api 的数量，其中有多少 .NET Standard 或 .NET Core 等效项。 主要关注自己的应用程序逻辑，而不是第三方依赖项，并注意 `System.Web` 需要移植的依赖项。 ApiPort 工具是在上一章 [了解和更新依赖项](understand-update-dependencies.md)中引入的。
 
 [安装和配置 *ApiPort* 工具](../../standard/analyzers/portability-analyzer.md)后，从 Visual Studio 中运行分析，如图4-2 所示。
 

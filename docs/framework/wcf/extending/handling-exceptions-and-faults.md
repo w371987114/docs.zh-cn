@@ -3,18 +3,18 @@ description: 了解详细信息：处理异常和错误
 title: 处理异常和错误
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 9851d63705ba8b28819b11e3893bcd6b019d565d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 16ae72d54177b664bc41be6e639d0a44867df569
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99735070"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605056"
 ---
 # <a name="handling-exceptions-and-faults"></a>处理异常和错误
 
 异常用来在服务或客户端实现中在本地传达错误， 而错误则用来跨服务边界传达错误，如在服务器与客户端之间传达。 除了错误以外，传输通道也常常使用传输特定的机制来传达传输级错误。 例如，HTTP 传输机制使用状态码（如 404）来传达不存在的终结点 URL（不存在发回错误的终结点）。 本文档由三部分组成，它们为自定义通道的作者提供指南。 第一部分提供关于何时以及如何定义和引发异常的指南。 第二部分提供关于生成和使用错误的指南。 第三部分说明如何提供跟踪信息来帮助自定义通道用户对所运行的应用程序进行疑难解答。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
 
  在引发异常时需要牢记两件事情：第一，异常的类型必须允许用户编写能对异常做出适当反应的正确代码。 第二，异常必须为用户提供足够的信息，使用户能了解究竟哪里出现了故障，该故障带来的影响以及如何修复该故障。 以下各节提供有关 Windows Communication Foundation (WCF) 通道的异常类型和消息的指导。 “异常的设计准则”文档中也有关于 .NET 中的异常的一般性指南。  
   
@@ -49,8 +49,8 @@ ms.locfileid: "99735070"
 
  SOAP 1.1 和 SOAP 1.2 均为错误定义了一个特定的结构。 这两个规范之间存在一些差异，但是，在创建和使用错误时通常使用 Message 和 MessageFault 类型。  
   
- ![处理异常和错误](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
-SOAP 1.2 错误（左）和 SOAP 1.1 错误（右）。 请注意，在 SOAP 1.1 中，只有 Fault 元素受到命名空间的限定。  
+ ![SOAP 1.2 错误和 SOAP 1.1 错误](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif)  
+SOAP 1.2 错误（左）和 SOAP 1.1 错误（右）。 在 SOAP 1.1 中，只有 Fault 元素是限定的命名空间。  
   
  SOAP 将错误消息定义为一个仅包含错误元素（名称为 `<env:Fault>` 的元素）的消息，该错误元素作为 `<env:Body>` 的子元素。 错误元素的内容在 SOAP 1.1 和 SOAP 1.2 之间略有不同，如图 1 中所示。 但是，<xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> 类会将这些差异标准化到一个对象模型中：  
   
@@ -117,7 +117,7 @@ public class FaultReason
  }  
 ```  
   
- 错误详细信息内容在使用各种方法（包括 `GetDetail` \<T> 和 `GetReaderAtDetailContents` ( # A1）的 MessageFault 上公开。 错误详细信息是一个不透明的元素，其中包含有关错误的附加详细信息。 如果您希望错误中包含一些任意的结构化详细信息，则这非常有用。  
+ 错误详细信息内容在使用各种方法（包括和 () ）的 MessageFault 上公开 `GetDetail` \<T> `GetReaderAtDetailContents` 。 错误详细信息是一个不透明的元素，其中包含有关错误的附加详细信息。 如果您希望错误中包含一些任意的结构化详细信息，则这非常有用。  
   
 ### <a name="generating-faults"></a>生成错误  
 
@@ -322,9 +322,9 @@ public class MessageFault
   
 - <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>（要写入的跟踪信息的源）、<xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>（具体侦听器的抽象基类，具体侦听器接收要从 <xref:System.Diagnostics.TraceSource> 跟踪的信息并将其输出到侦听器特定的目标， 例如，<xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪信息输出到 XML 文件中。) 以及 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>（允许应用程序用户控制跟踪的详细级别，通常在配置中指定）。  
   
-- 除了核心组件以外，还可以使用 [服务跟踪查看器工具 ( # A0) ](../service-trace-viewer-tool-svctraceviewer-exe.md) 来查看和搜索 WCF 跟踪。 该工具专门针对 WCF 生成并使用编写的跟踪文件而设计 <xref:System.Diagnostics.XmlWriterTraceListener> 。 下图演示了跟踪中涉及到的各种组件。  
+- 除了核心组件以外，还可以使用 [服务跟踪查看器工具 (SvcTraceViewer.exe) ](../service-trace-viewer-tool-svctraceviewer-exe.md) 来查看和搜索 WCF 跟踪。 该工具专门针对 WCF 生成并使用编写的跟踪文件而设计 <xref:System.Diagnostics.XmlWriterTraceListener> 。 下图演示了跟踪中涉及到的各种组件。  
   
- ![处理异常和错误](./media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
+ ![跟踪组件](./media/wcfc-tracinginchannelsc.gif)  
   
 ### <a name="tracing-from-a-custom-channel"></a>从自定义通道跟踪  
 
@@ -347,7 +347,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
   
 #### <a name="integrating-with-the-trace-viewer"></a>与跟踪查看器集成  
 
- 可以使用 [服务跟踪查看器工具 ](../service-trace-viewer-tool-svctraceviewer-exe.md) 可读取的格式输出由通道生成的跟踪， ( # A0) 使用 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 作为跟踪侦听器。 此操作无需由通道开发人员来执行， 相反，应用程序用户 (或对应用程序进行故障排除的人员) 需要在应用程序的配置文件中配置此跟踪侦听器。 例如，下面的配置将 <xref:System.ServiceModel?displayProperty=nameWithType> 和 `Microsoft.Samples.Udp` 中的跟踪信息均输出到名为 `TraceEventsFile.e2e` 的文件中：  
+ 可以使用 [服务跟踪查看器工具 ](../service-trace-viewer-tool-svctraceviewer-exe.md) 可读取的格式输出通道生成的跟踪 (SvcTraceViewer.exe) 使用 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 作为跟踪侦听器。 此操作无需由通道开发人员来执行， 相反，应用程序用户 (或对应用程序进行故障排除的人员) 需要在应用程序的配置文件中配置此跟踪侦听器。 例如，下面的配置将 <xref:System.ServiceModel?displayProperty=nameWithType> 和 `Microsoft.Samples.Udp` 中的跟踪信息均输出到名为 `TraceEventsFile.e2e` 的文件中：  
   
 ```xml  
 <configuration>  
