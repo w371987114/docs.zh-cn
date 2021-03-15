@@ -1,7 +1,7 @@
 ---
 title: Main() 和命令行参数 - C# 编程指南
 description: 了解 Main() 和命令行参数。 “Main”方法是可执行程序的入口点。
-ms.date: 08/02/2017
+ms.date: 03/08/2021
 f1_keywords:
 - main_CSharpKeyword
 - Main
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 611b0c8818f8f800cf1cf5c0f6b2789882939b7b
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 35117642f38885aab08a5c0249d1f65ec76c59f3
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957533"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190198"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令行参数（C# 编程指南）
 
@@ -26,6 +26,12 @@ ms.locfileid: "88957533"
 C# 程序中只能有一个入口点。 如果多个类包含 `Main` 方法，必须使用 `-main` 编译器选项来编译程序，以指定将哪个 `Main` 方法用作入口点。 有关详细信息，请参阅 [-main（C# 编译器选项）](../../language-reference/compiler-options/main-compiler-option.md)。
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
+
+自 C# 9 起，可以省略 `Main` 方法，并像在 `Main` 方法中一样编写 C# 语句，如下面的示例所示：
+
+:::code language="csharp" source="snippets/top-level-statements-1/Program.cs":::
+
+若要了解如何使用隐式入口点方法编写应用程序代码，请参阅[顶级语句](top-level-statements.md)。
 
 ## <a name="overview"></a>概述
 

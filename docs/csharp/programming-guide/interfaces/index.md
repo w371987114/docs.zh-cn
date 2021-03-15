@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 4485a9f8e3581aa80ed65221258dc40310b3a695
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 123c3768414ee9a577c49c218acfb7415d83572e
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303044"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605277"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 
@@ -31,7 +31,7 @@ ms.locfileid: "87303044"
 
 有关抽象类的详细信息，请参阅[抽象类、密封类及类成员](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。
 
-接口可以包含实例方法、属性、事件、索引器或这四种成员类型的任意组合。 接口可以包含静态构造函数、字段、常量或运算符。 有关示例的链接，请参阅[相关部分](./index.md#BKMK_RelatedSections)。 接口不能包含实例字段、实例构造函数或终结器。 默认情况下，接口成员是公共的。
+接口可以包含实例方法、属性、事件、索引器或这四种成员类型的任意组合。 接口可以包含静态构造函数、字段、常量或运算符。 有关示例的链接，请参阅[相关部分](./index.md#BKMK_RelatedSections)。 接口不能包含实例字段、实例构造函数或终结器。 接口成员默认是公共的，可以显式指定可访问性修饰符（如 `public`、`protected`、`internal`、`private`、`protected internal` 或 `private protected`）。 `private` 成员必须有默认实现。
 
 若要实现接口成员，实现类的对应成员必须是公共、非静态，并且具有与接口成员相同的名称和签名。
 
