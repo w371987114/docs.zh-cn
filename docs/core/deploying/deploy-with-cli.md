@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: af2198360670360f94f7fdf30d2890bc7dfd436d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d2695b1f271e57bb44ed3f94acbbe17b830fdd60
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99773857"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255681"
 ---
 # <a name="publish-net-apps-with-the-net-cli"></a>使用 .NET CLI 发布 .NET 应用
 
@@ -137,7 +137,7 @@ End Module
 
 - `-r <RID>` 此开关使用标识符 (RID) 来指定目标平台。 有关运行时标识符的详细信息，请参阅[运行时标识符 (RID) 目录](../rid-catalog.md)。
 
-- `--self-contained false` 此开关告知 .NET Core SDK 创建可执行文件作为 FDE。
+- `--self-contained false` 此开关会禁用 `-r` 开关的默认行为，即禁止创建独立部署 (SCD)。 此开关会创建一个 FDE。
 
 | 发布模式                   | SDK 版本 | 命令                                                     |
 |--------------------------------|-------------|-------------------------------------------------------------|

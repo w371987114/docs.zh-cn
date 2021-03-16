@@ -8,12 +8,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: 66408b11f4e82776058ac19b8454bf50906b4b86
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 2019f113cdf5e854ad966ca616e116743197a24c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167361"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259481"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe（程序集链接器）
 
@@ -22,7 +22,7 @@ ms.locfileid: "87167361"
 > [!NOTE]
 > 从 Visual Studio 2008 开始，C# 和 Visual Basic 编译器都自动将 Win32 清单嵌入到程序集中。 有关详细信息，请参阅 [-win32manifest（C# 编译器选项）](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请[对开发人员使用命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
 
 在命令提示符处，键入以下内容：
 
@@ -178,4 +178,4 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 - [Sn.exe（强名称工具）](sn-exe-strong-name-tool.md)
 - [Gacutil.exe（全局程序集缓存工具）](gacutil-exe-gac-tool.md)
 - [使用程序集编程](../../standard/assembly/index.md)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)

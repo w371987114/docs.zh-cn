@@ -2,19 +2,19 @@
 title: 面向对象的编程 (C#)
 description: C# 提供针对面向对象的编程（包括抽象、封装、继承和多态性）的完整支持。
 ms.date: 09/30/2020
-ms.openlocfilehash: b778b7c42bbfb1f20bdd2d83b9cb10512ea3f41b
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 57f1759edd2dd5f239e81351aed64bf061766b7b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794841"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255400"
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 
 C# 是面向对象的语言。 面向对象的编程中使用的四项关键技术是：
 
-- “抽象”意味着对类型使用者隐藏不必要的详细信息。
-- “封装”意味着将一组相关属性、方法和其他成员视为一个单元或对象。
+- “抽象”是指将一组相关属性、方法和其他成员视为一个单元或对象。
+- “封装”是指对类型使用者隐藏不必要的详细信息。
 - “继承”描述基于现有类创建新类的能力。
 - 多态性意味着可以有多个可互换使用的类，即使每个类以不同方式实现相同属性或方法。
 
@@ -183,7 +183,7 @@ public void MakeWithdrawal(decimal amount, DateTime date, string note)
 
 ## <a name="summary"></a>摘要
 
-如果遇到问题，可以在 [GitHub 存储库](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)中查看本教程的源代码。
+如果遇到问题，可以在 [GitHub 存储库](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)中查看本教程的源代码。
 
 本教程演示了面向对象的编程中使用的多种技术：
 

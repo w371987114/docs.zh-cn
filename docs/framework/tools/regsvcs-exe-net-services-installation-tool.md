@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: 58a20084457cb217f3af73f4b4ff9ea251647782
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a989ddf8b14806879917e4078f60486f225b00e3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238543"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259198"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe（.NET 服务安装工具）
 
@@ -27,7 +27,7 @@ ms.locfileid: "96238543"
   
 - 配置以编程方式添加到类的服务。  
   
- 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
+ 若要运行该工具，请[对开发人员使用命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -92,4 +92,4 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 
 - [工具](index.md)
 - [如何：使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)

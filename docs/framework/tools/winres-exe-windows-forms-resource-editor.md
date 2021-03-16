@@ -12,18 +12,18 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 35d1324d5ea7a72ffd5ea594530d1312e717cd7c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 723daa7703828ea6eb103ce3b63164bf787cc10b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543220"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258658"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe（Windows 资源本地化编辑器）
 
 Windows 资源本地化编辑器 Winres.exe 是一种可视布局工具，可以帮助本地化专家对窗体使用的 Windows 窗体用户界面 (UI) 资源进行本地化。 利用可视设计环境（如 Microsoft Visual Studio），可以创建用作 Winres.exe 的输入的 .resx 或 .resources 文件。 有关在 .NET Framework 应用程序中部署资源的信息，请参阅[桌面应用中的资源](../resources/index.md)。
 
-Winres.exe 随 Visual Studio 一起安装。 要运行该工具，请使用 Visual Studio 开发人员命令提示。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
+Winres.exe 随 Visual Studio 一起安装。 若要运行此工具，请使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
 
 ## <a name="syntax"></a>语法
 

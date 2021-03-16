@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 46a7453ff7de0329d9cd7f671dcaa0a3e3e0e54c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6c810a7116f88f2eb7fc25efbfc6f44b60f2768b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238465"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259120"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe（签名工具）
 
 签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
+ 此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请[对开发人员使用命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
 
 > [!Note]  
 > Windows 10 SDK、Windows 10 HLK、Windows 10 WDK 和 Windows 10 ADK 内部版本 20236 及更高版本需要指定摘要算法。 SignTool `sign` 命令需要 `/fd` 文件摘要算法和 `/td` 时间戳摘要算法选项在签名和添加时间戳期间分别指定。 如果在签名期间未指定 `/fd` 并且在添加时间戳期间未指定 `/td`，将引发警告（最初称为错误代码 0）。 在 SignTool 的更高版本中，警告将变成错误。 建议使用 SHA256，它被认为比行业 SHA1 更安全。  
@@ -231,4 +231,4 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ## <a name="see-also"></a>请参阅
 
 - [工具](index.md)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)

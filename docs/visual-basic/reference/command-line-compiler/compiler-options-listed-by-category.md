@@ -5,12 +5,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: f0535e2aa94cda96610acb0edb24f6d46cc4afa0
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 015be752e5c98ec732e1b95130979446071810f1
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100474169"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478051"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>按类别列出的 Visual Basic 编译器选项
 
@@ -26,7 +26,7 @@ Visual Basic 命令行编译器用作一种替代方法，用于在 Visual Studi
 |[-utf8output](utf8output.md)|显示使用 UTF-8 编码的编译器输出。|  
 |[-verbose](verbose.md)|在编译期间输出其他信息。|  
 |`-modulename:<string>`|指定源模块的名称|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|指定编译器输出的语言。|
+|[/preferreduilang](../../../csharp/language-reference/compiler-options/advanced.md#preferreduilang)|指定编译器输出的语言。|
   
 ## <a name="optimization"></a>优化  
   

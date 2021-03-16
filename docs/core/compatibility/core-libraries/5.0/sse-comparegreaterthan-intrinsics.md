@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：SSE 和 SSE2 CompareGreaterThan 方法正确处理 NaN 输入
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：SSE 和 SSE2 比较方法已修复为正确处理 NaN 输入。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：SSE 和 SSE2 比较方法已经过修复，现可正确处理 NaN 输入。
 ms.date: 11/01/2020
-ms.openlocfilehash: 4abffa8d8bf2abfa9ef83673db9154de035d952c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 23955f08f70d82635a0a93b9bbb9a05efbbab6a9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759096"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257110"
 ---
 # <a name="sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs"></a>SSE 和 SSE2 CompareGreaterThan 方法正确处理 NaN 输入
 
@@ -26,7 +26,7 @@ ms.locfileid: "95759096"
 
 以前，向列出的 <xref:System.Runtime.Intrinsics.X86.Sse> 和 <xref:System.Runtime.Intrinsics.X86.Sse2> 方法提供 `NaN` 输入所返回的结果不正确。 此结果也不同于 <xref:System.Runtime.Intrinsics.X86.Avx> 类中相应方法生成的结果。
 
-自 .NET 5.0 起，这些方法可以正确地处理 `NaN` 输入，并返回与 <xref:System.Runtime.Intrinsics.X86.Avx> 类中相应方法相同的结果。
+从 .NET 5 开始，这些方法会正确地处理 `NaN` 输入，并返回与 <xref:System.Runtime.Intrinsics.X86.Avx> 类中相应方法相同的结果。
 
 流式处理 SIMD 扩展 (SSE) 和流式处理 SIMD 扩展 2 (SSE2) 行业标准体系结构 (ISA) 没有为这些比较方法提供直接的硬件支持，因此它们是在软件中实现的。 以前，这些方法没有得到正确的实现，也没有正确地处理 `NaN` 输入。 对于从本机移植的代码，不正确的行为可能会引入 bug。 对于 256 位代码路径，这些方法可能还会生成与 <xref:System.Runtime.Intrinsics.X86.Avx> 类中等效方法不同的结果。
 

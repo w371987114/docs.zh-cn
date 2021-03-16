@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：与 DataGridView 相关的 API 引发 InvalidOperationException
-description: 了解 .NET 5.0 中的以下中断性变更：如果对象的 DataGridViewCellAccessibleObject.Owner 值为 null，则与 DataGridView 相关的某些 API 会引发异常。
+description: 了解 .NET 5 中的中断性变更：如果对象的 DataGridViewCellAccessibleObject.Owner 值为 null，则某些与 DataGridView 相关的 API 会引发异常。
 ms.date: 09/18/2020
-ms.openlocfilehash: 927b1c9160700159a45aa1472b8d96f1a9ecfe25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e49ce0ebecb5a9ab4ed7f0e0d70d994ab751bc58
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759255"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256109"
 ---
 # <a name="datagridview-related-apis-now-throw-invalidoperationexception"></a>与 DataGridView 相关的 API 现在引发 InvalidOperationException
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759255"
 
 ## <a name="change-description"></a>更改说明
 
-在以前的 .NET 版本中，受影响的 API 在被调用时会引发 <xref:System.NullReferenceException>，并且 <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 的值为 `null`。 从 .NET 5.0 开始，如果在调用 API 时，<xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 值为 `null`，这些 API 将引发 <xref:System.InvalidOperationException>，而不会引发 <xref:System.NullReferenceException>。
+在以前的 .NET 版本中，受影响的 API 在被调用时会引发 <xref:System.NullReferenceException>，并且 <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 的值为 `null`。 从 .NET 5 开始，如果在调用 API 时，<xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 值为 `null`，则这些 API 将引发 <xref:System.InvalidOperationException>，而不会引发 <xref:System.NullReferenceException>。
 
 引发 <xref:System.InvalidOperationException> 符合 .NET 运行时的行为。 它还通过清楚地传达无效属性来改进调试体验。
 

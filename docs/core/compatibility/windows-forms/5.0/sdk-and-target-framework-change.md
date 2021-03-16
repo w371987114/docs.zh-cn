@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：WinForms 和 WPF 应用使用 Microsoft.NET.Sdk
-description: 了解 .NET 5.0 中的以下中断性变更：Windows 窗体和 Windows Presentation Framework 应用现在使用 .NET SDK，而不使用 .NET Core WinForms 和 WPF SDK。
+description: 了解 .NET 5 中的中断性变更：Windows 窗体和 Windows Presentation Framework 应用现使用 .NET SDK，而不使用 .NET Core WinForms 和 WPF SDK。
 ms.date: 09/18/2020
-ms.openlocfilehash: 5eafed03fbf034f6a6457217a8527a877214e239
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 408233f6f8801fb3d4e53beab28c26a777a4a3e1
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633814"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256200"
 ---
 # <a name="winforms-and-wpf-apps-use-microsoftnetsdk"></a>WinForms 和 WPF 应用使用 Microsoft.NET.Sdk
 
@@ -15,7 +15,7 @@ Windows 窗体和 Windows Presentation Framework (WPF) 应用现在使用 .NET S
 
 ## <a name="change-description"></a>更改说明
 
-在以前的 .NET Core 版本中，WinForms 和 WPF 应用使用单独的[项目 SDK](../../../project-sdk/overview.md) (`Microsoft.NET.Sdk.WindowsDesktop`)。 从 .NET 5.0 开始，WinForms 和 WPF SDK 已与 .NET SDK (`Microsoft.NET.Sdk`) 统一。 此外，新的[目标框架名字对象 (TFM)](../../../../standard/frameworks.md) 替换 .NET 5 中的 `netcoreapp` 和 `netstandard`。 下面的示例显示了在重新面向 .NET 5.0 或更高版本时，需要对 WPF 项目文件进行的更改。
+在以前的 .NET Core 版本中，WinForms 和 WPF 应用使用单独的[项目 SDK](../../../project-sdk/overview.md) (`Microsoft.NET.Sdk.WindowsDesktop`)。 从 .NET 5 开始，WinForms 和 WPF SDK 已与 .NET SDK (`Microsoft.NET.Sdk`) 统一。 此外，新的[目标框架名字对象 (TFM)](../../../../standard/frameworks.md) 替换 .NET 5 中的 `netcoreapp` 和 `netstandard`。 下面的示例显示了在重新面向 .NET 5 或更高版本时，需要对 WPF 项目文件进行的更改。
 
 在以前的 .NET Core 版本中：
 
@@ -31,7 +31,7 @@ Windows 窗体和 Windows Presentation Framework (WPF) 应用现在使用 .NET S
 </Project>
 ```
 
-在 .NET 5.0 及更高版本中：
+在 .NET 5 及更高版本中：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

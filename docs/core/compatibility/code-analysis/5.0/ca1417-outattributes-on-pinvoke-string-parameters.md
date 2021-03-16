@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：CA1417:P/Invoke 的字符串参数上的 OutAttribute
-description: 了解 .NET 5.0 中启用代码分析规则 CA1417 所致的中断性变更。
+description: 了解 .NET 5 中启用代码分析规则 CA1417 所致的中断性变更。
 ms.date: 09/29/2020
-ms.openlocfilehash: 3316d07108ec7f9da985494413336cba6d560dc9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 74aa6dc867bc1eb62e32dd086dd6b43f62e7f01f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759070"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257825"
 ---
 # <a name="warning-ca1417-outattribute-on-string-parameter-for-pinvoke"></a>警告 CA1417：P/Invoke 的字符串参数上的 OutAttribute
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759070"
 
 ## <a name="change-description"></a>更改说明
 
-从 .NET 5.0 开始，.NET SDK 包括 [.NET 源代码分析器](../../../../fundamentals/code-analysis/overview.md)。 其中一些规则会默认启用，包括 [CA1417](/visualstudio/code-quality/ca1417)。 如果项目包含违反此规则的代码，并已被配置为将警告视为错误，则此更改可能会中断生成。
+从 .NET 5 开始，.NET SDK 包括 [.NET 源代码分析器](../../../../fundamentals/code-analysis/overview.md)。 其中一些规则会默认启用，包括 [CA1417](/visualstudio/code-quality/ca1417)。 如果项目包含违反此规则的代码，并已被配置为将警告视为错误，则此更改可能会中断生成。
 
 规则 CA1417 标记 [P/Invoke](../../../../standard/native-interop/pinvoke.md) 方法定义，其中 <xref:System.String> 参数用 <xref:System.Runtime.InteropServices.OutAttribute> 属性进行标记并按值传递。 例如：
 

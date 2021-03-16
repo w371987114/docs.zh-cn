@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：PrincipalPermissionAttribute 已过时，报告为错误
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：PrincipalPermissionAttribute 构造函数已过时，会生成编译时错误。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：PrincipalPermissionAttribute 构造函数已过时，会生成编译时错误。
 ms.date: 11/01/2020
-ms.openlocfilehash: 138bbf25fd493c1bb9c2b3f10b62681c735ea7b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7568883935633e98b884b553efccf50504448b77
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759154"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257227"
 ---
 # <a name="principalpermissionattribute-is-obsolete-as-error"></a>PrincipalPermissionAttribute 已过时，报告为错误
 
@@ -25,13 +25,13 @@ public void MyMethod()
 }
 ```
 
-从 .NET 5.0 开始，不能将 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 属性应用于方法。 该属性的构造函数已过时，会产生编译时错误。 与其他过时警告不同，无法禁止显示此错误。
+从 .NET 5 开始，不能将 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 属性应用于方法。 该属性的构造函数已过时，会产生编译时错误。 与其他过时警告不同，无法禁止显示此错误。
 
 ## <a name="reason-for-change"></a>更改原因
 
-<xref:System.Security.Permissions.PrincipalPermissionAttribute> 类型与子类 <xref:System.Security.Permissions.SecurityAttribute> 等其他类型一样，是 .NET 的代码访问安全性 (CAS) 基础结构的一部分。 在 .NET Framework 2.x - 4.x 中，即使应用程序在完全信任的情况下运行，运行时也会在方法条目上强制使用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 批注。 .NET Core 和 .NET 5.0 及更高版本不支持 CAS 属性，并且运行时将忽略这些属性。
+<xref:System.Security.Permissions.PrincipalPermissionAttribute> 类型与子类 <xref:System.Security.Permissions.SecurityAttribute> 等其他类型一样，是 .NET 的代码访问安全性 (CAS) 基础结构的一部分。 在 .NET Framework 2.x - 4.x 中，即使应用程序在完全信任的情况下运行，运行时也会在方法条目上强制使用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 批注。 .NET Core 和 .NET 5 及更高版本不支持 CAS 属性，而且运行时将忽略这些属性。
 
-从 .NET Framework 到 .NET Core 和 .NET 5.0 的行为差异可能导致“无法打开”的情况，在这种情况下，本应阻止但却允许了访问。 为防止出现“无法打开”的情况，你不能再在面向 .NET 5.0 或更高版本的代码中应用该属性。
+从 .NET Framework 到 .NET Core 和 .NET 5 的行为差异可能导致“无法打开”的情况，在这种情况下，本应阻止但却允许了访问。 为防止出现“无法打开”的情况，你不能再在面向 .NET 5 或更高版本的代码中应用该属性。
 
 ## <a name="version-introduced"></a>引入的版本
 

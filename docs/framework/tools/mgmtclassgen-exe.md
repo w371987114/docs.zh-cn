@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 1dea4b0b94053919169abb639ff48ecd3abbd66c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8008644a4c443a2fcd4430c6710f4845f1e4bb30
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279150"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259364"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe（管理强类型类生成器）
 
@@ -158,4 +158,4 @@ public class App
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>
 - [工具](index.md)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)

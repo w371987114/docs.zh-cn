@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 4b2d671e310763e6ddfa114bd63b031afba83a20
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 06746347910f62a428d4897693a88b5efe78e86f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400612"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258964"
 ---
 # <a name="additional-resources"></a>其他资源
 
@@ -32,13 +32,14 @@ ms.locfileid: "93400612"
 
 |URL|描述|
 |----------|----------------|
-|[Visual Basic 文档示例](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|包含整个 Visual Basic 和 .NET 文档中使用的示例。|
+|[Visual Basic 文档示例](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic)|包含整个 Visual Basic 和 .NET 文档中使用的示例。|
+|[示例浏览器](https://docs.microsoft.com/samples/browse/?languages=vb)|包含用 Visual Basic 编写的代码示例|
 
 ### <a name="forums"></a>论坛
 
-|URL|描述|
+|URL|说明|
 |----------|----------------|
-|[Visual Basic 论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|讨论常规 Visual Basic 问题。|
+|[Microsoft Q&A](https://docs.microsoft.com/answers/topics/dotnet-visual-basic.html)|有关 Visual Basic 编程语言的技术问题。|
 
 ### <a name="videos-and-webcasts"></a>视频与网络广播
 
@@ -64,4 +65,4 @@ ms.locfileid: "93400612"
 ## <a name="see-also"></a>请参阅
 
 - [Visual Basic 入门](index.md)
-- [与我们交流](/visualstudio/ide/feedback-options)
+- [Visual Studio 反馈选项](/visualstudio/ide/feedback-options)

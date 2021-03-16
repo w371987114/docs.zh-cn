@@ -2,12 +2,12 @@
 title: 使用 RabbitMQ 实现用于开发或测试环境的事件总线
 description: 容器化 .NET 应用程序的 .NET 微服务架构 | 使用 RabbitMQ 实现用于开发或测试环境的集成事件的事件总线消息传递。
 ms.date: 01/13/2021
-ms.openlocfilehash: a1e7d11e376080a03269f202fa6ae24ffeb0f4d2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: b67b6cf92ac2c29b9eff07c2c9603206e42968a3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188076"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258073"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>使用 RabbitMQ 实现用于开发或测试环境的事件总线
 
@@ -116,12 +116,14 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 支持 RabbitMQ 的生产就绪型解决方案。
 
-- EasyNetQ - 为 RabbitMQ 打开源 .NET API 客户端 \
+- **EasyNetQ** - 为 RabbitMQ 打开源 .NET API 客户端 \
   <https://easynetq.com/>
 
 - **MassTransit** \
   <https://masstransit-project.com/>
   
+- **Rebus** - 开源 .NET 服务总线<https://github.com/rebus-org/Rebus>
+
 > [!div class="step-by-step"]
 > [上一页](integration-event-based-microservice-communications.md)
 > [下一页](subscribe-events.md)

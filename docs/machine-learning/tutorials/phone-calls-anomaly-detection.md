@@ -4,12 +4,12 @@ description: 了解如何为时序数据构建异常检测应用程序。 本教
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f001cb912bb695a7edb0917f3306ca9bfbe311ac
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 7edb84ae53f1da7903cf4b3f77d215206ffbf1ef
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98187777"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259819"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>教程：使用 ML.NET 检测时序中的异常
 
@@ -32,7 +32,7 @@ ms.locfileid: "98187777"
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
-1. 创建名为“ProductSalesAnomalyDetection”的 C# .NET Core 控制台应用程序。
+1. 创建一个名为“PhoneCallsAnomalyDetection”的 C# .NET Core 控制台应用程序。
 
 2. 在项目中创建名为“Data”的目录，用于保存数据集文件。
 

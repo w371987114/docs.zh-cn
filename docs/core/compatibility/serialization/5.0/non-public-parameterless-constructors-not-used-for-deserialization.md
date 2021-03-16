@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：非公共的无参数构造函数不用于反序列化
-description: 了解 .NET 5.0 中的以下中断性变更：非公共的无参数构造函数不再用于 JsonSerializer 的反序列化。
+description: 了解 .NET 5 中的中断性变更：非公共的无参数构造函数不再用于 JsonSerializer 的反序列化。
 ms.date: 10/18/2020
-ms.openlocfilehash: a2ea54b6a76692dae7d6e01b06b11218d66b1cd7
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 9781061fa89eb3bffb53a4f08bacbd88f3bc9265
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794705"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256265"
 ---
 # <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>非公共的无参数构造函数不用于反序列化
 
@@ -17,7 +17,7 @@ ms.locfileid: "98794705"
 
 支持 .NET Standard 2.0 及更高版本（即版本 4.6.0 - 4.7.2）的独立 [System.Text.Json NuGet 包](https://www.nuget.org/packages/System.Text.Json/)的行为与 .NET Core 3.0 和 3.1 上的内置行为不一致。 在 .NET Core 3.x 上，内部和专用构造函数可用于反序列化。 在独立包中，不允许使用非公共构造函数，如果未定义任何公共的无参数构造函数，则会引发 <xref:System.MissingMethodException>。
 
-从 .NET 5.0 和 System.Text.Json NuGet 包 5.0.0 开始，NuGet 包与内置 API 的行为一致。 默认情况下，序列化程序会忽略非公共构造函数，包括无参数构造函数。 序列化程序使用下面一种构造函数进行反序列化：
+从 .NET 5 和 System.Text.Json NuGet 包 5.0.0 开始，NuGet 包与内置 API 的行为一致。 默认情况下，序列化程序会忽略非公共构造函数，包括无参数构造函数。 序列化程序使用下面一种构造函数进行反序列化：
 
 - 用 <xref:System.Text.Json.Serialization.JsonConstructorAttribute> 注释的公共构造函数。
 - 公共无参数构造函数。

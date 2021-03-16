@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 69fd1a1944987d08a6ce1aee2790d0dbe06b9452
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4080cb38ca3b7d79c0ad4291198b13567511093c
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106366"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480844"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 
@@ -594,8 +594,6 @@ vbc /t:module StringUtil.vb
 ```console
 csc /t:module NumberUtil.cs
 ```
-
-有关 C# 编译器的命令行语法的详细信息，请参阅[在命令行上使用 csc.exe 生成](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。
 
 然后，可以使用[链接器选项](/cpp/build/reference/linker-options)将两个模块编译到一个程序集：
 

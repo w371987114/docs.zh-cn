@@ -3,12 +3,12 @@ title: .NET 中的已知 EventCounters
 description: 查看 .NET 运行时和库发布的 EventCounters。
 ms.topic: reference
 ms.date: 12/17/2020
-ms.openlocfilehash: 8bd14c7caf004cefe73d5b0676b9fa3280840442
-ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
+ms.openlocfilehash: db7417993786eae18c9d7b6cc3bb79284d543dd3
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97737289"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189938"
 ---
 # <a name="well-known-eventcounters-in-net"></a>.NET 中的已知 EventCounters
 
@@ -16,7 +16,7 @@ ms.locfileid: "97737289"
 
 ## <a name="systemruntime-counters"></a>System.Runtime 计数器
 
-以下计数器作为 .NET 运行时 (CoreCLR) 的一部分发布，并在 [`RuntimeEventSource.cs`](https://github.com/dotnet/coreclr/blob/master/src/System.Private.CoreLib/src/System/Diagnostics/Eventing/RuntimeEventSource.cs) 中进行维护。
+以下计数器作为 .NET 运行时 (CoreCLR) 的一部分发布，并在 [`RuntimeEventSource.cs`](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs) 中进行维护。
 
 | 计数器 | 说明 |
 |--|--|

@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：Microsoft.DotNet.PlatformAbstractions 包已删除
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：Microsoft.DotNet.PlatformAbstractions 包已删除。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：Microsoft.DotNet.PlatformAbstractions 包已删除。
 ms.date: 11/01/2020
-ms.openlocfilehash: 38ffe5e592d01c3bae14fc41becb594283b975a3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aff7be816815b016e3ce694c4e9a97410538c08d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759164"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257240"
 ---
 # <a name="microsoftdotnetplatformabstractions-package-removed"></a>Microsoft.DotNet.PlatformAbstractions 包已删除
 
@@ -19,7 +19,7 @@ ms.locfileid: "95759164"
 
 <xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> 库与 System.\* 命名空间中已建立的 API 重叠。 此外，某些 <xref:Microsoft.DotNet.PlatformAbstractions> API 并未设计成具有与 System.\* 的其余部分相同的审查和长期可支持性。访问。 例如，<xref:Microsoft.DotNet.PlatformAbstractions> 使用 `Platform` 枚举来描述当前的操作系统平台。 如果设计了 <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform)?displayProperty=nameWithType> API，则会明确拒绝此枚举设计，以支持新的平台和未来的灵活性。
 
-现在，<xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> 库启用的方案可以在没有它的情况下使用。 现有版本即使在 .NET 5.0 和更高版本中也将继续有效，并将与以前版本的 .NET Core 一起受到维护。 但是，新功能将不会添加到该库中， 而是将添加到其他库和 API 中。
+现在，<xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> 库启用的方案可以在没有它的情况下使用。 现有版本即使在 .NET 5 和更高版本中也将继续有效，并将与以前版本的 .NET Core 一起受到维护。 但是，新功能将不会添加到该库中， 而是将添加到其他库和 API 中。
 
 ## <a name="version-introduced"></a>引入的版本
 

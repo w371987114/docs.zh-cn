@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：不支持对加密抽象的默认实现进行实例化
-description: 了解 .NET 5.0 中的以下中断性变更：对加密抽象的无参数 Create() 重载已过时。
+description: 了解 .NET 5 中的中断性变更：对加密抽象的无参数 Create() 重载已过时。
 ms.date: 10/16/2020
-ms.openlocfilehash: 8ed7d0b72347ec41ec65ccd9e4004266619c84f7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b75f3568317d1db8ae1bb629f760aaec7e69776a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759248"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256785"
 ---
 # <a name="instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported"></a>不支持对加密抽象的默认实现进行实例化
 
@@ -41,7 +41,7 @@ Console.WriteLine(alg.GetType());
 HashAlgorithm alg = HashAlgorithm.Create();
 ```
 
-在 .NET 5.0 及更高版本中，抽象加密基元工厂（例如 <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType>）被标记为已过时，并生成 ID 为 `SYSLIB0007` 的编译时警告。 在运行时，这些方法会继续引发 <xref:System.PlatformNotSupportedException>。
+在 .NET 5 及更高版本中，抽象加密基元工厂（例如 <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType>）被标记为已过时，并生成 ID 为 `SYSLIB0007` 的编译时警告。 在运行时，这些方法会继续引发 <xref:System.PlatformNotSupportedException>。
 
 ```csharp
 // Throws PlatformNotSupportedException.

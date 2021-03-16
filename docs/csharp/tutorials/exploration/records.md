@@ -2,12 +2,12 @@
 title: 使用记录类型 - C# 教程
 description: 了解如何使用记录类型、构建记录的层次结构，以及何时选择记录而不是类。
 ms.date: 11/12/2020
-ms.openlocfilehash: 8a2cb6966ab4f93432723fd6f82618efa86b26aa
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 33075c4cafc9a91683960daa8101c9f1defaa36a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688554"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258951"
 ---
 # <a name="create-record-types"></a>创建记录类型
 
@@ -155,8 +155,8 @@ var growingDegreeDaysCopy = growingDegreeDays with { };
 
 ## <a name="summary"></a>总结
 
-本教程介绍了记录的几个方面。 记录为引用类型提供了简洁的语法，它的基本用途是存储数据。 对于面向对象的类，基本用途是定义责任。 本教程重点介绍了位置记录，在这种记录中，你可以使用简洁的语法来声明记录的 init-only 属性。 编译器会合成记录的多个成员，以复制和比较记录。 你可针对记录类型添加所需的任何其他成员。 在明确编译器生成的所有成员都不会改变状态的情况下，可以创建不可变的记录类型。 对于位置记录，可借助 `with` 表达式轻松实现非破坏性修改。
+本教程介绍了记录的几个方面。 记录为引用类型提供了简洁的语法，它的基本用途是存储数据。 对于面向对象的类，基本用途是定义责任。 本教程重点介绍了位置记录，在这种记录中，你可以使用简洁的语法来声明记录的 init-only 属性。 编译器会合成记录的多个成员，以复制和比较记录。 你可针对记录类型添加所需的任何其他成员。 在明确编译器生成的所有成员都不会改变状态的情况下，可以创建不可变的记录类型。 可借助 `with` 表达式轻松实现非破坏性修改。
 
 记录提供了另一种定义类型的方法。 使用 `class` 定义来创建面向对象的层次结构，这些层次结构重点关注对象的责任和行为。 可为数据结构创建 `struct` 类型，这些数据结构可存储数据，并且足够小，以便进行有效复制。 当你需要基于值的相等性和比较、不需要复制值以及要使用引用变量时，可以创建记录。
 
-如需了解记录的完整说明，请参阅[建议的记录类型规范](~/_csharplang/proposals/csharp-9.0/records.md)。
+可以通过阅读[记录类型的 C# 语言参考文章](../../language-reference/builtin-types/record.md)和[建议的记录类型规范](~/_csharplang/proposals/csharp-9.0/records.md)来了解记录的完整说明。

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 28a84814d1df96935f7533fa00f0bb50cf84def8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3f08c1d8aabae3e698dbf2fcd0a52511136ba899
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279176"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259910"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe（图形化客户端中的清单生成和编辑工具）
 
 除了使用基于 Windows 的用户界面 (UI) 之外，MageUI.exe 与命令行工具 Mage.exe 支持的功能完全相同。 使用此工具，你可以对部署清单和应用程序清单执行创建、编辑和签名操作。 用 MageUI.exe 创建的新清单以 .NET Framework 4 Client Profile 为目标。 早期版本的 MageUI.exe 应用于以 .NET Framework 的早期版本为目标。 在清单中添加或删除程序集时或重新对现有清单签名时，MageUI.exe 不会将清单更新为以 .NET Framework 4 Client Profile 为目标。 有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](mage-exe-manifest-generation-and-editing-tool.md)。
 
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
+ 此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请[对开发人员使用命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
 
  Mage.exe 和 MageUI.exe 的两个版本作为组件包含在 Visual Studio 中。 若要查看版本信息，请运行 MageUI.exe，选择 **“帮助”** 并选择 **“关于”** 。 本文档描述 Mage.exe 和 MageUI.exe 的 4.0.x.x 版本。
 
@@ -38,7 +38,7 @@ ms.locfileid: "96279176"
 |**另存为**|**文件**||将文件保存到磁盘，使你能够提供新的文件名和/或位置。|  
 |**全部保存**|**文件**||保存对 MageUI.exe 中当前打开的全部文件所做的更改。|  
 |**首选项**|**文件**||打开“首选项”对话框。 有关详细信息，请参阅下一节。|  
-|<bpt id="p1">**</bpt>Exit<ept id="p1">**</ept>|**文件**|Alt + F4|退出 MageUI.exe。|  
+|**退出**|**文件**|Alt + F4|退出 MageUI.exe。|  
 |**剪切**|**编辑**|Ctrl+X|从应用程序中移除当前选定的文本，然后将其移至系统剪贴板。|  
 |**复制**|**编辑**|Ctrl+C|将当前选定的文本复制到系统剪贴板。|  
 |**粘贴**|**编辑**|Ctrl+V|将文本从系统剪贴板粘贴到当前活动的文本元素中。|  

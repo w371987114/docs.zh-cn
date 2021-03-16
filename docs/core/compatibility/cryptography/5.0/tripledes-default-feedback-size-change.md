@@ -1,23 +1,23 @@
 ---
 title: 中断性变更：TripleDES.Create 所创建实例的默认 FeedbackSize 值已更改
-description: 了解 .NET 5.0 中的以下中断性变更：从 TripleDES.Create() 返回的 TripleDES 实例的 FeedbackSize 属性默认值已从 64 更改为 8。
+description: 了解 .NET 5 中的中断性变更：从 TripleDES.Create() 返回的 TripleDES 实例的 FeedbackSize 属性默认值已从 64 更改为 8。
 ms.date: 10/16/2020
-ms.openlocfilehash: 4179da17bf2e5cc5fcc7d64d83ba92119f912042
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d3259da30cce84e83a3f13c610dad5884b445b8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759250"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256759"
 ---
 # <a name="default-feedbacksize-value-for-instances-created-by-tripledescreate-changed"></a>TripleDES.Create 所创建实例的默认 FeedbackSize 值已更改
 
 从 <xref:System.Security.Cryptography.TripleDES.Create?displayProperty=nameWithType> 返回的 <xref:System.Security.Cryptography.TripleDES> 实例的 <xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize?displayProperty=nameWithType> 属性默认值从 64 改为 8，以便更轻松地从 .NET Framework 迁移。 仅当 <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode> 属性为 <xref:System.Security.Cryptography.CipherMode.CFB?displayProperty=nameWithType> 时才使用此属性（除非直接在调用方代码中使用）。
 
-向 .NET 5.0 RC1 版本中首次添加了对 <xref:System.Security.Cryptography.CipherMode.CFB> 模式的支持，因此只有 .NET 5.0 RC1 和 .NET 5.0 RC2 应用程序会受到此更改的影响。
+向 .NET 5.0 RC1 版本中首次添加了对 <xref:System.Security.Cryptography.CipherMode.CFB> 模式的支持，因此只有 .NET 5 RC1 和 .NET 5 RC2 应用程序会受到此更改的影响。
 
 ## <a name="change-description"></a>更改描述
 
-在 .NET Core 和早期的 .NET 5.0 预发行版中，`TripleDES.Create().FeedbackSize` 的默认值为 64。 从 .NET 5.0 的 RTM 版本开始，`TripleDES.Create().FeedbackSize` 的默认值为 8。
+在 .NET Core 和早期的 .NET 5 预发行版中，`TripleDES.Create().FeedbackSize` 的默认值为 64。 从 .NET 5 的 RTM 版本开始，`TripleDES.Create().FeedbackSize` 的默认值为 8。
 
 ## <a name="reason-for-change"></a>更改原因
 
@@ -31,7 +31,7 @@ ms.locfileid: "95759250"
 
 ## <a name="recommended-action"></a>建议操作
 
-当满足以下条件时，对 RC1 或 RC2 版本的 .NET 5.0 中的数据进行加密或解密的应用程序使用 CFB64 执行此操作：
+当满足以下条件时，对 RC1 或 RC2 版本的 .NET 5 中的数据进行加密或解密的应用程序使用 CFB64 执行此操作：
 
 - 具有 <xref:System.Security.Cryptography.TripleDES.Create?displayProperty=nameWithType> 的 <xref:System.Security.Cryptography.TripleDES> 实例。
 - 使用 <xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize> 的默认值。

@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：UTF-7 代码路径已过时
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：UTF7 和 UTF7Encoding 构造函数已过时。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：UTF7 和 UTF7Encoding 构造函数已过时。
 ms.date: 11/01/2020
-ms.openlocfilehash: d58305f59a30cdf31a525c3789bd6497201c50ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a0ba771e0fac2908ca37f16afb10118e1537161
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759103"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256980"
 ---
 # <a name="utf-7-code-paths-are-obsolete"></a>UTF-7 代码路径已过时
 
@@ -26,7 +26,7 @@ Encoding enc2 = Encoding.GetEncoding(65000); // By code page.
 
 此外，表示 UTF-7 编码的实例是由 <xref:System.Text.Encoding.GetEncodings?displayProperty=nameWithType> 方法枚举的，该方法枚举在系统上注册的所有 <xref:System.Text.Encoding> 实例。
 
-从 .NET 5.0 开始，<xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 属性和 <xref:System.Text.UTF7Encoding.%23ctor%2A> 构造函数已过时，并生成警告 `SYSLIB0001`（或预览版中的 `MSLIB0001`）。 但是，若要减少在使用 <xref:System.Text.UTF7Encoding> 类时调用方收到的警告数，则 <xref:System.Text.UTF7Encoding> 类型本身不会标记为已过时。
+从 .NET 5 开始，<xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 属性和 <xref:System.Text.UTF7Encoding.%23ctor%2A> 构造函数已过时并生成警告 `SYSLIB0001`（若在预览版中，则生成 `MSLIB0001`）。 但是，若要减少在使用 <xref:System.Text.UTF7Encoding> 类时调用方收到的警告数，则 <xref:System.Text.UTF7Encoding> 类型本身不会标记为已过时。
 
 ```csharp
 // The next line generates warning SYSLIB0001.

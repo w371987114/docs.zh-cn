@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: 42a57334f9f3e50a4d3c3ec48d57d26357d57510
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: a35577841765f7e6d5d5e8220bf3951f81d65832
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439490"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258697"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
 
@@ -19,7 +19,7 @@ Windows 运行时元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模�
   
  使用 Windows 运行时组件模板（在 C# 中，位于“Microsoft Store”下；在 Visual Basic 中，位于 Visual Studio 2013 或 Visual Studio 2012 中）时，编译器目标是 .winmdobj 文件，后续生成步骤将调用 Winmdexp.exe 以将 .winmdobj 文件导出到 .winmd 文件。 这是生成 Windows 运行时组件的推荐方法。 当你对生成过程需要的控制超过 Visual Studio 所能提供的控制时，请直接使用 Winmdexp.exe。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
   
  在命令提示符处，键入以下内容：  
   

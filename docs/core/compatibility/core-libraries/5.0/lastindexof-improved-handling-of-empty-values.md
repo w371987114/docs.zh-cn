@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：LastIndexOf 改进了对空搜索字符串的处理
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：在搜索零长度子字符串时，LastIndexOf 和相关 API 现在返回正确的值。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：在搜索零长度子字符串时，LastIndexOf 和相关 API 现在返回正确的值。
 ms.date: 11/01/2020
-ms.openlocfilehash: 6d1a676eb2b9ed3de6a745db27d53bd43560a32f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9dc34300d867fe1bb9264494b3f2261bad2c1eea
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759091"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257422"
 ---
 # <a name="lastindexof-has-improved-handling-of-empty-search-strings"></a>LastIndexOf 改进了对空搜索字符串的处理
 
@@ -24,7 +24,7 @@ ReadOnlySpan<char> span = "Hello";
 Console.WriteLine(span.LastIndexOf("")); // prints '0' (incorrect)
 ```
 
-从 .NET 5.0 开始，这些 API 将返回 `LastIndexOf` 的正确值。
+从 .NET 5 开始，这些 API 将返回 `LastIndexOf` 的正确值。
 
 ```csharp
 Console.WriteLine("Hello".LastIndexOf("")); // prints '5' (correct)
@@ -45,7 +45,7 @@ Console.WriteLine(span.LastIndexOf("")); // prints '5' (correct)
 
 ## <a name="recommended-action"></a>建议操作
 
-你不必执行任何操作。 .NET 5.0 运行时自动提供新行为。
+你不必执行任何操作。 .NET 5 运行时自动提供新行为。
 
 没有用于还原旧行为的兼容性开关。
 

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: e94e80d0342f68098a08e184b6bf3f48c14e817b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: efa07ee4166d3f02ca3885c5efc4373be8eac2fd
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440876"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258528"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe（IL 反汇编程序）
 
 IL 反汇编程序是 IL 汇编程序 (Ilasm.exe) 的配套工具。 Ildasm.exe 可利用包含中间语言 (IL) 代码的可移植可执行 (PE) 文件，并创建适合输入到 Ilasm.exe 的文本文件 。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请[对开发人员使用命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
 
 在命令提示符处，键入以下内容：
 
@@ -188,4 +188,4 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 - [工具](index.md)
 - [Ilasm.exe（IL 汇编程序）](ilasm-exe-il-assembler.md)
 - [托管执行过程](../../standard/managed-execution-process.md)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)

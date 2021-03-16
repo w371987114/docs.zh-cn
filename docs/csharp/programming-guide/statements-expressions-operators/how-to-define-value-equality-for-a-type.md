@@ -1,6 +1,6 @@
 ---
-title: 如何为类型定义值相等性 - C# 编程指南
-description: 了解如何为类型定义值相等性。 查看代码示例和其他可用资源。
+title: 如何为类或结构定义值相等性 - C# 编程指南
+description: 了解如何为类或结构定义值相等性。 查看代码示例和其他可用资源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 9523ba99f877fde7207042ecb8d28548168a68cb
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a63fd8d11d0241063364e0156ee73a86aaeb7b35
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162721"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259559"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何为类型定义值相等性（C# 编程指南）
+# <a name="how-to-define-value-equality-for-a-class-or-struct-c-programming-guide"></a>如何为类或结构定义值相等性（C# 编程指南）
 
-定义类或结构时，需确定为类型创建值相等性（或等效性）的自定义定义是否有意义。 通常，类型的对象预期要添加到某类集合时，或者这些对象主要用于存储一组字段或属性时，需实现值相等性。 可以基于类型中所有字段和属性的比较结果来定义值相等性，也可以基于子集进行定义。
+当你定义一个[记录](../classes-and-structs/records.md)时，编译器会自动实现值相等性。 定义类或结构时，需确定为类型创建值相等性（或等效性）的自定义定义是否有意义。 通常，类型的对象预期要添加到某类集合时，或者这些对象主要用于存储一组字段或属性时，需实现值相等性。 可以基于类型中所有字段和属性的比较结果来定义值相等性，也可以基于子集进行定义。
 
 在任何一种情况下，类和结构中的实现均应遵循 5 个等效性保证条件（对于以下规则，假设 `x`、`y` 和 `z` 都不为 null）：  
   
