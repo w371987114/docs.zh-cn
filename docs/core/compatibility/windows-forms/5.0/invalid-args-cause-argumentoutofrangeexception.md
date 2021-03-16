@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：WinForms 属性现在引发 ArgumentOutOfRangeException
-description: 了解 .NET 5.0 中的以下中断性变更：某些 Windows 窗体属性现在将针对无效参数引发 ArgumentOutOfRangeException。
+description: 了解 .NET 5 中的中断性变更：某些 Windows 窗体属性现将针对无效参数引发 ArgumentOutOfRangeException。
 ms.date: 06/18/2020
-ms.openlocfilehash: 94593047d16304ce401b23993ad4ca173c10812b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 493669af1ed5646d93e7c7d2688afd40f3fa731c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759243"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256148"
 ---
 # <a name="winforms-properties-now-throw-argumentoutofrangeexception"></a>WinForms 属性现在引发 ArgumentOutOfRangeException
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759243"
 
 ## <a name="change-description"></a>更改描述
 
-以前，当传递超出范围的参数时，这些属性将引发各种异常，如 <xref:System.NullReferenceException>、<xref:System.IndexOutOfRangeException> 或 <xref:System.ArgumentException>。 从 .NET 5.0 开始，如果传递的参数超出范围，则这些属性现在将引发 <xref:System.ArgumentOutOfRangeException>。
+以前，当传递超出范围的参数时，这些属性将引发各种异常，如 <xref:System.NullReferenceException>、<xref:System.IndexOutOfRangeException> 或 <xref:System.ArgumentException>。 从 .NET 5 开始，如果传递的参数超出范围，这些属性现将引发 <xref:System.ArgumentOutOfRangeException>。
 
 引发 <xref:System.ArgumentOutOfRangeException> 符合 .NET 运行时的行为。 它还通过清楚地指示具体的无效参数来改进调试体验。
 

@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：WinForms 方法现在会引发 ArgumentNullException
-description: 了解 .NET 5.0 中的以下中断性变更：某些 Windows 窗体方法现在将针对 null 参数引发 ArgumentNullException。
+description: 了解 .NET 5 中的中断性变更：某些 Windows 窗体方法现将针对 null 参数引发 ArgumentNullException。
 ms.date: 09/18/2020
-ms.openlocfilehash: 77280827d44b0e58533339a09357d518a0bfe508
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d72f8e3320430396132de20c252cd5e8759dce3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759256"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256087"
 ---
 # <a name="winforms-methods-now-throw-argumentnullexception"></a>WinForms 方法现在会引发 ArgumentNullException
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759256"
 
 ## <a name="change-description"></a>更改描述
 
-以前，如果传递 null 参数，某些 Windows 窗体方法将引发 <xref:System.NullReferenceException>。 从 .NET 5.0 开始，这些方法现在将针对 null 参数引发 <xref:System.ArgumentNullException>。
+以前，如果传递 null 参数，某些 Windows 窗体方法将引发 <xref:System.NullReferenceException>。 从 .NET 5 开始，这些方法现将针对 null 参数引发 <xref:System.ArgumentNullException>。
 
 引发 <xref:System.ArgumentNullException> 符合 .NET 运行时的行为。 它还通过清楚地指示参数为 null 和具体参数来改进调试体验。
 
@@ -49,8 +49,8 @@ ms.locfileid: "95759256"
 > | <xref:System.Windows.Forms.ListViewGroup.System%23Runtime%23Serialization%23ISerializable%23GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | `info` | 预览版 5 |
 > | <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor(System.String,System.Int32,System.Int32)> | `className` | 预览版 5 |
 > | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox)> | `owner` | 预览版 6 |
-> | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Object[])> | `owner`，`value` | 预览版 6 |
-> | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Windows.Forms.ListBox.ObjectCollection)> | `owner`，`value` | 预览版 6 |
+> | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Object[])> | `owner`, `value` | 预览版 6 |
+> | <xref:System.Windows.Forms.ListBox.ObjectCollection.%23ctor(System.Windows.Forms.ListBox,System.Windows.Forms.ListBox.ObjectCollection)> | `owner`, `value` | 预览版 6 |
 > | <xref:System.Windows.Forms.ListBox.ObjectCollection.AddRange(System.Object[])?displayProperty=nameWithType> | `items` | 预览版 6 |
 > | <xref:System.Windows.Forms.ListBox.ObjectCollection.AddRange(System.Windows.Forms.ListBox.ObjectCollection)?displayProperty=nameWithType> | `value` | 预览版 6 |
 > | <xref:System.Windows.Forms.ListBox.ObjectCollection.CopyTo(System.Object[],System.Int32)?displayProperty=nameWithType> | `destination` | 预览版 6 |

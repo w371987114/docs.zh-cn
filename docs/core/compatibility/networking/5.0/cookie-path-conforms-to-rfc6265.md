@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：Cookie 路径处理现在符合 RFC 6265
-description: 了解 .NET 5.0 中的以下中断性变更：RFC 6265 中定义的路径处理算法之前针对 Cookie 和 CookieContainer 类而实现，
+description: 了解 .NET 5 中的中断性变更：RFC 6265 中定义的路径处理算法之前针对 Cookie 和 CookieContainer 类而实现。
 ms.date: 08/18/2020
-ms.openlocfilehash: 4aea06f434c4bbbef7d94b4b39ff647dd954745e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ee1bccc79a5ac271904dd3223b58cc168f18cfa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759126"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256460"
 ---
 # <a name="cookie-path-handling-now-conforms-to-rfc-6265"></a>Cookie 路径处理现在符合 RFC 6265
 

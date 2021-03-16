@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: ccd9bcfe2702083573cef979b40ff4d7167e8041
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6f3c1e2d4d6a0b8e794863f2c0b4fd947ac12836
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128396"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190081"
 ---
 # <a name="contextual-keywords-c-reference"></a>上下文关键字（C# 参考）
 
@@ -24,6 +24,7 @@ ms.locfileid: "89128396"
 |[dynamic](../builtin-types/reference-types.md)|定义一个引用类型，实现发生绕过编译时类型检查的操作。|  
 |[get](./get.md)|为属性或索引器定义访问器方法。|  
 |[global](../operators/namespace-alias-qualifier.md)|未以其他方式命名的全局命名空间的别名。|  
+|[init](./init.md)|为属性或索引器定义访问器方法。|  
 |[partial](./partial-type.md)|在整个同一编译单元内定义分部类、结构和接口。|  
 |[remove](./remove.md)|定义一个自定义事件访问器，客户端代码取消订阅事件时会调用该访问器。|  
 |[set](./set.md)|为属性或索引器定义访问器方法。|  

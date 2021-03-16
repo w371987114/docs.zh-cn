@@ -4,12 +4,12 @@ description: 了解从本机代码托管 .NET Core 运行时，以支持需要�
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 4b6b0d9765d78aac5f267dfac4a907f920230feb
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: db458e9ebb0c6ad930f82e1d67619632a493ae3b
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258216"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604692"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>编写自定义 .NET Core 主机以从本机代码控制 .NET 运行时
 
@@ -40,7 +40,7 @@ ms.locfileid: "102258216"
 
 ## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>使用 `nethost.h` 和 `hostfxr.h` 创建主机
 
-以下步骤详细说明如何使用 `nethost` 和 `hostfxr` 库在本机应用程序中启动 .NET Core 运行时并调用托管静态方法。 [示例](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr)使用了随 .NET SDK 一起安装的 `nethost` 标头和库，以及 [dotnet/runtime](https://github.com/dotnet/runtime) 存储库中的 [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/coreclr_delegates.h) 和 [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/native/corehost/hostfxr.h) 文件的副本。
+以下步骤详细说明如何使用 `nethost` 和 `hostfxr` 库在本机应用程序中启动 .NET Core 运行时并调用托管静态方法。 [示例](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr)使用了随 .NET SDK 一起安装的 `nethost` 标头和库，以及 [dotnet/runtime](https://github.com/dotnet/runtime) 存储库中的 [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/main/src/native/corehost/coreclr_delegates.h) 和 [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/native/corehost/hostfxr.h) 文件的副本。
 
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>步骤 1 - 加载 `hostfxr` 并获取导出的托管函数
 

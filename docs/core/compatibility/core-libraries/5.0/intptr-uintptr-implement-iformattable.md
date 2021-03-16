@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：IntPtr 和 UIntPtr 实现 IFormattable
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：IntPtr 和 UIntPtr 现在实现了 IFormattable。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：IntPtr 和 UIntPtr 现在实现了 IFormattable。
 ms.date: 11/01/2020
-ms.openlocfilehash: 0684652cdc2b8cf1d237074263bf0809082b0dcd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: adfb68807d5fa5f0c750fb41ef75951f63a4b2d5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759270"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257435"
 ---
 # <a name="intptr-and-uintptr-implement-iformattable"></a>IntPtr 和 UIntPtr 实现 IFormattable
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759270"
 
 在早期版本的 .NET 中，<xref:System.IntPtr> 和 <xref:System.UIntPtr> 不实现 <xref:System.IFormattable>。 检查 <xref:System.IFormattable> 的函数可回退到仅调用 <xref:System.IntPtr.ToString%2A?displayProperty=nameWithType> 或 <xref:System.UIntPtr.ToString%2A?displayProperty=nameWithType>，这意味着不会遵循格式说明符和区域性。
 
-在 .NET 5.0 和更高版本中，<xref:System.IntPtr> 和 <xref:System.UIntPtr> 实现 <xref:System.IFormattable>。 检查 <xref:System.IFormattable> 支持的功能现在可能返回这些类型的不同结果，因为它们可能以格式说明符和区域性的形式传递。
+在 .NET 5 及更高版本中，<xref:System.IntPtr> 和 <xref:System.UIntPtr> 实现 <xref:System.IFormattable>。 检查 <xref:System.IFormattable> 支持的功能现在可能返回这些类型的不同结果，因为它们可能以格式说明符和区域性的形式传递。
 
 此更改会影响内插字符串和 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 等方案。
 

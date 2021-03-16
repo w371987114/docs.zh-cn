@@ -14,23 +14,23 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 30a35ded6fc86af6dc6dd4bf19cdf60f66570e0c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a5666645c674bbbe77b988fc7a1ff0db935920aa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247247"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258229"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe（证书管理器工具）
 
 证书管理器工具 (Certmgr.exe) 管理证书、证书信任列表 (CTL) 和证书吊销列表 (CRL)。  
   
- 安装 Visual Studio 时，将会自动安装证书管理器。 若要启动该工具，请使用[命令提示](developer-command-prompt-for-vs.md)。  
+ 安装 Visual Studio 时，将会自动安装证书管理器。 若要启动该工具，请[对开发人员使用命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。  
   
 > [!NOTE]
 > 证书管理器工具 (Certmgr.exe) 是命令行实用程序，而“证书”(Certmgr.msc) 则是 Microsoft 管理控制台 (MMC) 管理单元。 由于 Certmgr.msc 通常位于 Windows 系统目录中，因此在命令行上输入 `certmgr` 可加载“证书”MMC 管理单元（即使已打开 Visual Studio 开发人员命令提示）。 出现这种情况的原因是，在 PATH 环境变量中，“证书”管理单元的路径出现在证书管理器工具的路径之前。 如果你遇到此问题，则可以通过指定可执行文件的路径来执行 Certmgr.exe 命令。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请[对开发人员使用命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。  
   
  有关 X.509 证书的概述，请参阅[使用证书](../wcf/feature-details/working-with-certificates.md)。  
   
@@ -143,4 +143,4 @@ certmgr /put /c /s my newFile
 
 - [工具](index.md)
 - [Makecert.exe（证书创建工具）](/windows/desktop/SecCrypto/makecert)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)

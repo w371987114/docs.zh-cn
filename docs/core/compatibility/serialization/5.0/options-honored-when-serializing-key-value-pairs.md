@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：将 PropertyNamingPolicy、PropertyNameCaseInsensitive 和 Encoder 选项用于键值对
-description: 了解 .NET 5.0 中的以下中断性变更：在序列化和反序列化键值对实例的 Key 和 Value 属性名称时，将使用 PropertyNamingPolicy、PropertyNameCaseInsensitive 和 Encoder 选项。
+description: 了解 .NET 5 中的中断性变更：在序列化和反序列化键值对实例的 Key 和 Value 属性名称时，将使用 PropertyNamingPolicy、PropertyNameCaseInsensitive 和 Encoder 选项。
 ms.date: 10/18/2020
-ms.openlocfilehash: 5d75cb7feea32cc4b942e5261c5b609e00a5082c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe6298a677488574fdd7bdc7e887ed3b244ba8d6
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759266"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256317"
 ---
 # <a name="propertynamingpolicy-propertynamecaseinsensitive-and-encoder-options-are-honored-when-serializing-and-deserializing-key-value-pairs"></a>对键值对进行序列化和反序列化时，使用“PropertyNamingPolicy”、“PropertyNameCaseInsensitive”和“Encoder”选项
 
@@ -27,7 +27,7 @@ Console.WriteLine(JsonSerializer.Serialize(kvp, options));
 // Actual: {"Key":1,"Value":1}
 ```
 
-从 .NET 5.0 开始，序列化 <xref:System.Collections.Generic.KeyValuePair%602> 实例时，将使用 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> 和 <xref:System.Text.Json.JsonSerializerOptions.Encoder> 选项。 下面的代码示例演示在序列化后 <xref:System.Collections.Generic.KeyValuePair%602.Key> 和 <xref:System.Collections.Generic.KeyValuePair%602.Value> 属性如何按照指定的属性命名策略采用 camel 大小写。
+从 .NET 5 开始，序列化 <xref:System.Collections.Generic.KeyValuePair%602> 实例时，将使用 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> 和 <xref:System.Text.Json.JsonSerializerOptions.Encoder> 选项。 下面的代码示例演示在序列化后 <xref:System.Collections.Generic.KeyValuePair%602.Key> 和 <xref:System.Collections.Generic.KeyValuePair%602.Value> 属性如何按照指定的属性命名策略采用 camel 大小写。
 
 ```csharp
 var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
@@ -47,7 +47,7 @@ string json = @"{""key"":1,""value"":1}";
 JsonSerializer.Deserialize<KeyValuePair<int, int>>(json, options);
 ```
 
-从 .NET 5.0 开始，使用 <xref:System.Text.Json.JsonSerializer> 进行反序列化时，将使用 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> 和 <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive> 选项。 例如，下面的代码片段演示了小写的 <xref:System.Collections.Generic.KeyValuePair%602.Key> 和 <xref:System.Collections.Generic.KeyValuePair%602.Value> 属性名称的成功反序列化，因为指定的属性命名策略允许这样做。
+从 .NET 5 开始，使用 <xref:System.Text.Json.JsonSerializer> 进行反序列化时，将使用 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> 和 <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive> 选项。 例如，下面的代码片段演示了小写的 <xref:System.Collections.Generic.KeyValuePair%602.Key> 和 <xref:System.Collections.Generic.KeyValuePair%602.Value> 属性名称的成功反序列化，因为指定的属性命名策略允许这样做。
 
 ```csharp
 var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };

@@ -3,14 +3,14 @@ title: 删除 .NET 运行时和 SDK
 description: 本文介绍如何确定当前所安装 .NET 运行时和 SDK 的版本，以及如何在 Windows、Mac 和 Linux 上删除它们。
 author: adegeo
 ms.author: adegeo
-ms.date: 11/20/2020
+ms.date: 03/02/2021
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: f07a9acdc5be310d38da18602dde2ebf678e9a1b
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 8ef6ab531d6c3eada5226b1682f19bfe5537bfe4
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031717"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255628"
 ---
 # <a name="how-to-remove-the-net-runtime-and-sdk"></a>如何删除 .NET 运行时和 SDK
 
@@ -71,15 +71,15 @@ Linux 还提供其他选项来卸载 .NET（SDK 或运行时）。 卸载 .NET �
 
 如果使用 tarball 安装，则必须手动删除 .NET。
 
-在 Linux 上，必须通过删除进行版本控制的目录，分别删除 SDK 和运行时。 删除它们会从磁盘中删除 SDK 和运行时。 例如，要删除 1.0.1 SDK 和运行时，可使用以下 bash 命令：
+在 Linux 上，必须通过删除进行版本控制的目录，分别删除 SDK 和运行时。 这些目录可能因你的 Linux 分发版而异。 删除它们会从磁盘中删除 SDK 和运行时。 例如，要删除 1.0.1 SDK 和运行时，可使用以下 bash 命令：
 
 ```bash
 version="1.0.1"
-sudo rm -rf /usr/local/share/dotnet/sdk/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.NETCore.App/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.All/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/$version
-sudo rm -rf /usr/local/share/dotnet/host/fxr/$version
+sudo rm -rf /usr/share/dotnet/sdk/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.NETCore.App/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.AspNetCore.All/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.AspNetCore.App/$version
+sudo rm -rf /usr/share/dotnet/host/fxr/$version
 ```
 
 SDK 和运行时的父目录列在 `dotnet --list-sdks` 和 `dotnet --list-runtimes` 命令的输出中，如上表所示。
@@ -107,6 +107,8 @@ SDK 和运行时的父目录列在 `dotnet --list-sdks` 和 `dotnet --list-runti
 
 你可以使用 [.NET 卸载工具](../additional-tools/uninstall-tool.md) (`dotnet-core-uninstall`) 从系统中删除 .NET SDK 和运行时。 可使用选项集合来指定应卸载的版本。
 
+::: zone pivot="os-windows"
+
 ## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>.NET Core SDK 版本的 Visual Studio 依赖项
 
 在 Visual Studio 2019 版本 16.3 之前，Visual Studio 安装程序称为独立的 .NET Core SDK 安装程序。 因此，SDK 版本显示在 Windows“应用和功能”对话框中  。 使用独立安装程序删除 Visual Studio 安装的 .NET Core SDK 可能会破坏 Visual Studio。 如果 Visual Studio 在卸载 SDK 之后出现问题，请在该特定版本的 Visual Studio 上运行修复。 下表显示了 .NET Core SDK 版本的一些 Visual Studio 依赖项：
@@ -120,6 +122,8 @@ SDK 和运行时的父目录列在 `dotnet --list-sdks` 和 `dotnet --list-runti
 | Visual Studio 2017 版本 15.8 | .NET Core SDK 2.1.4xx          |
 
 从 Visual Studio 2019 16.3 版开始，Visual Studio 负责其自己的 .NET SDK 副本。 因此，“应用和功能”对话框中将不再显示这些 SDK 版本  。
+
+::: zone-end
 
 ## <a name="remove-the-nuget-fallback-folder"></a>删除 NuGet 回退文件夹
 

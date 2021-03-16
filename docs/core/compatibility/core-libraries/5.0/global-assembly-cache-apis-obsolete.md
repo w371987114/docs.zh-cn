@@ -1,17 +1,17 @@
 ---
 title: 中断性变更：全局程序集缓存 API 已过时
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：处理 GAC 的 API 要么失败，要么不执行任何操作。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：处理 GAC 的 API 要么失败，要么不执行任何操作。
 ms.date: 11/01/2020
-ms.openlocfilehash: 2f74fccc68b7a925d909938d77578df8ebe8d60d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 39c7b092b06754a28723693c0147b7ec3a0b705e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759180"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257474"
 ---
 # <a name="global-assembly-cache-apis-are-obsolete"></a>全局程序集缓存 API 已过时
 
-.NET Core 和 .NET 5.0 及更高版本消除了 .NET Framework 中存在的全局程序集缓存 (GAC) 这一概念。 因此，所有处理 GAC 的 .NETCore 和 .NET 5+ API 要么失败，要么不执行任何操作。
+.NET Core 和 .NET 5 及更高版本消除了 .NET Framework 中存在的全局程序集缓存 (GAC) 这一概念。 因此，所有处理 GAC 的 .NETCore 和 .NET 5+ API 要么失败，要么不执行任何操作。
 
 为帮助开发人员摒弃这些 API，一些 GAC 相关的 API 标记为已过时，并在编译时生成 `SYSLIB0005` 警告。 .NET 的未来版本中将删除这些 API。
 
@@ -31,7 +31,7 @@ Assembly asm = typeof(object).Assembly;
 Console.WriteLine(asm.GlobalAssemblyCache);
 ```
 
-在 .NET 5.0 和更高版本中，<xref:System.Reflection.Assembly.GlobalAssemblyCache> 属性仍始终返回 `false`。 然而，属性 Getter 也标记为已过时，以指示调用方应停止访问该属性。 库和应用不应使用 <xref:System.Reflection.Assembly.GlobalAssemblyCache> API 来确定运行时行为，因为它在 .NET Core 和 .NET 5.0 及更高版本中始终返回 `false`。
+在 .NET 5 及更高版本中，<xref:System.Reflection.Assembly.GlobalAssemblyCache> 属性仍始终返回 `false`。 然而，属性 Getter 也标记为已过时，以指示调用方应停止访问该属性。 库和应用不得使用 <xref:System.Reflection.Assembly.GlobalAssemblyCache> API 来确定运行时行为，因为它在 .NET Core 和 .NET 5 及更高版本中始终返回 `false`。
 
 ```csharp
 Assembly asm = typeof(object).Assembly;
@@ -43,7 +43,7 @@ Console.WriteLine(asm.GlobalAssemblyCache);
 
 ## <a name="reason-for-change"></a>更改原因
 
-全局程序集缓存 (GAC) 这一概念不存在于 .NET Core 和 .NET 5.0 及更高版本中。
+.NET Core 和 .NET 5 及更高版本中没有全局程序集缓存 (GAC) 这一概念。
 
 ## <a name="version-introduced"></a>引入的版本
 

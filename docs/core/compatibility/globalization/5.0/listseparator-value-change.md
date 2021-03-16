@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：TextInfo.ListSeparator 值更改
-description: 了解 .NET 5.0 的以下中断性变更：版本 5.0 和 5.0.1 之间更改了 TextInfo.ListSeparator 的默认值。
+description: 了解 .NET 5 的中断性变更：版本 5.0 和 5.0.1 之间更改了 TextInfo.ListSeparator 的默认值。
 ms.date: 12/10/2020
-ms.openlocfilehash: 720d46c1908bcd70812f575a90f580470dbc7f32
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 9a319da8ea8e3cbf62cbf4730e553b03f5bfdc89
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596298"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256720"
 ---
 # <a name="textinfolistseparator-values-changed"></a>TextInfo.ListSeparator 值已更改
 
@@ -21,7 +21,7 @@ ms.locfileid: "97596298"
 
 下表总结了对 <xref:System.Globalization.TextInfo.ListSeparator?displayProperty=nameWithType> 值所做的更改。
 
-| | .NET framework<br/>.NET Core 1.0-3.1 | .NET 5.0 | .NET 5.0.1 |
+| | .NET framework<br/>.NET Core 1.0-3.1 | .NET 5 | .NET 5.0.1 |
 -|-|-|-
 | Windows | 从 NLS 获取 | ICU 中的十进制分隔符。<br/>可切换回 NLS。 | 等于 NLS |
 | **Linux 和 macOS** | ICU 中的十进制分隔符 | ICU 中的十进制分隔符 | 等于 NLS |

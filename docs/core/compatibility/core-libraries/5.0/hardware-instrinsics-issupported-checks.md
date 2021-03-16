@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：嵌套类型的硬件内部 IsSupported 检查可能有所不同
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：检查硬件内部函数的 X64.IsSupported 现在可能生成不同的结果。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：检查硬件内部函数的 X64.IsSupported 现在可能会生成不同的结果。
 ms.date: 11/01/2020
-ms.openlocfilehash: 9acef15860de76a9743621cb4c5edba5aac3931c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c6049ad5881c0389870cfd5e1550f8358c67599
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759179"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257448"
 ---
 # <a name="hardware-intrinsic-issupported-checks-may-differ-for-nested-types"></a>嵌套类型的硬件内部 IsSupported 检查可能有所不同
 
@@ -24,7 +24,7 @@ ms.locfileid: "95759179"
 
 在 .NET 的早期版本中，某些 <xref:System.Runtime.Intrinsics.X86> 硬件内部类型（例如 <xref:System.Runtime.Intrinsics.X86.Aes?displayProperty=nameWithType>）未公开嵌套的 `X64` 类。 对于这些类型，调用 `<Isa>.X64.IsSupported` 解析为父类 `<Isa>` 的嵌套 `X64` 类上的 `IsSupported` 属性。 这意味着即使 `<Isa>.IsSupported` 返回 `false`，该属性也可返回 `true`。
 
-在 .NET 5.0 及更高版本中，所有 <xref:System.Runtime.Intrinsics.X86> 类型都公开适当报告支持的嵌套的 `X64` 类。 这可确保一般层次结构保持正确；如果 `<Isa>.X64.IsSupported` 为 `true`，则也可假定 `<Isa>.IsSupported` 为 `true`。
+在 .NET 5 及更高版本中，所有 <xref:System.Runtime.Intrinsics.X86> 类型都公开适当报告支持的嵌套的 `X64` 类。 这可确保一般层次结构保持正确；如果 `<Isa>.X64.IsSupported` 为 `true`，则也可假定 `<Isa>.IsSupported` 为 `true`。
 
 ## <a name="reason-for-change"></a>更改原因
 

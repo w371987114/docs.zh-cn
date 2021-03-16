@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：CA1831:为字符串使用 AsSpan 而不是基于范围的索引器
-description: 了解 .NET 5.0 中启用代码分析规则 CA1831 所致的中断性变更。
+description: 了解 .NET 5 中因启用代码分析规则 CA1831 而导致的中断性变更。
 ms.date: 08/21/2020
-ms.openlocfilehash: 850916b804ae29dba8d2bd05c6e4fb06fe667296
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 1ed4e2bdde9c3d525f95963f316551909ac3de7c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437892"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257786"
 ---
 # <a name="warning-ca1831-use-asspan-instead-of-range-based-indexers-for-string"></a>警告 CA1831：为字符串使用 AsSpan 而不是基于范围的索引器
 
@@ -15,7 +15,7 @@ ms.locfileid: "96437892"
 
 ## <a name="change-description"></a>更改说明
 
-从 .NET 5.0 开始，.NET SDK 包括 [.NET 源代码分析器](../../../../fundamentals/code-analysis/overview.md)。 默认情况下会启用其中一些规则，包括 [CA1831](/visualstudio/code-quality/ca1831)。 如果项目包含违反此规则的代码，并已被配置为将警告视为错误，则此更改可能会中断生成。
+从 .NET 5 开始，.NET SDK 包括 [.NET 源代码分析器](../../../../fundamentals/code-analysis/overview.md)。 默认情况下会启用其中一些规则，包括 [CA1831](/visualstudio/code-quality/ca1831)。 如果项目包含违反此规则的代码，并已被配置为将警告视为错误，则此更改可能会中断生成。
 
 规则 CA1831 查找在字符串中使用基于 <xref:System.Range> 的索引器但不打算进行复制的实例。 如果直接在字符串中使用基于 <xref:System.Range> 的索引器来生成隐式强制转换，则会创建字符串请求部分的不必要副本。 例如：
 

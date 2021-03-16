@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：默认 ActivityIdFormat 为 W3C
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：默认 ActivityIdFormat 现在为 W3C。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：默认 ActivityIdFormat 现在为 W3C。
 ms.date: 11/01/2020
-ms.openlocfilehash: 77ee705ac18065c84ddeab3127e01b6a40c3b84d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f15c2d61443117cfbcb2be7de9561fecbff9a1d9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759182"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257500"
 ---
 # <a name="default-activityidformat-is-w3c"></a>默认 ActivityIdFormat 为 W3C
 
@@ -15,9 +15,9 @@ ms.locfileid: "95759182"
 
 ## <a name="change-description"></a>更改描述
 
-.NET Core 3.0 中引入了 W3C 活动 ID 格式，作为分层 ID 格式的替代格式。 但是，为了保持兼容性，直到 .NET 5.0 才将 W3C 格式设置为默认格式。 .NET 5.0 中更改了默认格式，因为 [W3C 格式已获得批准](https://www.w3.org/TR/trace-context/)，并广泛用于多种语言实现。
+.NET Core 3.0 中引入了 W3C 活动 ID 格式，作为分层 ID 格式的替代格式。 但是，为了保持兼容性，直到 .NET 5.0 才将 W3C 格式设置为默认格式。 .NET 5 中更改了默认格式，原因是 [W3C 格式已获得批准](https://www.w3.org/TR/trace-context/)，并广泛用于多种语言实现。
 
-如果应用面向除 .NET 5.0 或更高版本之外的平台，那么它会使用旧行为，其中的默认格式为 <xref:System.Diagnostics.ActivityIdFormat.Hierarchical>。 此默认格式适用于平台 net45+、netstandard1.1+ 和 netcoreapp （1.x、2.x 和 3.x）。 在 .NET 5.0 及更高版本中，<xref:System.Diagnostics.Activity.DefaultIdFormat?displayProperty=nameWithType> 设置为 <xref:System.Diagnostics.ActivityIdFormat.W3C?displayProperty=nameWithType>。
+如果应用面向除 .NET 5 或更高版本之外的平台，那么它会使用旧行为，其中的默认格式为 <xref:System.Diagnostics.ActivityIdFormat.Hierarchical>。 此默认格式适用于平台 net45+、netstandard1.1+ 和 netcoreapp （1.x、2.x 和 3.x）。 在 .NET 5 及更高版本中，<xref:System.Diagnostics.Activity.DefaultIdFormat?displayProperty=nameWithType> 设置为 <xref:System.Diagnostics.ActivityIdFormat.W3C?displayProperty=nameWithType>。
 
 ## <a name="version-introduced"></a>引入的版本
 

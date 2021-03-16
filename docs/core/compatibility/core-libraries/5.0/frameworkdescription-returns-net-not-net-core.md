@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：FrameworkDescription 的值是 .NET 而不是 .NET Core
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：RuntimeInformation.FrameworkDescription 现在返回“.NET”而不是“.NET Core”。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：RuntimeInformation.FrameworkDescription 现返回“.NET”而不是“.NET Core”。
 ms.date: 11/01/2020
-ms.openlocfilehash: 3925fb092135c26291e1e60b99f359974d21553c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 18aa9a30a149b3c38d4bbfe4a0c99446f4372f07
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759181"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257513"
 ---
 # <a name="frameworkdescriptions-value-is-net-instead-of-net-core"></a>FrameworkDescription 的值是 .NET 而不是 .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759181"
 
 在以前的 .NET 版本中，<xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> 返回“.NET Core”作为描述字符串的一部分，例如 `.NET Core 3.1.1`。
 
-从 .NET 5.0 开始，<xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> 返回“.NET”作为描述字符串的一部分，例如 `.NET 5.0.0`。
+从 .NET 5 开始，<xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> 返回“.NET”作为描述字符串的一部分，例如 `.NET 5.0.0`。
 
 ## <a name="reason-for-change"></a>更改原因
 

@@ -3,12 +3,12 @@ title: C# 语言版本控制 - C# 指南
 description: 了解如何根据项目确定 C# 语言版本，以及背后的原因。 了解如何手动重写默认值。
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: fb4a869fe67b3292ba430ea563bc2a072590adb2
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: ba6f453123668248b2c65ee6a431cb16dfe74c46
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582156"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258398"
 ---
 # <a name="c-language-versioning"></a>C# 语言版本控制
 
@@ -79,7 +79,7 @@ C# 9.0 仅在 .NET 5 及更高版本上受支持。
 </Project>
 ```
 
-包含该文件的目录的所有子目录中的版本都将使用 C# 预览版。 有关详细信息，请参阅关于[自定义生成](/visualstudio/msbuild/customize-your-build)的文章。
+包含该文件的目录的所有子目录中的版本都将使用 C# 预览版。 有关详细信息，请查看[自定义生成](/visualstudio/msbuild/customize-your-build)。
 
 ## <a name="c-language-version-reference"></a>C# 语言版本引用
 
@@ -88,13 +88,13 @@ C# 9.0 仅在 .NET 5 及更高版本上受支持。
 [!INCLUDE [langversion-table](includes/langversion-table.md)]
 
 > [!TIP]
-> 打开 [Visual Studio 的开发人员命令提示](../../framework/tools/developer-command-prompt-for-vs.md)，运行以下命令以查看计算机上可用的语言版本列表。
+> 打开[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)，并运行以下命令，查看计算机上可用的语言版本的列表。
 >
 > ```CMD
 > csc -langversion:?
 > ```
 >
-> 质疑此类 [-langversion](compiler-options/langversion-compiler-option.md) 编译选项时，将打印类似于下面的内容：
+> 查询此类 [-langversion](compiler-options/langversion-compiler-option.md) 编译选项时，会打印如下所示的内容：
 >
 > ```CMD
 > Supported language versions:

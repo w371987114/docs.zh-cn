@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: 76f616c36d81b8245f77f011b5c2f9b945e6916b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b5e58c5943eba8db7497b4db56bfbd99b17b1043
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255099"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477623"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>如何：添加对类型库的引用
 
@@ -42,12 +42,12 @@ ms.locfileid: "96255099"
   
 1. 按后列文章中所述，生成一个互操作程序集：[如何：从类型库生成互操作程序集](how-to-generate-interop-assemblies-from-type-libraries.md)。  
   
-2. 配合使用 [-link（C# 编译器选项）](../../csharp/language-reference/compiler-options/link-compiler-option.md)或 [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 编译器选项与互操作程序集名称，将 COM 类型的类型信息嵌入到可执行文件中。  
+2. 配合使用 [-link（C# 编译器选项）](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes)或 [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 编译器选项与互操作程序集名称，将 COM 类型的类型信息嵌入到可执行文件中。  
   
 ## <a name="see-also"></a>请参阅
 
 - [将类型库作为程序集导入](importing-a-type-library-as-an-assembly.md)
 - [向 .NET Framework 公开 COM 组件](exposing-com-components.md)
 - [演练：在 Visual Studio 中嵌入托管程序集中的类型](../../standard/assembly/embed-types-visual-studio.md)
-- [-link（C# 编译器选项）](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-link（C# 编译器选项）](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes)
 - [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

@@ -3,12 +3,12 @@ title: 调试内存泄漏教程
 description: 了解如何调试 .NET Core 中的内存泄漏。
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 6764663eedc28cd75f9f68927a12ae5b2255d11b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 2cdc6e2f27ac04b6057aca3787564024d084fe63
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431446"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255667"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>调试 .NET Core 中的内存泄漏
 
@@ -32,8 +32,7 @@ ms.locfileid: "100431446"
 
 本教程使用：
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更高版本。
-- [dotnet-trace](dotnet-trace.md) 列出进程。
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) 或更高版本。
 - [dotnet-counters](dotnet-counters.md) 检查托管内存的使用情况。
 - [dotnet-dump](dotnet-dump.md) 收集和分析转储文件。
 - 要诊断的[示例调试目标](/samples/dotnet/samples/diagnostic-scenarios/)应用。
@@ -50,10 +49,10 @@ ms.locfileid: "100431446"
 dotnet run
 ```
 
-在单独的控制台中，使用 [dotnet-trace](dotnet-trace.md) 工具查找进程 ID：
+在单独的控制台中，找到处理 ID：
 
 ```console
-dotnet-trace ps
+dotnet-counters ps
 ```
 
 输出应如下所示：
@@ -116,7 +115,7 @@ Press p to pause, r to resume, q to quit.
 
 ### <a name="generate-memory-dump"></a>生成内存转储
 
-分析可能的内存泄漏时，需要访问应用的内存堆。 然后可以分析内存内容。 查看对象之间的关系，可以创建理论说明内存未释放的原因。 常见的诊断数据源是 Windows 上的内存转储或 Linux 上的等效核心转储。 若要生成 .NET Core 应用程序转储，可以使用 [dotnet-dump)](dotnet-dump.md) 工具。
+分析可能的内存泄漏时，需要访问应用的内存堆。 然后可以分析内存内容。 查看对象之间的关系，可以创建理论说明内存未释放的原因。 常见的诊断数据源是 Windows 上的内存转储或 Linux 上的等效核心转储。 若要生成 .NET Core 应用程序转储，可使用 [dotnet-dump](dotnet-dump.md) 工具。
 
 使用之前启动的[示例调试目标](/samples/dotnet/samples/diagnostic-scenarios/)，运行以下命令以生成 Linux 核心转储：
 

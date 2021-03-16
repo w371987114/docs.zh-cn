@@ -1,17 +1,17 @@
 ---
 title: 中断性变更：面向 .NET 5 时，未定义 NETCOREAPP3_1 预处理器符号
-description: 了解 .NET 5.0 中的以下中断性变更：项目不再为早期版本定义预处理器符号。
+description: 了解 .NET 5 中的中断性变更：项目不再为早期版本定义预处理器符号。
 ms.date: 09/17/2020
-ms.openlocfilehash: 61a5e4fce258d2be3d584318e154bb752b88ebe1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 390c8f5af97510db4652f3f42db577e6de158020
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759128"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256525"
 ---
 # <a name="netcoreapp3_1-preprocessor-symbol-is-not-defined-when-targeting-net-5"></a>面向 .NET 5 时，未定义 NETCOREAPP3_1 预处理器符号
 
-在 .NET 5.0 RC2 和更高版本中，项目不再为早期版本（而仅为其目标版本）定义预处理器符号。 这与 .NET Core 1.0 - 3.1 的行为相同。
+在 .NET 5 RC2 及更高版本中，项目不再为早期版本（而仅为其目标版本）定义预处理器符号。 这与 .NET Core 1.0 - 3.1 的行为相同。
 
 ## <a name="version-introduced"></a>引入的版本
 
@@ -19,9 +19,9 @@ ms.locfileid: "95759128"
 
 ## <a name="change-description"></a>更改描述
 
-在 .NET 5.0 预览版 7 到 RC1 中，面向 `net5.0` 的项目会定义 `NETCOREAPP3_1` 和 `NET5_0` 预处理器符号。 此行为更改的目的在于，从 .NET 5.0 开始，条件编译[符号将会累积](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md#preprocessor-symbols)。
+在 .NET 5 预览版 7 至 RC1 中，面向 `net5.0` 的项目会定义 `NETCOREAPP3_1` 和 `NET5_0` 预处理器符号。 此行为更改的目的在于，从 .NET 5 开始，条件编译[符号将会累积](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md#preprocessor-symbols)。
 
-在 .NET 5.0 RC2 和更高版本中，项目仅为其面向的目标框架名字对象 (TFM) 定义符号，而不为任何早期版本进行定义。
+在 .NET 5 RC2 及更高版本中，项目仅为其面向的目标框架名字对象 (TFM) 定义符号，而不为任何早期版本进行定义。
 
 ## <a name="reason-for-change"></a>更改原因
 

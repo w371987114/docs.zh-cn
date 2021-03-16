@@ -1,17 +1,17 @@
 ---
 title: .NET 5+ 中已过时的功能
-description: 了解在 .NET 5.0 和更高版本中标记为已过时并生成 SYSLIB 编译器警告的 API。
+description: 了解在 .NET 5 及更高版本中标记为已过时并生成 SYSLIB 编译器警告的 API。
 ms.date: 10/20/2020
-ms.openlocfilehash: 336958c93e3db8f66cfbec89476a666e5e103b70
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: d6563f21624456d74801242268ecf72652fc4f88
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593300"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256278"
 ---
 # <a name="obsolete-features-in-net-5"></a>.NET 5 中已过时的功能
 
-从 .NET 5.0 开始，一些新标记为已过时的 API 使用 <xref:System.ObsoleteAttribute> 上的两个新属性。
+从 .NET 5 开始，一些新标记为已过时的 API 使用 <xref:System.ObsoleteAttribute> 上的两个新属性。
 
 - <xref:System.ObsoleteAttribute.DiagnosticId?displayProperty=nameWithType> 属性指示编译器使用自定义诊断 ID 产生生成警告。 通过自定义 ID 可专门、单独地取消过时警告。 对于 .NET 5+ 过时，自定义诊断 ID 的格式为 `SYSLIBxxxx`。
 

@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：ConsoleLoggerOptions 上已过时的属性
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：ConsoleLoggerFormat 类型和 ConsoleLoggerOptions 上的某些属性现已过时。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：ConsoleLoggerFormat 类型和 ConsoleLoggerOptions 上的某些属性现已过时。
 ms.date: 11/01/2020
-ms.openlocfilehash: bd039dfa84ae3399d7fb36f992010a9a3c9f6ddf
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: c6ee294f90e304cebd517bd0139c58a6c7a41e0c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548378"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257305"
 ---
 # <a name="obsolete-properties-on-consoleloggeroptions"></a>ConsoleLoggerOptions 上已过时的属性
 
@@ -15,7 +15,7 @@ ms.locfileid: "99548378"
 
 ## <a name="change-description"></a>更改说明
 
-从 .NET 5.0 开始，<xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat?displayProperty=nameWithType> 类型和 <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions> 上的很多属性已过时。 已过时的属性是：
+从 .NET 5 开始，<xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat?displayProperty=nameWithType> 类型和 <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions> 上的很多属性已过时。 已过时的属性是：
 
 - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.DisableColors?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.IncludeScopes?displayProperty=nameWithType>
@@ -49,7 +49,7 @@ ms.locfileid: "99548378"
   <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName> 和 <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.Format> 之间有一些区别：
 
   - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.Format> 只有两个可能的选项：`Default` 和 `Systemd`。
-  - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName> 不区分大小写，可以是任何字符串。 保留的内置名称为 `Simple`、`Systemd` 和 `Json`（.NET 5.0 及更高版本）。
+  - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName> 不区分大小写，可以是任何字符串。 保留的内置名称为 `Simple`、`Systemd` 和 `Json`（.NET 5 及更高版本）。
   - `"Format": "Systemd"` 映射到 `"FormatterName": "Systemd"`。
   - `"Format": "Default"` 映射到 `"FormatterName": "Simple"`。
 

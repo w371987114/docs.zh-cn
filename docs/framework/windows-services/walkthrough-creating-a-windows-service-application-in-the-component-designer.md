@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, walkthroughs
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
-ms.openlocfilehash: bbf9ab7d06c952aa2e076fc36c71f37f1bb10884
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: b6e4937b71c50f887a7eb784bc9106360a05fdc2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608382"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259793"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>教程：创建 Windows 服务应用
 
@@ -65,7 +65,7 @@ ms.locfileid: "91608382"
 
 ### <a name="add-custom-event-log-functionality"></a>添加自定义事件日志功能
 
-1. 在“解决方案资源管理器”中，从“MyNewService.cs”或“MyNewService.vb”的快捷菜单中，选择“查看设计器”   。
+1. 在“解决方案资源管理器”中，从“MyNewService.cs”或“MyNewService.vb”的快捷菜单中，选择“查看设计器”     。
 
 2. 在“工具箱”中，展开“组件”，然后将“EventLog”组件拖到“Service1.cs [Design]”或“Service1.vb [Design]”标签      。
 
@@ -124,7 +124,7 @@ ms.locfileid: "91608382"
    timer.Start()
    ```
 
-2. 将 `using` 语句添加到“MyNewService.cs”，或者，对于 <xref:System.Timers?displayProperty=nameWithType> 命名空间，将 `Imports` 语句添加到“MyNewService.vb” ：
+2. 将 `using` 语句添加到“MyNewService.cs”，或者，对于 <xref:System.Timers?displayProperty=nameWithType> 命名空间，将 `Imports` 语句添加到“MyNewService.vb”   ：
 
    ```csharp
    using System.Timers;
@@ -470,9 +470,9 @@ Windows 服务可以接受命令行参数或启动参数。 将代码添加到�
 
 由于已经生成了 Windows 服务，你现在可以安装它。 要安装 Windows 服务，必须在安装它的计算机上拥有管理员凭据。
 
-1. 使用管理凭据打开[“Visual Studio 开发人员命令提示”](../tools/developer-command-prompt-for-vs.md)。 从 Windows“开始”菜单中，在 Visual Studio 文件夹中选择“VS 2017 的开发人员命令提示”，然后从快捷菜单中选择“更多” > “以管理员身份运行”     。
+1. 使用管理凭据打开[“Visual Studio 开发人员命令提示”](/visualstudio/ide/reference/command-prompt-powershell)。
 
-2. 在“Visual Studio 的开发人员命令提示”窗口中，导航到包含项目输出的文件夹（默认情况下，它是项目的 \bin\Debug 子目录）   。
+2. 在“Visual Studio 的开发人员命令提示”中，导航到包含项目输出的文件夹（默认情况下，它是项目的 \bin\Debug 子目录）。
 
 3. 输入以下命令：
 

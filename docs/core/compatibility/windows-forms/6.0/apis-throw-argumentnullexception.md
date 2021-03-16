@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：一些 API 引发 ArgumentNullException
-description: 了解 .NET 6.0 中的以下中断性变更：一些 API 现在会验证参数并引发 ArgumentNullException。
+description: 了解 .NET 6 中的中断性变更：一些 API 现在会验证参数并引发 ArgumentNullException。
 ms.date: 01/29/2021
-ms.openlocfilehash: f9d7dc8bb57ed8dc5b4ff41bda9b3bde7db7b880
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ca7f32739237715657350f52d2523b0ce378364d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99804147"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255732"
 ---
 # <a name="some-apis-throw-argumentnullexception"></a>一些 API 引发 ArgumentNullException
 
@@ -17,7 +17,7 @@ ms.locfileid: "99804147"
 
 在以前的 .NET 版本中，在通过值为 `null` 的参数进行调用时，受影响的 API 会引发 <xref:System.NullReferenceException>。
 
-从 .NET 6.0 开始，在通过值为 `null` 的参数进行调用时，受影响的 API 会引发 <xref:System.ArgumentNullException>。
+从 .NET 6 开始，在通过值为 `null` 的参数进行调用时，受影响的 API 会引发 <xref:System.ArgumentNullException>。
 
 ## <a name="reason-for-change"></a>更改原因
 

@@ -2,12 +2,12 @@
 title: 使用 .NET SDK 和工具实现持续集成 (CI)
 description: 了解如何在具有持续集成的生成服务器上使用 .NET SDK 及其工具。
 ms.date: 05/18/2017
-ms.openlocfilehash: 6d92bf7250ab4aea33325b1a23e7661a296e9756
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: fd1548f5c2d0a5191dd54c315c90a8ce3f8a5305
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633813"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189990"
 ---
 # <a name="using-the-net-sdk-and-tools-in-continuous-integration-ci"></a>在持续集成 (CI) 中使用 .NET SDK 和工具
 
@@ -126,7 +126,7 @@ Travis CI 可同时在生成矩阵  中运行 macOS 和 Linux 作业。在生成
 
 ### <a name="appveyor"></a>AppVeyor
 
-[AppVeyor](https://www.appveyor.com/) 使用 `Visual Studio 2017` 生成辅助角色映像安装 .NET Core 1.0.1 SDK。 提供具有不同版本的 .NET SDK 的其他生成映像。 有关详细信息，请参阅 AppVeyor 文档中的 [appveyor.yml 示例](https://github.com/dotnet/docs/blob/master/appveyor.yml)和[生成辅助角色映像](https://www.appveyor.com/docs/build-environment/#build-worker-images)一文。
+[AppVeyor](https://www.appveyor.com/) 使用 `Visual Studio 2017` 生成辅助角色映像安装 .NET Core 1.0.1 SDK。 提供具有不同版本的 .NET SDK 的其他生成映像。 有关详细信息，请参阅 AppVeyor 文档中的 [appveyor.yml 示例](https://github.com/dotnet/docs/blob/main/appveyor.yml)和[生成辅助角色映像](https://www.appveyor.com/docs/build-environment/#build-worker-images)一文。
 
 .NET SDK 二进制文件通过安装脚本下载并解压缩到子目录，再添加到 `PATH` 环境变量。 添加生成矩阵可以运行包含多个版本 .NET SDK 的集成测试：
 

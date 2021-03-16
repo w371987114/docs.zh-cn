@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：已从 .NET 运行时中删除 WinHttpHandler
-description: 了解 .NET 5.0 中的以下中断性变更：WinHttpHandler 已从 .NET 运行时中删除。
+description: 了解 .NET 5 中的中断性变更：WinHttpHandler 已从 .NET 运行时中删除。
 ms.date: 10/18/2020
-ms.openlocfilehash: f8b9910ade8d459133791a23704d624a91cc5dff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 95abcfb4d7670be035bd640dbb85458406c1b0e0
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759119"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256408"
 ---
 # <a name="winhttphandler-removed-from-net-runtime"></a>已从 .NET 运行时中删除 WinHttpHandler
 
@@ -19,7 +19,7 @@ ms.locfileid: "95759119"
 
 ## <a name="change-description"></a>更改描述
 
-在以前的 .NET 版本中，<xref:System.Net.Http.WinHttpHandler> 类作为核心 .NET 库的一部分提供。 从 .NET 5.0 开始，<xref:System.Net.Http.WinHttpHandler> 类仅作为单独安装的 [NuGet 包](https://www.nuget.org/packages/System.Net.Http.WinHttpHandler/)提供。
+在以前的 .NET 版本中，<xref:System.Net.Http.WinHttpHandler> 类作为核心 .NET 库的一部分提供。 从 .NET 5 开始，<xref:System.Net.Http.WinHttpHandler> 类仅作为单独安装的 [NuGet 包](https://www.nuget.org/packages/System.Net.Http.WinHttpHandler/)提供。
 
 ## <a name="recommended-action"></a>建议操作
 

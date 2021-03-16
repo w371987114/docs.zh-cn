@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：TextFormatFlags.ModifyString 已过时
-description: 了解 .NET 5.0 中的以下中断性变更：TextFormatFlags.ModifyString 字段已过时，显示警告。
+description: 了解 .NET 5 中的中断性变更：TextFormatFlags.ModifyString 字段已过时，显示警告。
 ms.date: 11/05/2020
-ms.openlocfilehash: 83dca65a770ccdcd5ce48bb669f5122dc2d5ad77
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9fe1e04b1ad36070b08af2affdca1e058ec74bb8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759116"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256161"
 ---
 # <a name="textformatflagsmodifystring-is-obsolete"></a>TextFormatFlags.ModifyString 已过时
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759116"
 
 ## <a name="change-description"></a>更改描述
 
-在以前的 .NET 版本中，<xref:System.Windows.Forms.TextFormatFlags.ModifyString?displayProperty=nameWithType> 枚举字段未被标记为已过时。 在 .NET 5.0 及更高版本中，它被标记为已过时（警告）。 此字段可能会在将来的 .NET 版本中删除。
+在以前的 .NET 版本中，<xref:System.Windows.Forms.TextFormatFlags.ModifyString?displayProperty=nameWithType> 枚举字段未被标记为已过时。 在 .NET 5 及更高版本中，它被标记为已过时（警告）。 此字段可能会在将来的 .NET 版本中删除。
 
 ## <a name="reason-for-change"></a>更改原因
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f5703377782977bb69815255d04cf1ee5a274c18
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290936"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477219"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的程序集
 
@@ -64,7 +64,7 @@ ms.locfileid: "84290936"
 
 有几种创建程序集的方法。 你可以使用可创建 .dll 或 .exe 文件的开发工具，例如 Visual Studio 。 可以使用 Windows SDK 中的工具创建具有从其他开发环境中创建的模块的程序集。 还可以使用公共语言运行时 API（例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>）来创建动态程序集。
 
-可以采用以下方法编译程序集：在 Visual Studio 中生成程序集、使用 .NET Core 命令行接口工具生成程序集，或使用命令行编译器生成 .NET Framework 程序集。 要详细了解如何使用 .NET Core CLI 生成程序集，请参阅 [.NET Core CLI 概述](../../core/tools/index.md)。 要了解如何使用命令行编译器生成程序集，请参阅[使用 csc.exe 的命令行生成](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)（适用于 C#），或者[从命令行生成](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)（适用于 Visual Basic）。
+可以采用以下方法编译程序集：在 Visual Studio 中生成程序集、使用 .NET Core 命令行接口工具生成程序集，或使用命令行编译器生成 .NET Framework 程序集。 要详细了解如何使用 .NET Core CLI 生成程序集，请参阅 [.NET Core CLI 概述](../../core/tools/index.md)。
 
 > [!NOTE]
 > 若要在 Visual Studio 中生成程序集，请在“生成”菜单上选择“生成” 。
@@ -86,7 +86,7 @@ ms.locfileid: "84290936"
 必须添加对应用程序中的程序集的引用，才能使用该程序集。 引用程序集后，应用程序可以使用其名称空间的所有可访问类型、属性、方法和其他成员，就好像它们的代码是源文件的一部分一样。
 
 > [!NOTE]
-> .NET 类库中的大多数程序集都是自动引用的。 如果系统程序集不是自动引用的，则对于 .NET Core，可以添加对包含该程序集的 NuGet 包的引用。 请使用 Visual Studio 中的 NuGet 包管理器，或者将程序集的 [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) 元素添加到 .csproj 或 .vbproj 项目 。 在 .NET Framework 中，可以通过在 Visual Studio 中使用“添加引用”对话框，或者通过使用 [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) 或 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) 编译器的 `-reference` 命令行选项，添加对该程序集的引用。
+> .NET 类库中的大多数程序集都是自动引用的。 如果系统程序集不是自动引用的，则对于 .NET Core，可以添加对包含该程序集的 NuGet 包的引用。 请使用 Visual Studio 中的 NuGet 包管理器，或者将程序集的 [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) 元素添加到 .csproj 或 .vbproj 项目 。 在 .NET Framework 中，可以通过在 Visual Studio 中使用“添加引用”对话框，或者通过使用 [C#](../../csharp/language-reference/compiler-options/inputs.md#references) 或 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) 编译器的 `-reference` 命令行选项，添加对该程序集的引用。
 
 在 C# 中，可以在单个应用程序中使用同一程序集的两个版本。 有关详细信息，请参阅[外部别名](../../csharp/language-reference/keywords/extern-alias.md)。
 

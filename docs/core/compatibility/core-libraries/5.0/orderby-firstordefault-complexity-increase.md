@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：增加了 LINQ OrderBy.First{OrDefault} 的复杂度
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：OrderBy.First 的实现已更改。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：OrderBy.First 的实现已更改。
 ms.date: 11/01/2020
-ms.openlocfilehash: 3c4f8fd0bb2051c3e1ac14eab091be11f10f88b4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4cd2dda5f60976f935505d6a6cb1e4c23d150d09
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759174"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257266"
 ---
 # <a name="complexity-of-linq-orderbyfirstordefault-increased"></a>增加了 LINQ OrderBy.First{OrDefault} 的复杂度
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759174"
 
 在 .NET Core 1.x 至 3.x 中，调用 <xref:System.Linq.Enumerable.OrderBy%2A> 或 <xref:System.Linq.Enumerable.OrderByDescending%2A>（后跟 <xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> 或 <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})>）需处理 `O(N)` 复杂度。 由于只需要第一个（或默认）元素，因此要找到它，只需要一次枚举。 然而，会精确调用 `N` 次提供给 <xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> 或 <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> 的谓词，其中 `N` 是序列的长度。
 
-在 .NET 5.0 及更高版本中，[进行了一项更改](https://github.com/dotnet/runtime/pull/36643)，以致于调用 <xref:System.Linq.Enumerable.OrderBy%2A> 或 <xref:System.Linq.Enumerable.OrderByDescending%2A>（后跟 <xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> 或 <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})>）会处理 `O(N log N)` 复杂度，而不是 `O(N)` 复杂度。 但是，可调用提供给 <xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> 或 <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> 的谓词（不超过 `N` 次），这对整体性能来说更为重要。
+在 .NET 5 及更高版本中，[进行了一项更改](https://github.com/dotnet/runtime/pull/36643)，以致于调用 <xref:System.Linq.Enumerable.OrderBy%2A> 或 <xref:System.Linq.Enumerable.OrderByDescending%2A>（后跟 <xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> 或 <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})>）会处理 `O(N log N)` 复杂度，而不是 `O(N)` 复杂度。 但是，可调用提供给 <xref:System.Linq.Enumerable.First%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> 或 <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable{%60%600},System.Func{%60%600,System.Boolean})> 的谓词（不超过 `N` 次），这对整体性能来说更为重要。
 
 > [!NOTE]
 > 这项更改与 .NET Framework 中操作的实现和复杂性相契合。

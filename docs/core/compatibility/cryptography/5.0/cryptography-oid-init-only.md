@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：Cryptography.Oid 在功能上仅用于初始化
-description: 了解 .NET 5.0 中的以下中断性变更：当尝试更改某个值时，Cryptography.Oid 类的属性资源库现在会引发异常。
+description: 了解 .NET 5 中的中断性变更：当尝试更改某个值时，Cryptography.Oid 类的属性资源库现在会引发异常。
 ms.date: 08/16/2020
-ms.openlocfilehash: a3b5a393e2a84f7c9a60c2a821ecfda9c6acd2e3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa1e72adcda61f2292574729e36cdc578bf907d2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759100"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256863"
 ---
 # <a name="systemsecuritycryptographyoid-is-functionally-init-only"></a>System.Security.Cryptography.Oid 在功能上仅用于初始化
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759100"
 
 在以前的版本中，<xref:System.Security.Cryptography.Oid> 上的属性资源库可用于更改 <xref:System.Security.Cryptography.Oid.FriendlyName> 和 <xref:System.Security.Cryptography.Oid.Value> 属性的值。
 
-在 .NET 5.0 和更高版本中，属性资源库仅可用于初始化值。 属性具有值后，无论是从构造函数还是以前版本调用属性资源库，属性资源库始终引发 <xref:System.PlatformNotSupportedException>。
+在 .NET 5 及更高版本中，属性资源库仅可用于初始化值。 属性具有值后，无论是从构造函数还是以前版本调用属性资源库，属性资源库始终引发 <xref:System.PlatformNotSupportedException>。
 
 ## <a name="reason-for-change"></a>更改原因
 

@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：已从 .NET 中删除对 WinRT 的内置支持
-description: 了解 .NET 5.0 中的以下互操作中断性变更：对 WinRT 的内置支持已从 .NET 中删除。
+description: 了解 .NET 5 中的互操作中断性变更：已从 .NET 中删除对 WinRT 的内置支持。
 ms.date: 10/13/2020
-ms.openlocfilehash: 61d8e26d06c232a7bfa1891a2159f5232f747b8a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 986b810b74c7e7d7514ec2b734bfab45e29b87fa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759178"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256681"
 ---
 # <a name="built-in-support-for-winrt-is-removed-from-net"></a>已从 .NET 中删除对 WinRT 的内置支持
 
@@ -19,7 +19,7 @@ ms.locfileid: "95759178"
 
 ## <a name="change-description"></a>更改描述
 
-以前，CoreCLR 可能会使用 [Windows 元数据 (WinMD) 文件](/uwp/winrt-cref/winmd-files)来激活和使用 WinRT 类型。 从 .NET 5.0 开始，CoreCLR 不再能够直接使用 WinMD 文件。
+以前，CoreCLR 可能会使用 [Windows 元数据 (WinMD) 文件](/uwp/winrt-cref/winmd-files)来激活和使用 WinRT 类型。 从 .NET 5 开始，CoreCLR 不再能够直接使用 WinMD 文件。
 
 如果尝试引用不受支持的程序集，则会收到 <xref:System.IO.FileNotFoundException>。 如果激活 WinRT 类，则会收到 <xref:System.PlatformNotSupportedException>。
 
@@ -38,7 +38,7 @@ ms.locfileid: "95759178"
   <TargetFramework>net5.0-windows10.0.19041</TargetFramework>
   ```
 
-- 使用 [C#/WinRT](/windows/uwp/csharp-winrt/) 工具链生成或自定义针对 .NET 5.0 及更高版本的 WinRT API 和类型。
+- 使用 [C#/WinRT](/windows/uwp/csharp-winrt/) 工具链生成或自定义针对 .NET 5 及更高版本的 WinRT API 和类型。
 
 ## <a name="affected-apis"></a>受影响的 API
 

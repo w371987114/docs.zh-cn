@@ -2,12 +2,12 @@
 title: dotnet-install 脚本
 description: 了解用于安装 .NET SDK 和共享运行时的 dotnet-install 脚本。
 ms.date: 09/22/2020
-ms.openlocfilehash: 1904d0322774de25aeba7e7a53ab36ce135d685d
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.openlocfilehash: 51482ca70d08d86e02a493f1da49b056fed8d11c
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98957868"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206682"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
@@ -52,6 +52,9 @@ bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统�
 
 * 在 Windows 上运行的 PowerShell 脚本。
 * 在 Linux/macOS 上运行的 bash 脚本。
+
+> [!NOTE]
+> .NET 会收集遥测数据。 若要了解详细信息和退出方式，请查看 [.NET SDK 遥测](telemetry.md)。
 
 ### <a name="purpose"></a>目标
 

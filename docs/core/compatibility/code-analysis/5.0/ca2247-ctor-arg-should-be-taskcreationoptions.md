@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：CA2247:TaskCompletionSource 构造函数的参数应为 TaskCreationOptions 值
-description: 了解 .NET 5.0 中启用代码分析规则 CA2247 所致的中断性变更。
+description: 了解 .NET 5 中因启用代码分析规则 CA2247 而导致的中断性变更。
 ms.date: 09/03/2020
-ms.openlocfilehash: 323fd5a05da4dfeb68ef75d88d5d293ba01c8ade
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6c7accaad312352a1448406f2bbf4189f3df1ee5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759169"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257695"
 ---
 # <a name="warning-ca2247-argument-to-taskcompletionsource-constructor-should-be-taskcreationoptions-value"></a>警告 CA2247：TaskCompletionSource 构造函数的参数应为 TaskCreationOptions 值
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759169"
 
 ## <a name="change-description"></a>更改说明
 
-从 .NET 5.0 开始，.NET SDK 包括 [.NET 源代码分析器](../../../../fundamentals/code-analysis/overview.md)。 其中一些规则会默认启用，包括 [CA2247](/visualstudio/code-quality/ca2247)。 如果项目包含违反此规则的代码，并已被配置为将警告视为错误，则此更改可能会中断生成。
+从 .NET 5 开始，.NET SDK 包括 [.NET 源代码分析器](../../../../fundamentals/code-analysis/overview.md)。 其中一些规则会默认启用，包括 [CA2247](/visualstudio/code-quality/ca2247)。 如果项目包含违反此规则的代码，并已被配置为将警告视为错误，则此更改可能会中断生成。
 
 规则 CA2247 会查找对 <xref:System.Threading.Tasks.TaskCompletionSource%601> 构造函数的调用，这些调用传递类型为 <xref:System.Threading.Tasks.TaskContinuationOptions> 的参数。 <xref:System.Threading.Tasks.TaskCompletionSource%601> 类型具有一个接受 <xref:System.Threading.Tasks.TaskCreationOptions> 值的构造函数和一个接受 <xref:System.Object> 的构造函数。 如果意外传递了 <xref:System.Threading.Tasks.TaskContinuationOptions> 值（而不是 <xref:System.Threading.Tasks.TaskCreationOptions> 值），则在运行时调用带有 <xref:System.Object> 参数的构造函数。 代码将编译并运行，但没有预期行为。
 

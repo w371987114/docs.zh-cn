@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：增加了 NotifyIcon.Text 最大文本长度
-description: 了解 .NET 6.0 中的中断性变更，其中 NotifyIcon.Text 属性的最大文本长度有所增加。
+description: 了解 .NET 6 中的中断性变更：NotifyIcon.Text 属性的最大文本长度有所增加。
 ms.date: 01/19/2021
-ms.openlocfilehash: 0029556f3ec2795fb079575b329e7fbd187d486f
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.openlocfilehash: f87b98dd852ce202689ae9360bee9b6cfbf01794
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98617974"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255771"
 ---
 # <a name="notifyicontext-maximum-text-length-increased"></a>增加了 NotifyIcon.Text 最大文本长度
 
@@ -15,7 +15,7 @@ ms.locfileid: "98617974"
 
 ## <a name="change-description"></a>更改描述
 
-在以前的 .NET 版本中，<xref:System.Windows.Forms.NotifyIcon.Text?displayProperty=nameWithType> 属性允许的最大文本长度为 63 个字符。 从 .NET 6.0 开始，允许的最大文本长度为 127 个字符。 在任何版本中，如果试图设置超过该限制的值，则都会引发 <xref:System.ArgumentException>。
+在以前的 .NET 版本中，<xref:System.Windows.Forms.NotifyIcon.Text?displayProperty=nameWithType> 属性允许的最大文本长度为 63 个字符。 从 .NET 6 开始，允许的最大文本长度为 127 个字符。 在任何版本中，如果试图设置超过该限制的值，则都会引发 <xref:System.ArgumentException>。
 
 ## <a name="reason-for-change"></a>更改原因
 
@@ -23,7 +23,7 @@ ms.locfileid: "98617974"
 
 ## <a name="version-introduced"></a>引入的版本
 
-.NET 6.0 预览版 1
+.NET 6 预览版 1
 
 ## <a name="recommended-action"></a>建议的操作
 

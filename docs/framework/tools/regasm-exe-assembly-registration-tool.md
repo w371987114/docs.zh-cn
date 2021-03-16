@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: a3af6a0fbc7c9c695e18448da285977f04fd72ef
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 14dbaf0e100204718e78292b038bf016b5607bc8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517251"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259185"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe（程序集注册工具）
 
 程序集注册工具读取程序集中的元数据，并将所需项添加到注册表中。注册表允许 COM 客户端以透明方式创建 .NET Framework 类。 在注册一个类之后，任何 COM 客户端都可以像使用 COM 类一样使用它。 类仅在安装程序集时注册一次。 只有实际注册程序集中的类实例之后才能从 COM 中创建它们。
 
-要运行该工具，请使用 Visual Studio 开发人员命令提示。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
+若要运行该工具，请使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
 
 在命令提示符处，键入以下内容：
 
@@ -29,7 +29,7 @@ ms.locfileid: "87517251"
 regasm assemblyFile [options]
 ```
 
-## <a name="parameters"></a>parameters
+## <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
@@ -89,4 +89,4 @@ regasm myTest.dll /tlb:myTest.tlb
 - [Tlbexp.exe（类型库导出程序）](tlbexp-exe-type-library-exporter.md)
 - [Tlbimp.exe（类型库导入程序）](tlbimp-exe-type-library-importer.md)
 - [向 COM 注册程序集](../interop/registering-assemblies-with-com.md)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)

@@ -2,12 +2,12 @@
 title: 为基于容器的应用程序选择 Azure 计算平台
 description: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序 | 为基于容器的应用程序选择 Azure 计算平台
 ms.date: 02/18/2020
-ms.openlocfilehash: 4bc72fb5a5be30d47cffe73d53a82b3237a959a6
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 9246b8dfb4e1d68fbd965d25e2e9d3272563798c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987811"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257988"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>为基于容器的应用程序选择 Azure 计算平台
 
@@ -31,7 +31,7 @@ ms.locfileid: "80987811"
 |:------------------------:|:--:|:--:|:--:|:--:|:--:|:--:|
 | **Web 应用（单片）**         | ![可能使用 VM](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![推荐使用应用服务](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![可能使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | |
 | **N 层应用（服务）**        | ![可能使用 VM](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![推荐使用应用服务](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![可能使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 Azure Fuctions](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | |
-| **云本机（微服务）**  | | ![可能使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | ![推荐使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （Linux&nbsp;容器）| ![推荐使用 Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （事件驱动） | |
+| **云本机（微服务）**  | | ![可能使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) <br/> （带有容器）&nbsp; | ![推荐使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （Linux&nbsp;容器）| ![推荐使用 Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （事件驱动） | |
 | **批处理/作业（后台任务）** | ![可能使用 VM](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用应用服务](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![推荐使用 Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （后台任务） | ![建议使用 Azure Batch](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （大规模） |
 
 **图例**

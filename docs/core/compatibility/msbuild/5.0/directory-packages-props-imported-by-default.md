@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：默认导入 Directory.Packages.props 文件
-description: 了解 .NET 5.0 中的以下中断性变更：如果在项目文件夹中找到名为 Directory.Packages.props 的文件，则 NuGet 的 .props 文件会自动导入该文件。
+description: 了解 .NET 5 中的中断性变更：如果在项目文件夹中找到名为 Directory.Packages.props 的文件，则 NuGet 的 .props 文件会自动导入该文件。
 ms.date: 09/17/2020
-ms.openlocfilehash: ee8a2999b801e81750d96a0bc985e3c8169224a9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a031d9b2bd832be06dedb20495c24075d1239b02
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759131"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256577"
 ---
 # <a name="directorypackagesprops-files-is-imported-by-default"></a>默认导入 Directory.Packages.props 文件
 
@@ -21,7 +21,7 @@ ms.locfileid: "95759131"
 
 在以前的 .NET 版本中，项目文件中有一个名为 Directory.Packages.props 的文件，并且 NuGet 的 .props 文件不会在生成时自动导入该文件 。
 
-从 .NET 5.0 开始，如果项目文件夹或其任何上级中存在这样的文件，将自动导入它。 如果项目文件夹中有一个具有此名称的文件，则此自动导入可能会更改生成的行为。 例如，将导入该文件，但是与之前有所不同，如果你特意导入该文件，则导入顺序可能会发生变化。
+从 .NET 5 开始，如果项目文件夹或其任何上级中存在这样的文件，将自动导入它。 如果项目文件夹中有一个具有此名称的文件，则此自动导入可能会更改生成的行为。 例如，将导入该文件，但是与之前有所不同，如果你特意导入该文件，则导入顺序可能会发生变化。
 
 ## <a name="reason-for-change"></a>更改原因
 

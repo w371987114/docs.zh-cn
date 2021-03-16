@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：不在非 Windows 平台上探测 A/W 后缀
-description: 了解 .NET 5.0 中的以下互操作中断性变更：在非 Windows 平台上探测 P/Invoke 期间，不再将后缀添加到函数导出名称。
+description: 了解 .NET 5 中的互操作中断性变更：在非 Windows 平台上探测 P/Invoke 期间，不再将后缀添加到函数导出名称。
 ms.date: 08/13/2020
-ms.openlocfilehash: a4c612a81796faf80fa257df21232a54f7b95431
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 924cbcb6c432e2f7c52c7218d48a938b61306c9c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759177"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256616"
 ---
 # <a name="no-aw-suffix-probing-on-non-windows-platforms"></a>不在非 Windows 平台上探测 A/W 后缀
 
@@ -23,7 +23,7 @@ ms.locfileid: "95759177"
 
 对于之前版本的 .NET，在导出对 P/Invoke 的发现结果的过程中，CoreCLR 和 Mono 运行时在所有平台上都会向导出名称添加 `A` 或 `W` 后缀。
 
-而对于 .NET 5.0 及更高版本，在导出发现结果的过程中，仅在 Windows 上向导出名称添加 `A` 或 `W` 后缀。 在 Unix 平台上，不会添加后缀。 在 Windows 平台上，这两种运行时的语义保持不变。
+而对于 .NET 5 及更高版本，在导出发现过程中，仅在 Windows 上向导出名称添加 `A` 或 `W` 后缀。 在 Unix 平台上，不会添加后缀。 在 Windows 平台上，这两种运行时的语义保持不变。
 
 ## <a name="reason-for-change"></a>更改原因
 

@@ -4,12 +4,12 @@ description: 了解 ASP.NET Core 5.0 中的以下中断性变更：安全性：C
 author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 3cd40d2b04d0cdf0863e3a3fb6d790c2b35692bc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 00764493fb2d8d300612f2bd9dc6e512b10be25f
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759296"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190055"
 ---
 # <a name="security-cookie-name-encoding-removed"></a>安全性：Cookie 名称编码已删除
 
@@ -46,8 +46,8 @@ ms.locfileid: "95759296"
 
 - <xref:Microsoft.AspNetCore.Http.HttpRequest.Cookies%2A?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.Http.HttpResponse.Cookies%2A?displayProperty=nameWithType>
-- <xref:Microsoft.Owin.IOwinRequest.Cookies?displayProperty=nameWithType>
-- <xref:Microsoft.Owin.IOwinResponse.Cookies?displayProperty=nameWithType>
+- `Microsoft.Owin.IOwinRequest.Cookies`
+- `Microsoft.Owin.IOwinResponse.Cookies`
 
 <!--
 

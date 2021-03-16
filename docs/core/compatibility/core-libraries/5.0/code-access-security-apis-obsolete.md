@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：大多数代码访问安全 API 已过时
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：.NET 中大多数与代码访问安全性 (CAS) 相关的类型现在均已过时，并显示警告。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：.NET 中大多数与代码访问安全性 (CAS) 相关的类型现都已过时并显示警告。
 ms.date: 11/01/2020
-ms.openlocfilehash: e793043e83389730934137d441f7ee776d44540b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc4be58622e81022e74476cf824a19689ba23ea4
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759184"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257630"
 ---
 # <a name="most-code-access-security-apis-are-obsolete"></a>大多数代码访问安全 API 已过时
 
@@ -54,7 +54,7 @@ public void DoDeny()
 }
 ```
 
-在 .NET 5.0 和更高版本中，大多数与 CAS 相关的 API 标记为已过时并生成编译时警告 `SYSLIB0003`。
+在 .NET 5 及更高版本中，大多数与 CAS 相关的 API 被标记为已过时并生成编译时警告 `SYSLIB0003`。
 
 ```csharp
 [SocketPermission(SecurityAction.Assert, Host = "contoso.com", Port = "443")] // warning SYSLIB0003
@@ -65,7 +65,7 @@ public void DoSomething()
 }
 ```
 
-这是仅在编译时进行的更改。 以前版本的 .NET Core 没有运行时更改。 在 .NET Core 2.x - 3.x 中不执行任何操作的方法在 .NET 5.0 及更高版本中将继续在运行时不执行任何操作。 在 .NET Core 2.x - 3.x 中引发 <xref:System.PlatformNotSupportedException> 的方法在 .NET 5.0 及更高版本中将继续在运行时引发 <xref:System.PlatformNotSupportedException>。
+这是仅在编译时进行的更改。 以前版本的 .NET Core 没有运行时更改。 在 .NET Core 2.x - 3.x 中不执行任何操作的方法在 .NET 5 及更高版本中将继续在运行时不执行任何操作。 在 .NET Core 2.x - 3.x 中引发 <xref:System.PlatformNotSupportedException> 的方法在 .NET 5 及更高版本中将继续在运行时引发 <xref:System.PlatformNotSupportedException>。
 
 ## <a name="reason-for-change"></a>更改原因
 
