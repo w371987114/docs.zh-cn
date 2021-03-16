@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：StringInfo 和 TextElementEnumerator 现在与 UAX29 兼容
-description: 了解 .NET 5.0 中的以下全球化中断性变更：StringInfo 和 TextElementEnumerator 将根据最新版 Unicode 标准处理字形群集。
+description: 了解 .NET 5 中的全球化中断性变更：StringInfo 和 TextElementEnumerator 将根据最新版 Unicode 标准处理字形群集。
 ms.date: 04/07/2020
-ms.openlocfilehash: cd5ae5a3eb9f2dd9c02bc179a40d454d24101199
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cf770e30bfadf1973bbe018cc9d2783ed6234723
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759088"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256700"
 ---
 # <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo 和 TextElementEnumerator 现在与 UAX29 兼容
 

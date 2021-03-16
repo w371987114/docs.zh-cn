@@ -5,16 +5,16 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: b9cd308a1eaf2ae8f4e3e89b1a4770933b3978cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 171218dcc4904b797b0c9a66b56bcb970607684e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188403"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104843"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 参数修饰符（C# 参考）
 
-`in` 关键字通过引用传递参数。 它让形参成为实参的别名，这必须是变量。 换而言之，对形参执行的任何操作都是对实参执行的。 它类似于 [ref](ref.md) 或 [out](out-parameter-modifier.md) 关键字，不同之处在于 `in` 参数无法通过调用的方法进行修改。 `out` 参数必须由调用的方法进行修改，这些修改在调用上下文中是可观察的，而 `ref` 参数是可以修改的。
+`in` 关键字会导致按引用传递参数，但确保未修改参数。 它让形参成为实参的别名，这必须是变量。 换而言之，对形参执行的任何操作都是对实参执行的。 它类似于 [ref](ref.md) 或 [out](out-parameter-modifier.md) 关键字，不同之处在于 `in` 参数无法通过调用的方法进行修改。 `out` 参数必须由调用的方法进行修改，这些修改在调用上下文中是可观察的，而 `ref` 参数是可以修改的。
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -120,14 +120,8 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 - 扩展方法的第一个参数不能有 `in` 修饰符，除非该参数是结构。
 - 扩展方法的第一个参数，其中该参数是泛型类型（即使该类型被约束为结构。）
 
+若要详细了解 `in` 修饰符及其与 `ref` 和 `out` 的区别，可查看[编写安全有效的代码](../../write-safe-efficient-code.md)一文。
+
 ## <a name="c-language-specification"></a>C# 语言规范  
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>请参阅
-
-- [C# 参考](../index.md)
-- [C# 编程指南](../../programming-guide/index.md)
-- [C# 关键字](index.md)
-- [方法参数](method-parameters.md)
-- [编写安全高效的代码](../../write-safe-efficient-code.md)

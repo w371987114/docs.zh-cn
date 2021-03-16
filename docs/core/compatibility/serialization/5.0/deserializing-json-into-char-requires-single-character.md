@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：反序列化 char 需要单字符的字符串
-description: 了解 .NET 5.0 中的以下中断性变更：反序列化为 char 目标时，System.Text.Json 在 JSON 中需要单字符字符串。
+description: 了解 .NET 5 中的中断性变更：反序列化为 char 目标时，System.Text.Json 在 JSON 中需要单字符字符串。
 ms.date: 12/15/2020
-ms.openlocfilehash: 39a2d25b00bf8855cfbf46a4d78b8545052703e5
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: e901f8ee7e7521af948a3bcde5cf969640436f7f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633866"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256330"
 ---
 # <a name="systemtextjson-requires-single-char-string-to-deserialize-a-char"></a>System.Text.Json 需要使用单字符字符串才能反序列化 char
 
@@ -19,11 +19,11 @@ ms.locfileid: "97633866"
 
 ```csharp
 // .NET Core 3.0 and 3.1: Returns the first char 'a'.
-// .NET 5.0 and later: Throws JsonException because payload has more than one char.
+// .NET 5 and later: Throws JsonException because payload has more than one char.
 char deserializedChar = JsonSerializer.Deserialize<char>("\"abc\"");
 ```
 
-在 .NET 5.0 和更高版本中，当反序列化目标为 `char` 时，除单 `char` 字符串以外的任何内容都会导致引发 <xref:System.Text.Json.JsonException>。 以下示例字符串在所有 .NET 版本中都已成功反序列化：
+在 .NET 5 及更高版本中，当反序列化目标为 `char` 时，除单 `char` 字符串以外的任何内容都会导致引发 <xref:System.Text.Json.JsonException>。 以下示例字符串在所有 .NET 版本中都已成功反序列化：
 
 ```csharp
 // Correct usage.

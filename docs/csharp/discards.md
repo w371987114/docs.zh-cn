@@ -3,12 +3,12 @@ title: 弃元 - C# 指南
 description: 介绍 C# 对弃元的支持（弃元是未赋值的可丢弃变量），以及弃元的使用方式。
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 3c18fbb0bbb80c2c29c9f5d8334a5dd711b68cc5
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: eefa81d3bd8d56c9296e01533aaf93c4725323a3
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432629"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104947"
 ---
 # <a name="discards---c-guide"></a>弃元 - C# 指南
 
@@ -42,9 +42,9 @@ ms.locfileid: "100432629"
 
 ## <a name="pattern-matching-with-switch"></a>利用 `switch` 的模式匹配
 
-弃元模式可通过 [switch](language-reference/keywords/switch.md) 关键字用于模式匹配。 每个表达式始终匹配弃元模式。 （可将其与 [is](language-reference/keywords/is.md) 表达式一起使用。 不过，这种情况很少出现，因为可以删除弃元，但不会更改其含义。）
+弃元模式可通过 [switch 表达式](language-reference/operators/switch-expression.md)用于模式匹配。 每个表达式（包括 `null`）都始终匹配弃元模式。
 
-以下示例定义了一个 `ProvidesFormatInfo` 方法，该方法使用 [is](language-reference/keywords/is.md) 语句来确定对象是否提供 <xref:System.IFormatProvider> 实现并测试对象是否为 `null`。 它还使用占位符模式来处理任何其他类型的非 null 对象。
+以下示例定义了一个 `ProvidesFormatInfo` 方法，它使用 `switch` 表达式来确定对象是否提供 <xref:System.IFormatProvider> 实现并测试对象是否为 `null`。 它还使用占位符模式来处理任何其他类型的非 null 对象。
 
 :::code language="csharp" source="snippets/discards/discard-pattern2.cs" ID="DiscardSwitchExample" :::
 

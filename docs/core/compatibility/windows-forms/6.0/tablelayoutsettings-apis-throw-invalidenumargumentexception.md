@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：某些 TableLayoutSettings 属性会引发 InvalidEnumArgumentException
-description: 了解 .NET 6.0 中的以下中断性变更：某些 TableLayoutSettings API 现在将针对无效参数引发 InvalidEnumArgumentException。
+description: 了解 .NET 6 中的中断性变更：某些 TableLayoutSettings API 现在将针对无效参数引发 InvalidEnumArgumentException。
 ms.date: 01/18/2021
-ms.openlocfilehash: 8397952e4647347718f11597a100c5d764e7186b
-ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
+ms.openlocfilehash: 2da097122b935ec3a60c2bb009cc8ebbcff6468e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570237"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255719"
 ---
 # <a name="selected-tablelayoutsettings-properties-throw-invalidenumargumentexception"></a>所选的 TableLayoutSettings 属性会引发 InvalidEnumArgumentException
 
@@ -15,7 +15,7 @@ ms.locfileid: "98570237"
 
 ## <a name="change-description"></a>更改描述
 
-在以前的 .NET 版本中，如果尝试分配不正确的值，这些属性会引发 <xref:System.ArgumentOutOfRangeException>。 从 .NET 6.0 开始，这些属性在此情况下会引发 <xref:System.ComponentModel.InvalidEnumArgumentException>。
+在以前的 .NET 版本中，如果尝试分配不正确的值，这些属性会引发 <xref:System.ArgumentOutOfRangeException>。 从 .NET 6 开始，这些属性在此情况下会引发 <xref:System.ComponentModel.InvalidEnumArgumentException>。
 
 ## <a name="reason-for-change"></a>更改原因
 

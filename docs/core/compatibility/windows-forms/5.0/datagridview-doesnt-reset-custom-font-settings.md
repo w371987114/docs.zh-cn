@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：DataGridView 不再重置自定义单元格样式的字体
-description: 了解 .NET 5.0 中的以下中断性变更：如果已自定义单元格样式字体，则 DataGridView 不再重置默认单元格样式字体，以让其与环境字体一致。
+description: 了解 .NET 5 中的中断性变更：如果已自定义单元格样式字体，则 DataGridView 不再重置默认单元格样式字体，以使其与环境字体一致。
 ms.date: 10/18/2020
-ms.openlocfilehash: 708b12ba1305681f5c38eb605861d02e3b2c8eb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fd28fb5a0b508157289dde1b720522ed49163e31
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759309"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256122"
 ---
 # <a name="datagridview-no-longer-resets-fonts-for-customized-cell-styles"></a>DataGridView 不再重置自定义单元格样式的字体
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759309"
 
 在以前的 .NET 版本中，如果环境字体发生更改，<xref:System.Windows.Forms.DataGridViewElement.DataGridView> 将重置并覆盖 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle>、<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle> 和 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> 属性中的用户定义的字体。
 
-从 .NET 5.0 开始，如果在 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle>、<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle> 或 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> 属性中配置了字体设置，即使环境字体发生更改，也会保留这些设置。 对于任何未自定义字体的属性，字体都将被更改为与环境字体设置一致。
+从 .NET 5 开始，如果在 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle>、<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle> 或 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> 属性中配置了字体设置，那么即使环境字体发生更改，也会保留这些设置。 对于任何未自定义字体的属性，字体都将被更改为与环境字体设置一致。
 
 ## <a name="reason-for-change"></a>更改原因
 

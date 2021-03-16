@@ -1,21 +1,21 @@
 ---
 title: 中断性变更：WinForms 对象不可通过本机代码访问
-description: 了解 .NET 5.0 中的中断性变更，即 Windows 窗体对象不可再通过本机代码访问。
+description: 了解 .NET 5 中的中断性变更：不可再通过本机代码访问 Windows 窗体对象。
 ms.date: 01/29/2021
-ms.openlocfilehash: 53343f3f07817f735fa3b0ee77a352dcc80d4b6c
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 823d37cb8115b8669b254878325a350809393e79
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506463"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256084"
 ---
 # <a name="native-code-cant-access-windows-forms-objects"></a>本机代码无法访问 Windows 窗体对象
 
-自 .NET 5.0 起，你就不能再通过本机代码访问 Windows 窗体对象了。
+从 .NET 5 开发，你无法再通过本机代码访问 Windows 窗体对象了。
 
 ## <a name="change-description"></a>更改描述
 
-在旧版 .NET 中，某些 Windows 窗体类型被修饰为对 COM 互操作可见，因此可通过本机代码访问。 自 .NET 5.0 起，Windows 窗体 API 对 COM 互操作不可见或不可通过本机代码访问。 .NET 运行时不再直接支持创建自定义类型库。 此外，.NET 运行时也无法依赖于 .NET Framework 的类型库（这就要求保持类在 .NET Framework 中的形状）。
+在旧版 .NET 中，某些 Windows 窗体类型被修饰为对 COM 互操作可见，因此可通过本机代码访问。 从 .NET 5 开始，Windows 窗体 API 对 COM 互操作不可见或不可通过本机代码访问。 .NET 运行时不再直接支持创建自定义类型库。 此外，.NET 运行时也无法依赖于 .NET Framework 的类型库（这就要求保持类在 .NET Framework 中的形状）。
 
 ## <a name="reason-for-change"></a>更改原因
 
@@ -67,7 +67,7 @@ public class Form1 : Form
 }
 ```
 
-有两种可能的方法可以让此示例在 .NET 5.0 及更高版本上运行：
+可采用两种方法使此示例在 .NET 5 及更高版本上运行：
 
 - 引入支持 `IDispatch` 的用户声明的 `ObjectForScripting` 对象（默认情况下应用，除非在项目级别显式更改）。
 

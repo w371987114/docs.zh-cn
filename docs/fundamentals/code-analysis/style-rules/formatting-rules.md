@@ -1,6 +1,6 @@
 ---
-title: 代码样式格式规则
-description: 了解用于设置缩进、空格和新行的代码样式规则。
+title: 代码样式格式设置规则
+description: 了解用于设置缩进、空格和换行格式的代码样式规则。
 ms.date: 09/25/2020
 ms.topic: reference
 author: gewarren
@@ -16,33 +16,33 @@ helpviewer_keywords:
 - formatting code style rules [EditorConfig]
 - formatting rules
 - EditorConfig formatting conventions
-ms.openlocfilehash: 61e6f6a6afdc6aaf9710eef3143af8ae700ef612
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
-ms.translationtype: MT
+ms.openlocfilehash: 866949692341f65a5b78c7dd5b8eec918873d3b7
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "96590513"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511796"
 ---
 # <a name="formatting-rules"></a>格式设置规则
 
-格式设置规则会影响 .NET 编程语言构造的缩进、空格和新行的对齐方式。 这些规则分为以下几类：
+格式设置规则会影响 .NET 编程语言构造的缩进、空格和换行的排列方式。 规则分为以下几类：
 
-- [.Net 格式规则](#net-formatting-rules)：适用于 c # 和 Visual Basic 的规则。 这些规则的 EditorConfig 选项名称以前缀开头 `dotnet_` 。
-- [C # 格式设置规则](#c-formatting-rules)：仅特定于 c # 语言的规则。 这些规则的 EditorConfig 选项名称以前缀开头 `csharp_` 。
+- [.NET 格式设置规则](#net-formatting-rules)：适用于 C# 和 Visual Basic 的规则。 这些规则的 EditorConfig 选项名称以 `dotnet_` 前缀开头。
+- [C# 格式设置规则](#c-formatting-rules)：仅适用于 C# 语言的规则。 这些规则的 EditorConfig 选项名称以 `csharp_` 前缀开头。
 
-## <a name="rule-id-ide0055-fix-formatting"></a>规则 ID： "IDE0055" (修复格式设置) 
+## <a name="rule-id-ide0055-fix-formatting"></a>规则 ID：“IDE0055”（修复格式设置）
 
-所有格式设置选项都具有规则 ID `IDE0055` 和标题 `Fix formatting` 。 使用以下配置行在 EditorConfig 文件中设置格式设置冲突的严重性。
+所有格式设置选项都具有规则 ID `IDE0055` 和标题 `Fix formatting`。 使用以下配置行在 EditorConfig 文件中设置格式设置冲突的严重性。
 
 ```ini
 dotnet_diagnostic.IDE0055.severity = <severity value>
 ```
 
-严重性值必须是 `warning` 或 `error` 才能 [在生成时强制执行](../overview.md#code-style-analysis)。 对于所有可能的严重性值，请参阅 [严重性级别](../configuration-options.md#severity-level)。
+严重性值必须是 `warning` 或 `error` 才能[在生成时强制执行](../overview.md#code-style-analysis)。 要了解所有可能的严重性值，请参阅[严重性级别](../configuration-options.md#severity-level)。
 
 ## <a name="option-format"></a>选项格式
 
-格式设置规则的选项可在 EditorConfig 文件中指定，格式如下：
+可以在 EditorConfig 文件中指定格式设置规则的选项，格式如下：
 
 `rule_name = value`
 
@@ -50,7 +50,7 @@ dotnet_diagnostic.IDE0055.severity = <severity value>
 
 ## <a name="net-formatting-rules"></a>.NET 格式设置规则
 
-本节中的格式设置规则适用于 c # 和 Visual Basic。
+本节中的格式设置规则适用于 C# 和 Visual Basic。
 
 - [组织 using](#organize-using-directives)
   - dotnet_sort_system_directives_first
@@ -76,7 +76,7 @@ dotnet_separate_import_directive_groups = true
 | **选项名称** | dotnet_sort_system_directives_first |
 | **适用的语言** | C# 和 Visual Basic |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
-| **选项值** | `true` - `System.*` `using` 按字母顺序排序指令，并将其放在其他 using 指令之前。<br /><br />`false` -不要将 `System.*` `using` 指令放在其他 `using` 指令之前。 |
+| **选项值** | `true` - 按字母顺序对 `System.*` `using` 指令排序，并将它们放在其他 using 指令前面。<br /><br />`false` - 不要将 `System.*` `using` 指令放在其他 `using` 指令前面。 |
 
 代码示例：
 
@@ -116,7 +116,7 @@ using System.Threading.Tasks;
 using Octokit;
 ```
 
-## <a name="c-formatting-rules"></a>C # 格式设置规则
+## <a name="c-formatting-rules"></a>C# 格式设置规则
 
 本节中的格式设置规则仅适用于 C# 代码。
 
@@ -1040,7 +1040,7 @@ for (int i = 0; i < x.Length; i++)
 for (int i = 0;i < x.Length;i++)
 ```
 
-##### <a name="csharp_space_before_semicolon_in_for_statement"></a>csharp_space_before_semicolon_in_for_statement
+#### <a name="csharp_space_before_semicolon_in_for_statement"></a>csharp_space_before_semicolon_in_for_statement
 
 |Property|值|
 |-|-|
