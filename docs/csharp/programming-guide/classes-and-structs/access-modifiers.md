@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d800116137e088a54edb221fb4f81ecd47b0278f
-ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
+ms.openlocfilehash: 168965a3d7f5c3d2436bfdc25edb6c78cdabbc05
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98757858"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258333"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>访问修饰符（C# 编程指南）
 
@@ -30,19 +30,19 @@ ms.locfileid: "98757858"
 
 不是所有访问修饰符都可以在所有上下文中由所有类型或成员使用。 在某些情况下，类型成员的可访问性受到其包含类型的可访问性的限制。
 
-## <a name="class-and-struct-accessibility"></a>类和结构可访问性  
+## <a name="class-record-and-struct-accessibility"></a>类、记录和结构可访问性  
 
-直接在命名空间中声明的类和结构（即，没有嵌套在其他类或结构中的类和结构）可以为 `public` 或 `internal`。 如果未指定任何访问修饰符，则默认设置为 `internal`。
+直接在命名空间中声明的类、记录和结构（即，没有嵌套在其他类或结构中的类、记录和结构）可以为 `public` 或 `internal`。 如果未指定任何访问修饰符，则默认设置为 `internal`。
 
 结构成员（包括嵌套的类和结构）可以声明为 `public`、`internal` 或 `private`。 类成员（包括嵌套的类和结构）可以声明为 `public`、`protected internal`、`protected`、`internal`、`private protected` 或 `private`。 默认情况下，类成员和结构成员（包括嵌套的类和结构）的访问级别为 `private`。 不能从包含类型的外部访问私有嵌套类型。
 
-派生类不能具有高于其基类型的可访问性。 不能声明派生自内部类 `A` 的公共类 `B`。 如果允许这样，则它将具有使 `A` 公开的效果，因为可从派生类访问 `A` 的所有 `protected` 或 `internal` 成员。
+派生类和派生记录不能具有高于其基类型的可访问性。 不能声明派生自内部类 `A` 的公共类 `B`。 如果允许这样，则它将具有使 `A` 公开的效果，因为可从派生类访问 `A` 的所有 `protected` 或 `internal` 成员。
 
 可以通过使用 `InternalsVisibleToAttribute` 启用特定的其他程序集访问内部类型。 有关详细信息，请参阅[友元程序集](../../../standard/assembly/friend.md)。
 
-## <a name="class-and-struct-member-accessibility"></a>类和结构成员可访问性  
+## <a name="class-record-and-struct-member-accessibility"></a>类、记录和结构成员可访问性  
 
-可以使用六种访问类型中的任意一种声明类成员（包括嵌套的类和结构）。 结构成员无法声明为 `protected`、`protected internal` 或 `private protected`，因为结构不支持继承。
+可以使用六种访问类型中的任意一种声明类和记录成员（包括嵌套的类、记录和结构）。 结构成员无法声明为 `protected`、`protected internal` 或 `private protected`，因为结构不支持继承。
 
 通常情况下，成员的可访问性不大于包含该成员的类型的可访问性。 但是，如果内部类的 `public` 成员实现了接口方法或替代了在公共基类中定义的虚拟方法，则可从该程序集的外部访问该成员。
 
@@ -52,7 +52,7 @@ ms.locfileid: "98757858"
 
 终结器不能具有可访问性修饰符。
 
-若要设置 `class` 或 `struct` 成员的访问级别，请向成员声明添加适当的关键字，如以下示例中所示。
+若要设置 `class`、`record` 或 `struct` 成员的访问级别，请向成员声明添加适当的关键字，如以下示例中所示。
 
 [!code-csharp[MethodAccess](~/samples/snippets/csharp/objectoriented/accessmodifiers.cs#MethodAccess)]
 

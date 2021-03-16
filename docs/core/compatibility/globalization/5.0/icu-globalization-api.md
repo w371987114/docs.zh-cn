@@ -1,23 +1,23 @@
 ---
 title: 中断性变更：全球化 API 在 Windows 上使用 ICU 库
-description: 了解 .NET 5.0 中的以下全球化中断性变更：ICU 库用于全球化功能而不是 NLS。
+description: 了解 .NET 5 中的全球化中断性变更：ICU 库用于全球化功能而不是 NLS。
 ms.date: 05/19/2020
-ms.openlocfilehash: efc20e21969ea4a83c9122e40b262e1dc38e6770
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4b8580fcb3ba3c9b95357a7922e3a3062ccd3728
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759303"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256746"
 ---
 # <a name="globalization-apis-use-icu-libraries-on-windows"></a>全球化 API 在 Windows 上使用 ICU 库
 
-当在 Windows 10 2019 年 5 月更新或更高版本上运行时，.NET 5.0 及更高版本使用 [Unicode 国际组件 (ICU)](http://site.icu-project.org/home) 库来实现全球化功能。
+当在 Windows 10 2019 年 5 月更新或更高版本上运行时，.NET 5 及更高版本使用 [Unicode 国际组件 (ICU)](http://site.icu-project.org/home) 库来实现全球化功能。
 
 ## <a name="change-description"></a>更改描述
 
 在 .NET Core 1.0 - 3.1 和 .NET Framework 4 及更高版本中，.NET 库使用[本地语言支持 (NLS)](/windows/win32/intl/national-language-support) API 来实现 Windows 上的全球化功能。 例如，NLS 函数用于比较字符串，获取区域性信息，并在适当的区域中执行字符串大小写。
 
-默认情况下，从 .NET 5.0 开始，如果应用在 Windows 10 2019 年 5 月更新或更高版本上运行，.NET 库将使用 [ICU](http://site.icu-project.org/home) 全球化 API。
+从 .NET 5 开始，如果应用在 Windows 10 2019 年 5 月更新或更高版本上运行，.NET 库将默认使用 [ICU](http://site.icu-project.org/home) 全球化 API。
 
 > [!NOTE]
 > Windows 10 2019 年 5 月更新及更高版本随 ICU 本机库一起提供。 如果 .NET 运行时无法加载 ICU，它将改用 NLS。
@@ -37,7 +37,7 @@ Console.WriteLine(idx);
 ```
 
 - 在 Windows 上的早期版本的 .NET 中，代码片段打印 `6`。
-- 在 Windows 19H1 和更高版本上的 .NET 5.0 及更高版本中，代码片段打印 `-1`。
+- 在 Windows 19H1 和更高版本上的 .NET 5 及更高版本中，代码片段会打印 `-1`。
 
 若要通过执行序号搜索而不是区分区域性的搜索来修复此代码，请调用 <xref:System.String.IndexOf(System.String,System.StringComparison)> 重载，并传入 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 作为参数。
 
@@ -55,7 +55,7 @@ string text = string.Format("{0:C}", 100);
 ```
 
 - 在 Windows 上的早期版本的 .NET 中，文本值为 `"100,00 €"`。
-- 在 Windows 19H1 和更高版本上的 .NET 5.0 及更高版本中，文本值为 `"100,00 ¤"`，它使用国际货币符号而不是欧元。 在 ICU 中，这种设计是指，货币是国家或地区的属性，而不是语言。
+- 在 Windows 19H1 和更高版本上的 .NET 5 及更高版本中，文本值为 `"100,00 ¤"`，它使用国际货币符号而不是欧元。 在 ICU 中，这种设计是指，货币是国家或地区的属性，而不是语言。
 
 ## <a name="reason-for-change"></a>更改原因
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: 328c085035927b3f271a39a0ea3992dde29f5119
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 050822d12ef4e0a7dfa752e4789f9861c4894cfa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279098"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259377"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe（按托管配置文件优化工具）
 
@@ -24,7 +24,9 @@ ms.locfileid: "96279098"
 
 当你遇到与中间语言 (IL) 程序集的启动时间和工作集大小相关的性能问题时，建议你先使用 Ngen.exe 消除实时 (JIT) 编译成本和推动代码共享。 如果你需要更多改进，则可使用 Mpgo.exe 进一步优化应用程序。 你可以使用未优化的本机映像程序集的性能数据作为计算性能提升的基准。 使用 Mpgo.exe 可以获得更短的冷启动时间和更小的工作集大小。 Mpgo.exe 将信息到添加 Ngen.exe 用于创建优化的本机映像程序集的 IL 程序集中。 有关详细信息，请参阅 .NET 博客中的 [Improving Launch Performance for your Desktop Applications](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)（提高桌面应用程序的启动性能）。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示），并在命令提示符处键入以下命令。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
+
+在命令提示符处输入以下命令：
 
 对于桌面应用程序：
 
@@ -33,8 +35,6 @@ mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <a
 ```
 
 对于 Windows 8.x 应用商店应用：
-
-## <a name="syntax"></a>语法
 
 ```console
 mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
@@ -133,6 +133,6 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ## <a name="see-also"></a>请参阅
 
 - [Ngen.exe（本机映像生成器）](ngen-exe-native-image-generator.md)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)
 - [Improving Launch Performance for your Desktop Applications](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)（提高桌面应用程序的启动性能）
 - [.NET Framework 4.5 中的性能改进概述](/archive/msdn-magazine/2012/april/clr-an-overview-of-performance-improvements-in-net-4-5)

@@ -1,23 +1,23 @@
 ---
 title: 中断性变更：Thread.Abort 已过时
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：Thread.Abort API 已过时。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：Thread.Abort API 已过时。
 ms.date: 11/01/2020
-ms.openlocfilehash: 6d7dfce8fda393bfd88c9b4cf0c59d53942cee25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 29c688250593801bab9b32b9e787911e561ec000
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759094"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257058"
 ---
 # <a name="threadabort-is-obsolete"></a>Thread.Abort 已过时
 
-<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> API 已过时。 如果调用这些方法，则以 .NET 5.0 或更高版本为目标的项目将遇到编译时警告 `SYSLIB0006`。
+<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> API 已过时。 如果调用这些方法，则面向 .NET 5 或更高版本的项目将遇到编译时警告 `SYSLIB0006`。
 
 ## <a name="change-description"></a>更改说明
 
 以前，对 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 的调用不会生成编译时警告，但该方法确实会在运行时引发 <xref:System.PlatformNotSupportedException>。
 
-从 .NET 5.0 开始，<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 以警告的形式标记为已过时。 调用此方法将生成编译器警告 `SYSLIB0006`。 该方法的实现保持不变，并且继续引发 <xref:System.PlatformNotSupportedException>。
+从 .NET 5 开始，<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 以警告的形式标记为已过时。 调用此方法将生成编译器警告 `SYSLIB0006`。 该方法的实现保持不变，并且继续引发 <xref:System.PlatformNotSupportedException>。
 
 ## <a name="reason-for-change"></a>更改原因
 

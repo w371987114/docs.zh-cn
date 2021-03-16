@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: d10d1851978ef25b7b02503f196cd2a436aab608
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 3bc41e9adeff23dc385d0888163f9edf04772595
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381679"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259612"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等性比较（C# 编程指南）
 
@@ -41,7 +41,7 @@ if (b == a)
 }  
 ```  
   
- 对于大多数其他类型，针对值相等性的测试较为复杂，因为它需要用户了解类型对值相等性的定义方式。 对于具有多个字段或属性的类和结构，值相等性的定义通常指所有字段或属性都具有相同的值。 例如，如果 pointA.X 等于 pointB.X，并且 pointA.Y 等于 pointB.Y，则可以将两个 `Point` 对象定义为相等。  
+ 对于大多数其他类型，针对值相等性的测试较为复杂，因为它需要用户了解类型对值相等性的定义方式。 对于具有多个字段或属性的类和结构，值相等性的定义通常指所有字段或属性都具有相同的值。 例如，如果 pointA.X 等于 pointB.X，并且 pointA.Y 等于 pointB.Y，则可以将两个 `Point` 对象定义为相等。 对记录来说，值相等性是指如果记录类型的两个变量类型相匹配，且所有属性和字段值都一致，那么记录类型的两个变量是相等的。  
   
 但是，并不要求类型中的所有字段均相等。 只需子集相等即可。 比较不具所有权的类型时，应确保明确了解相等性对于该类型是如何定义的。 若要详细了解如何在自己的类和结构中定义值相等性，请参阅[如何为类型定义值相等性](./how-to-define-value-equality-for-a-type.md)。
   
@@ -52,12 +52,13 @@ if (b == a)
 ## <a name="related-topics"></a>相关主题  
   
 |Title|描述|  
-|-----------|-----------------|  
-|[如何测试引用相等性（标识）](./how-to-test-for-reference-equality-identity.md)|介绍如何确定两个变量是否具有引用相等性。|  
-|[如何为类型定义值相等性](./how-to-define-value-equality-for-a-type.md)|介绍如何为类型提供值相等性的自定义定义。|  
-|[C# 编程指南](../index.md)|提供一些链接，这些链接指向重要 C# 语言功能以及通过 .NET 提供给 C# 的功能的相关详细信息。|  
-|[类型](../types/index.md)|提供有关 C# 类型系统的信息以及指向附加信息的链接。|  
-  
-## <a name="see-also"></a>请参阅
+|-----------|-----------------|
+|[如何测试引用相等性（标识）](./how-to-test-for-reference-equality-identity.md)|介绍如何确定两个变量是否具有引用相等性。|
+|[如何为类型定义值相等性](./how-to-define-value-equality-for-a-type.md)|介绍如何为类型提供值相等性的自定义定义。|
+|[C# 编程指南](../index.md)|提供一些链接，这些链接指向重要 C# 语言功能以及通过 .NET 提供给 C# 的功能的相关详细信息。|
+|[类型](../types/index.md)|提供有关 C# 类型系统的信息以及指向附加信息的链接。|
+|[记录](../classes-and-structs/records.md)|提供有关记录类型的信息，默认情况下，记录类型会测试值相等性。|
+
+## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)

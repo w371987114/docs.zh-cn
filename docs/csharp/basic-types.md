@@ -4,12 +4,12 @@ description: 了解所有 C# 程序中的核心类型（数字、字符串和对
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 1ddc6b51e48758d203fa570a664fe06d0a5b52c5
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1c3cdefe6aba300536386fe4bb66d788814bcd9d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439711"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258177"
 ---
 # <a name="types-variables-and-values"></a>类型、变量和值
 
@@ -60,7 +60,7 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
   
 ## <a name="custom-types"></a>自定义类型
 
-可以使用[结构](language-reference/builtin-types/struct.md)、[类](language-reference/keywords/class.md)、[接口](language-reference/keywords/interface.md)，和[枚举](language-reference/builtin-types/enum.md)构造创建你自己的自定义类型。 .NET 类库本身就是 Microsoft 提供的一组自定义类型，以供你在自己的应用程序中使用。 默认情况下，类库中最常用的类型在任何 C# 程序中均可用。 对于其他类型，只有在显式添加对定义这些类型的程序集的项目引用时才可用。 编译器引用程序集之后，你可以声明在源代码的此程序集中声明的类型的变量（和常量）。
+使用[结构](language-reference/builtin-types/struct.md)、[类](language-reference/keywords/class.md)、[记录](language-reference/builtin-types/record.md)、[接口](language-reference/keywords/interface.md)和[枚举](language-reference/builtin-types/enum.md)构造函数自行创建自定义类型。 .NET 类库本身就是 Microsoft 提供的一组自定义类型，以供你在自己的应用程序中使用。 默认情况下，类库中最常用的类型在任何 C# 程序中均可用。 对于其他类型，只有在显式添加对定义这些类型的程序集的项目引用时才可用。 编译器引用程序集之后，你可以声明在源代码的此程序集中声明的类型的变量（和常量）。
   
 ## <a name="generic-types"></a>泛型类型
 

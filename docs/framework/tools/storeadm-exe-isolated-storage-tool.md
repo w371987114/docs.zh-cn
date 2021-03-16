@@ -9,18 +9,18 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-ms.openlocfilehash: 974f3c464ff686a486657d08e77c97299cc94732
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e6c2fc15ba2b6fef27bb57344628638a99103916
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283830"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258733"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe（独立存储工具）
 
 独立存储工具列出或移除当前用户的所有现有存储。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
   
  在命令提示符处，键入以下内容：  
   
@@ -30,7 +30,7 @@ ms.locfileid: "96283830"
 storeadm [/list][/machine][/remove][/roaming][/quiet]  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
   
 |选项|说明|  
 |------------|-----------------|  
@@ -65,4 +65,4 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 
 - [工具](index.md)
 - [独立存储](../../standard/io/isolated-storage.md)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)

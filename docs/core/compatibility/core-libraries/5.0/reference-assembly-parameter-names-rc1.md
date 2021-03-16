@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：RC2 中的参数名称已更改
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：某些引用程序集参数名称已从 .NET 5.0 的预览版本和候选发布版本更改。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：某些引用程序集参数名称已从 .NET 5.0 的预览版本和候选发布版本更改。
 ms.date: 11/01/2020
-ms.openlocfilehash: 554a4fa9e08fdb504f380465496d7e7e9df85814
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: caca9055bda50174b40d5675c6d34679df61deba
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759153"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257188"
 ---
 # <a name="parameter-names-changed-in-rc2"></a>RC2 中的参数名称已更改
 
@@ -15,9 +15,9 @@ ms.locfileid: "95759153"
 
 ## <a name="change-description"></a>更改描述
 
-在以前的 .NET 5.0 预览版和 RC 版本中，某些[引用程序集](../../../../standard/assembly/reference-assemblies.md)参数名称与实现程序集中的对应参数不同。 使用命名参数和反射时，这可能会导致出现问题。
+在之前的 .NET 5 预览版和 RC 版本中，某些[引用程序集](../../../../standard/assembly/reference-assemblies.md)参数名称与实现程序集中的对应参数不同。 使用命名参数和反射时，这可能会导致出现问题。
 
-在 .NET 5.0 RC2 中，这些不匹配的参数名称在引用程序集中已更新，以与实现程序集中的相应参数名完全匹配。
+在 .NET 5 RC2 中，这些不匹配的参数名称在引用程序集中已更新，现与实现程序集中的相应参数名完全匹配。
 
 下表显示了更改的 API 和参数名称。
 
