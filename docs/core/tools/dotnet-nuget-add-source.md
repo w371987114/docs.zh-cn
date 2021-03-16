@@ -2,12 +2,12 @@
 title: dotnet nuget add source 命令
 description: Dotnet nuget add source 命令将新的包源添加到 NuGet 配置文件中。
 ms.date: 03/20/2020
-ms.openlocfilehash: b847d987de2d88cb3452d32d1bc84232a1e20b6e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: df31a2eaba997d0e9fe4f4c2666052fd7c7c2f03
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537968"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105046"
 ---
 # <a name="dotnet-nuget-add-source"></a>dotnet nuget add source
 
@@ -30,6 +30,9 @@ dotnet nuget add source -h|--help
 ## <a name="description"></a>描述
 
 `dotnet nuget add source` 命令将新的包源添加到 NuGet 配置文件中。
+
+> [!WARNING]
+> 添加多个包源时，请注意不要引入[依赖关系混乱漏洞](https://aka.ms/pkg-sec-wp)。
 
 ## <a name="arguments"></a>自变量
 

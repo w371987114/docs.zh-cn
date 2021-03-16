@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-ms.openlocfilehash: 895e39593b5e84d708392d3d994267b25bc4eeea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 90c989bcf21e24cf7ccf410c9a18a44cde81233e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244166"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478213"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用跟踪和调试执行有条件编译
 
@@ -67,7 +67,7 @@ ms.locfileid: "96244166"
     |`-d:`|定义条件编译符号|  
   
     > [!NOTE]
-    > 必须用大写字母来拼写 TRACE 或 DEBUG。 有关条件编译命令的详细信息，请在命令提示处输入 `vbc /?`（对于 Visual Basic）或 `csc /?`（对于 C#）。 有关详细信息，请参阅[从命令行生成](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) 或[调用命令行编译器](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic)。  
+    > 必须用大写字母来拼写 TRACE 或 DEBUG。 有关条件编译命令的详细信息，请在命令提示处输入 `vbc /?`（对于 Visual Basic）或 `csc /?`（对于 C#）。 有关详细信息，请参阅[从命令行生成](../../csharp/language-reference/compiler-options/index.md) (C#) 或[调用命令行编译器](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic)。  
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>使用 #CONST 或 #define 执行条件编译  
   
@@ -102,5 +102,5 @@ ms.locfileid: "96244166"
 - [跟踪开关](trace-switches.md)
 - [跟踪侦听器](trace-listeners.md)
 - [如何：向应用程序代码添加跟踪语句](how-to-add-trace-statements-to-application-code.md)
-- [如何为 Visual Studio 命令行设置环境变量](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [如何为 Visual Studio 命令行设置环境变量](../../csharp/language-reference/compiler-options/index.md)
 - [如何：调用命令行编译器](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

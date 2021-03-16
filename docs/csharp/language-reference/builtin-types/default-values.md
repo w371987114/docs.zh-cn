@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 72d6249ed56ae6ae34a6f51102e1e7bbd3f64ab7
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507251"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104110"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>C# 类型的默认值（C# 参考）
 
@@ -18,7 +18,7 @@ ms.locfileid: "79507251"
 
 |类型|默认值|
 |---------|------------------|
-|任何引用类型|`null`|
+|任何[引用类型](../keywords/reference-types.md)|`null`|
 |任何[内置整数数值类型](integral-numeric-types.md)|0（零）|
 |任何[内置浮点型数值类型](floating-point-numeric-types.md)|0（零）|
 |[bool](bool.md)|`false`|

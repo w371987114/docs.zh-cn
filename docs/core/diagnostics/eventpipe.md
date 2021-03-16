@@ -3,12 +3,12 @@ title: EventPipe 概述
 description: 了解 EventPipe 以及如何使用它来跟踪 .NET 应用程序，以诊断性能问题。
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: f315beafabbd99bf78647b3f714fd76d93fcac28
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 213d15e48ac9d50af0c87565738f952295c4f041
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582977"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105292"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -77,10 +77,11 @@ EventPipe 和 ETW/LTTng 之间的另一个主要区别是管理员/根用户权�
 
 * `COMPlus_EventPipeOutputPath`：输出 EventPipe 跟踪文件（配置为通过 `COMPlus_EnableEventPipe` 运行时）的路径。 默认值为 `trace.nettrace`，将在运行应用的同一目录中创建该默认值。
 
-* `COMPlus_CircularBufferMB`：EventPipe 使用的内部缓冲区（配置为通过 `COMPlus_EnableEventPipe` 运行时）的大小。
+* `COMPlus_EventPipeCircularMB`：一个十六进制值，它表示 EventPipe 的内部缓冲区大小（以 MB 为单位）。 仅当 EventPipe 配置为通过 `COMPlus_EnableEventPipe` 运行时，才使用此配置值。 默认缓冲区大小为 1024 MB，而由于 `0x400` == `1024`，它转换为设置成 `400` 的环境变量。
+
+* `COMPlus_EventPipeProcNumbers`：将此项设置为 `1`，以在 EventPipe 事件标头中捕获处理器数。 默认值为 `0`。
 
 * `COMPlus_EventPipeConfig`：使用 `COMPlus_EnableEventPipe` 启动 EventPipe 会话时设置 EventPipe 会话配置。
-
   语法如下：
 
   `<provider>:<keyword>:<level>`

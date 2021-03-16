@@ -2,12 +2,12 @@
 title: dotnet tool install 命令
 description: Dotnet tool install 命令在计算机上安装指定的 .NET 工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 1dd870a8f91e557a2f59919682616aa8817fc070
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b04e7fd24edce5d5da67cdd83fbea797118689b4
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634319"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206476"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -71,15 +71,15 @@ dotnet new tool-manifest
 
 ## <a name="options"></a>选项
 
-- **`add-source <SOURCE>`**
+- **`--add-source <SOURCE>`**
 
-  添加安装过程中要使用的其他 NuGet 包源。
+  添加安装过程中要使用的其他 NuGet 包源。 系统会并行访问这些源，而不是按某种优先级顺序依次访问。 如果同一个包和版本在多个源中，则选取速度最快的源。 有关详细信息，请查看[安装 NuGet 包时会发生什么情况？](/nuget/concepts/package-installation-process)。
 
-- **`configfile <FILE>`**
+- **`--configfile <FILE>`**
 
   要使用的 NuGet 配置 (nuget.config) 文件。
 
-- **`framework <FRAMEWORK>`**
+- **`--framework <FRAMEWORK>`**
 
   指定要安装工具的[目标框架](../../standard/frameworks.md)。 默认情况下，.NET SDK 尝试选择最合适的目标框架。
 
@@ -91,7 +91,7 @@ dotnet new tool-manifest
 
   打印出有关命令的简短帮助。
 
-- **`tool-path <PATH>`**
+- **`--tool-path <PATH>`**
 
   指定全局工具的安装位置。 路径可以是绝对的，也可以是相对的。 如果路径不存在，命令会尝试创建它。 省略 `--global` 和 `--tool-path` 指定本地工具安装。
 

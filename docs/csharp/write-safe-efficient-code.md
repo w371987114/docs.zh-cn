@@ -4,12 +4,12 @@ description: 通过 C# 语言最新增强功能，可以编写可验证的安全
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: c324f3603c69555b40efa56d8e26c046c28f3a7c
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: b739a4ce1f723798cbe50ef9eae673494996751c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82021479"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106613"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>编写安全有效的 C# 代码
 
@@ -160,8 +160,7 @@ public struct Point3D
 
 `originReference` 的声明需要 `readonly` 修饰符。
 
-编译器可强制使调用方不能修改引用。 直接分配给该值的尝试会生成编译时错误。 但是，编译器无法得知某一成员方法是否修改该结构的状态。
-若要确保该对象未被修改，编译器将创建副本并使用该副本调用成员引用。 任何修改均针对该防御性副本。
+编译器可强制使调用方不能修改引用。 直接分配给该值的尝试会生成编译时错误。 在其他情况下，编译器会分配防御性副本，除非它可安全地使用只读引用。 静态分析规则会确定是否可修改结构。 当结构为 `readonly struct`，或者成员为结构的 `readonly` 成员时，编译器不会创建防御性副本。 无需使用防御性副本即可将结构作为 `in` 参数进行传递。
 
 ## <a name="apply-the-in-modifier-to-readonly-struct-parameters-larger-than-systemintptrsize"></a>将 `in` 修饰符应用于大于 `System.IntPtr.Size` 的 `readonly struct` 参数
 

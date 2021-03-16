@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: bd618714a9bd27bc309b7933b656de6bd139cfe7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3901bb74e4091406140f8c2d955a3a5150604b57
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554887"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605342"
 ---
 # <a name="interop-marshaling"></a>互操作封送处理
 
@@ -69,7 +69,7 @@ COM 也有一个在 COM 单元或不同的 COM 进程之间封送数据的封送
 
 当托管客户端和非托管服务器位于同一单元中时，互操作封送处理服务处理所有数据封送。 但是，当客户端和服务器在不同的单元中初始化时，还需要 COM 封送处理。 下图显示跨单元调用的元素：
 
-![COM 封送处理](./media/interop-marshaling/single-process-across-multi-apartment.gif ".NET 客户端和 COM 对象之间的跨单元调用")
+![.NET 客户端和 COM 对象之间的跨单元调用](./media/interop-marshaling/single-process-across-multi-apartment.gif)
 
 对于跨单元封送，可以执行下列操作：
 
@@ -90,7 +90,7 @@ COM 也有一个在 COM 单元或不同的 COM 进程之间封送数据的封送
 
 下图显示互操作封送处理和 COM 封送处理如何跨进程和主机边界提供通信信道：
 
-![COM 封送处理](./media/interop-marshaling/interop-and-com-marshaling.gif "跨进程封送")
+![跨进程封送](./media/interop-marshaling/interop-and-com-marshaling.gif)
 
 ### <a name="preserving-identity"></a>保留标识
 

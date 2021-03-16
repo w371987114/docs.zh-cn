@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：将 RCW 强制转换为 `InterfaceIsIInspectable` 会引发异常
-description: 了解 .NET 5.0 中的以下互操作中断性变更：将 RCW 强制转换为 `InterfaceIsIInspectable` 接口会引发 PlatformNotSupportedException。
+description: 了解 .NET 5 中的互操作中断性变更：将 RCW 强制转换为 `InterfaceIsIInspectable` 接口会引发 PlatformNotSupportedException。
 ms.date: 09/13/2020
-ms.openlocfilehash: 7c0f37057aebcc41d0c00d949b921ec3a4bdf012
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f777ee9396f7822c9ff6bf5209021c07b8b618a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759176"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256629"
 ---
 # <a name="casting-rcw-to-an-interfaceisiinspectable-interface-throws-platformnotsupportedexception"></a>将 RCW 强制转换为 `InterfaceIsIInspectable` 接口会引发 PlatformNotSupportedException
 
@@ -19,13 +19,13 @@ ms.locfileid: "95759176"
 
 ## <a name="change-description"></a>更改描述
 
-在 .NET 5.0 预览版 6 之前的 .NET 版本中，将 RCW 强制转换为标记为 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 的接口的行为符合预期。 在 .NET 5.0 预览版 6-8 和 RC1 中，可以将 RCW 成功转换为 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 接口。 但是，对接口执行方法时，可能会出现访问冲突，因为[已在 .NET 5.0 预览版 6 中删除](built-in-support-for-winrt-removed.md)运行时中的基础支持。
+在低于 .NET 5 预览版 6 的 .NET 版本中，将 RCW 强制转换为标记为 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 的接口的行为符合预期。 在 .NET 5 预览版 6-8 和 RC1 中，可将 RCW 成功转换为 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 接口。 但在对接口执行方法时，可能会出现访问冲突，因为[已在 .NET 5 预览版 6 中删除](built-in-support-for-winrt-removed.md)运行时中的基础支持。
 
-在 .NET 5.0 RC2 和更高版本中，将 RCW 强制转换为标记为 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 的接口将在转换时引发 <xref:System.PlatformNotSupportedException>。
+在 .NET 5 RC2 及更高版本中，将 RCW 强制转换为标记为 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 的接口将在转换时引发 <xref:System.PlatformNotSupportedException>。
 
 ## <a name="reason-for-change"></a>更改原因
 
-在[以前的 .NET 5.0 预览版](built-in-support-for-winrt-removed.md)中删除了对 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 的支持。 但是，意外忽视了强制转换到 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 接口的操作。 由于运行时中的基础支持不再存在，引发 <xref:System.PlatformNotSupportedException> 会启用正常故障路径。 引发异常还让你更容易发现已不再支持此功能。
+在[以前的 .NET 5 预览版](built-in-support-for-winrt-removed.md)中删除了对 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 的支持。 但是，意外忽视了强制转换到 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 接口的操作。 由于运行时中的基础支持不再存在，引发 <xref:System.PlatformNotSupportedException> 会启用正常故障路径。 引发异常还让你更容易发现已不再支持此功能。
 
 ## <a name="recommended-action"></a>建议的操作
 

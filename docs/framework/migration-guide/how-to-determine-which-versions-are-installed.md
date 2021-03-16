@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining installed versions
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: a219514fafdcb17db259e089afa8318dbab24811
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 817e7ad7b10e11675fb055b1243a8584196cc2b5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851824"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258619"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定已安装的 .NET Framework 版本
 
@@ -208,7 +208,7 @@ v4.0
 
 - **Clrver 工具**
 
-  使用 [CLR 版本工具 (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) 确定计算机上安装了哪些版本的 CLR。 打开 [Visual Studio 开发人员命令提示](../tools/developer-command-prompt-for-vs.md)并输入 `clrver`。
+  使用 [CLR 版本工具 (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) 确定计算机上安装了哪些版本的 CLR。 打开[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)，然后输入 `clrver`。
 
   示例输出：
 

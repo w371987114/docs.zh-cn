@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: d1644ff4d69c857e36e87f7e83f668908b7ba021
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1a9806cd71f9990d9ce70b35b3af760a22347003
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275757"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258798"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe（许可证编译器）
 
@@ -28,7 +28,7 @@ ms.locfileid: "96275757"
   
  在生成项目时，如果使用许可证编译器，则不支持在 32 位与 64 位之间进行交叉编译。 这是因为，许可证编译器必须加载程序集，而不允许从 32 位应用程序加载 64 位程序集，反之亦然。 在这种情况下，使用许可证编译器从命令行手动编译许可证，并指定相应的体系结构。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -99,4 +99,4 @@ lc @response.rsp
 
 - [工具](index.md)
 - [Al.exe（程序集链接器）](al-exe-assembly-linker.md)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)

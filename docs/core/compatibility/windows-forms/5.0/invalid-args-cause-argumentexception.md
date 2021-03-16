@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：WinForms 方法现在会引发 ArgumentException
-description: 了解 .NET 5.0 中的以下中断性变更：某些 Windows 窗体方法现在将针对无效参数引发 ArgumentException。
+description: 了解 .NET 5 中的中断性变更：某些 Windows 窗体方法现在将针对无效参数引发 ArgumentException。
 ms.date: 07/18/2020
-ms.openlocfilehash: 892f4d16b80f3e42187480a7fcfb24e81868d07c
-ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
+ms.openlocfilehash: 9823e9162a562081cdd64346a502ca136b51fa75
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570211"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256131"
 ---
 # <a name="winforms-methods-now-throw-argumentexception"></a>WinForms 方法现在会引发 ArgumentException
 
@@ -15,7 +15,7 @@ ms.locfileid: "98570211"
 
 ## <a name="change-description"></a>更改描述
 
-以前，如果将异常类型或错误类型的参数传递给某些 Windows 窗体方法，会导致不确定的状态。 从 .NET 5.0 开始，在传递无效参数后，这些方法现在会引发 <xref:System.ArgumentException>。
+以前，如果将异常类型或错误类型的参数传递给某些 Windows 窗体方法，会导致不确定的状态。 从 .NET 5 开始，在传递无效参数后，这些方法现会引发 <xref:System.ArgumentException>。
 
 引发 <xref:System.ArgumentException> 符合 .NET 运行时的行为。 它还通过清楚地指示具体的无效参数来改进调试体验。
 

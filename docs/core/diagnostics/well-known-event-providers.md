@@ -3,12 +3,12 @@ title: .NET 中的已知事件提供程序
 description: 查看 .NET 运行时和库发布的提供程序和事件。
 ms.topic: reference
 ms.date: 12/21/2020
-ms.openlocfilehash: 03d505f33e300b094958676bb768fb542d828aeb
-ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
+ms.openlocfilehash: 37aa9551397bb3e3e8858a1289ddc3921327b722
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97738185"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105162"
 ---
 # <a name="well-known-event-providers-in-net"></a>.NET 中的已知事件提供程序
 
@@ -113,3 +113,9 @@ ms.locfileid: "97738185"
 ASP.NET Core 还提供了数种事件来帮助诊断 ASP.NET Core 堆栈中的问题。
 
 若要详细了解 ASP.NET Core 中的事件以及如何使用这些事件，请参阅[登录 .NET Core 和 ASP.NET Core](/aspnet/core/fundamentals/logging/)。
+
+## <a name="entity-framework-core"></a>Entity Framework Core
+
+EF Core 也提供了事件来帮助你诊断 EF Core 中的问题。
+
+若要详细了解 EF Core 中的事件及其使用方式，请查看 [EF Core 中的 .NET 事件](/ef/core/logging-events-diagnostics/events)。

@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：API 已过时并带有非默认诊断 ID
-description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：某些 API 使用自定义诊断 ID 标记了为已过时。
+description: 了解核心 .NET 库中的 .NET 5 中断性变更：某些 API 使用自定义诊断 ID 被标记了为已过时。
 ms.date: 11/01/2020
-ms.openlocfilehash: 9bd7ce18aed38955f9abc91e0c8b09e827c401d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9aa4543ae6660f2d2fceac2419340bc6c90f1c54
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759261"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257370"
 ---
 # <a name="api-obsoletions-with-non-default-diagnostic-ids"></a>API 已过时并带有非默认诊断 ID
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759261"
 
 ## <a name="change-description"></a>更改描述
 
-在以前的 .NET 版本中，可以使用这些 API，而不会引发任何生成警告。 在 .NET 5.0 和更高版本中，使用这些 API 会生成编译时警告或错误，并提供自定义诊断 ID。 使用自定义诊断 ID 可单独取消某个过时警告，而不是取消所有过时警告。
+在以前的 .NET 版本中，可以使用这些 API，而不会引发任何生成警告。 在 .NET 5 及更高版本中，使用这些 API 会生成编译时警告或错误，并显示自定义诊断 ID。 使用自定义诊断 ID 可单独取消某个过时警告，而不是取消所有过时警告。
 
 下表列出了已过时 API 的自定义诊断 ID 及其相应的警告消息。
 

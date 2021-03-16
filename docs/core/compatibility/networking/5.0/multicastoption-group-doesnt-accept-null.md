@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：MulticastOption.Group 不接受 null 值
-description: 了解 .NET 5.0 中的以下中断性变更：MulticastOption.Group 不再接受 null 值。
+description: 了解 .NET 5 中的中断性变更：MulticastOption.Group 不再接受 null 值。
 ms.date: 08/18/2020
-ms.openlocfilehash: 164ac8c2c8dd14f9e0758017e54eeb377f88a7e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 09c6415d275361abee8285aabdda13ccd9727043
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759121"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256447"
 ---
 # <a name="multicastoptiongroup-doesnt-accept-a-null-value"></a>MulticastOption.Group 不接受 null 值
 
@@ -21,7 +21,7 @@ ms.locfileid: "95759121"
 
 在早期版本的 .NET 中，可以将 <xref:System.Net.Sockets.MulticastOption.Group?displayProperty=nameWithType> 属性设置为 `null`。 如果 <xref:System.Net.Sockets.MulticastOption> 稍后传递给 <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType>，则运行时将引发 <xref:System.NullReferenceException>。
 
-在 .NET 5.0 和更高版本中，如果将属性设置为 `null`，则会引发 <xref:System.ArgumentNullException>。
+在 .NET 5 及更高版本中，如果将属性设置为 `null`，则会引发 <xref:System.ArgumentNullException>。
 
 ## <a name="reason-for-change"></a>更改原因
 

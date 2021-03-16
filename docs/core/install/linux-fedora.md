@@ -3,13 +3,13 @@ title: 在 Fedora 上安装 .NET - .NET
 description: 演示在 Fedora 上安装 .NET SDK 和 .NET 运行时的各种方式。
 author: adegeo
 ms.author: adegeo
-ms.date: 01/06/2021
-ms.openlocfilehash: 9dd8c6264831e2a9382960be505639f1eba95151
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.date: 02/17/2021
+ms.openlocfilehash: efaad4788db2200b1a47f9b4ae2414730588c6ae
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970819"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255747"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a>在 Fedora 上安装 .NET SDK 或 .NET 运行时
 
@@ -17,31 +17,19 @@ ms.locfileid: "97970819"
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
-[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+有关在不使用包管理器的情况下安装 .NET 的详细信息，请参阅以下文章之一：
+
+- [通过 Snap 安装 .NET SDK 或 .NET Runtime。](linux-snap.md)
+- [使用脚本安装 .NET SDK 或 .NET Runtime。](linux-scripted-manual.md#scripted-install)
+- [手动安装 .NET SDK 或 .NET Runtime。](linux-scripted-manual.md#manual-install)
 
 ## <a name="install-net-50"></a>安装 .NET 5.0
 
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-**Fedora 32**
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/32/prod.repo
-```
-
-**Fedora 33**
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/33/prod.repo
-```
+Fedora 的默认包存储库中提供的 .NET 最新版是 .NET 5.0。
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="install-net-core-31"></a>安装 .NET Core 3.1
-
-Fedora 的默认包存储库中提供的最新 .NET 版本为 .NET Core 3.1。
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
@@ -109,7 +97,11 @@ Fedora 的早期版本的默认包存储库中并不包含 .NET Core。 可使�
 
 ### <a name="unable-to-find-package"></a>找不到包
 
-[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+有关在不使用包管理器的情况下安装 .NET 的详细信息，请参阅以下文章之一：
+
+- [通过 Snap 安装 .NET SDK 或 .NET Runtime。](linux-snap.md)
+- [使用脚本安装 .NET SDK 或 .NET Runtime。](linux-scripted-manual.md#scripted-install)
+- [手动安装 .NET SDK 或 .NET Runtime。](linux-scripted-manual.md#manual-install)
 
 ### <a name="failed-to-fetch"></a>未能提取
 

@@ -5,12 +5,12 @@ ms.topic: error-reference
 ms.date: 02/12/2021
 f1_keywords:
 - NETSDK1045
-ms.openlocfilehash: 900402ae01f945b1096170ea4fc79d00ea789b62
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 7f21270fdc7c2db862a49302a302bf8121fc86a5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488191"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104097"
 ---
 # <a name="netsdk1045-the-current-net-sdk-does-not-support-newer-version-as-a-target"></a>NETSDK1045：当前的 .NET SDK 不支持将“更新的版本”作为目标。
 
@@ -40,7 +40,7 @@ dotnet --list-sdks
 
 .NET SDK 的每个版本均可用于 x86 和 x64 体系结构。 项目可能会尝试查找适用于错误体系结构的 .NET SDK，或者适用于项目所需体系结构的 .NET SDK 可能未安装。 检查所需体系结构的安装文件夹。 例如，在 Windows 上，x86 版本的 .NET SDK 安装在 C:\Program Files (x86)\dotnet 中，而 x64 版本安装在 C:\Program Files\dotnet 中。 请参阅[如何检查是否已安装 .NET](../../install/how-to-detect-installed-versions.md) 并选择操作系统，查明如何检测计算机上安装的内容。
 
-如果未安装所需的版本，请从[此处](https://dotnet.microsoft.com/download/dotnet-core)下载。
+如果未安装所需的版本，请在 [.NET 下载](https://dotnet.microsoft.com/download/dotnet)页面找到你需要的版本。
 
 ## <a name="preview-not-enabled"></a>未启用预览版
 

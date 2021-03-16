@@ -4,12 +4,12 @@ description: 了解如何在运行 .NET CLI 命令时使用 global.json 文件�
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 02a0ab478a23f7df55a8cc2e872e480b311304fe
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: cc471cf5b50cf91c38b46607ccf38bd4d087aa6a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633994"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104136"
 ---
 # <a name="globaljson-overview"></a>global.json 概述
 
@@ -153,7 +153,7 @@ ms.locfileid: "94633994"
 
 最好能知道计算机上安装了哪些 SDK 版本，以便在 global.json 文件中设置相应版本。 有关如何执行此操作的详细信息，请参阅[如何检查是否已安装 .NET](../install/how-to-detect-installed-versions.md#check-sdk-versions)。
 
-若要在计算机上安装其他 .NET SDK 版本，请访问[下载 .NET Core](https://dotnet.microsoft.com/download/dotnet-core) 页面。
+若要在计算机上安装其他 .NET SDK 版本，请访问[下载 .NET](https://dotnet.microsoft.com/download/dotnet) 页面。
 
 可执行 [dotnet new](dotnet-new.md) 命令在当前目录中创建一个新的 global.json 文件，类似于以下示例：
 

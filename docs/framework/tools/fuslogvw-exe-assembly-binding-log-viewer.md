@@ -10,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-ms.openlocfilehash: 949f9cf98d5eb4e100be9837be120038f085cc40
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: d9c028507c19ef8599e58b38dcdf15af2ede1dee
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167127"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259273"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe（程序集绑定日志查看器）
 
@@ -24,17 +24,30 @@ ms.locfileid: "87167127"
 > [!IMPORTANT]
 > 你必须使用管理员特权运行 fuslogvw.exe。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
 
-在命令提示符处，键入以下内容：
+在命令提示符处，输入下列命令：
 
 ```console
 fuslogvw
 ```
 
-查看器将为每个失败的程序集绑定显示一个条目。 对于每次失败，查看器将描述启动绑定的应用程序、绑定所针对的程序集（包括名称、版本、区域性和公钥）以及失败的日期和时间。
+查看器将为每个失败的程序集绑定显示一个条目。 对于每一次失败，查看器都会描述：
 
-### <a name="to-change-the-log-location-view"></a>更改日志位置视图
+- 启动了绑定的应用程序
+- 绑定的程序集，包括名称、版本、区域性和公钥
+- 失败的日期和时间
+
+## <a name="how-to"></a>如何
+
+- [更改日志位置视图](#change-the-log-location-view)
+- [查看有关特定失败的详细信息](#view-details-about-a-specific-failure)
+- [删除条目](#delete-entries)
+- [刷新用户界面](#refresh-the-user-interface)
+- [更改日志设置](#change-the-log-settings)
+- [查看“关于”对话框](#view-the-about-dialog)
+
+### <a name="change-the-log-location-view"></a>更改日志位置视图
 
 1. 选择“默认”选项按钮以查看所有应用程序类型的绑定失败。 默认情况下，日志条目存储在磁盘上 wininet 缓存中基于用户的目录中。
 
@@ -43,7 +56,7 @@ fuslogvw
     > [!NOTE]
     > 默认的绑定位置优于自定义绑定位置。 运行时将默认绑定位置存储在 wininet 缓存中，因而可以自动清除该位置。如果你指定了自定义绑定位置，则需负责将其清除。
 
-### <a name="to-view-details-about-a-specific-failure"></a>查看有关特定失败的详细信息
+### <a name="view-details-about-a-specific-failure"></a>查看有关特定失败的详细信息
 
 1. 在查看器中选择所需条目的应用程序名称。
 
@@ -97,33 +110,35 @@ LOG: Attempting download of new URL file:///C:/Program Files/Microsoft.NET/Frame
 LOG: All probing URLs attempted and failed.
 ```
 
-### <a name="to-delete-a-single-entry-from-the-log"></a>从日志中删除单一条目
+### <a name="delete-entries"></a>删除条目
+
+从日志中删除一个条目：
 
 1. 在查看器中选择一个条目。
 
 2. 单击“删除条目”按钮。
 
-### <a name="to-delete-all-entries-from-the-log"></a>从日志中删除所有条目
+从日志中删除所有条目：
 
 - 单击“全部删除”按钮。
 
-### <a name="to-refresh-the-user-interface"></a>刷新用户界面
+### <a name="refresh-the-user-interface"></a>刷新用户界面
 
 - 单击“刷新”按钮。 查看器在其运行时不会自动检测新的日志条目。 必须使用“刷新”按钮来显示它们。
 
-### <a name="to-change-the-log-settings"></a>更改日志设置
+### <a name="change-the-log-settings"></a>更改日志设置
 
-- 单击“设置”按钮以打开“日志设置”对话框 。
+单击“设置”按钮以打开“日志设置”对话框 。
 
-### <a name="to-view-the-about-dialog"></a>查看“关于”对话框
+### <a name="view-the-about-dialog"></a>查看“关于”对话框
 
-- 单击“关于”按钮。
+单击“关于”按钮。
 
 ## <a name="binding-logs-for-native-images"></a>本机映像的绑定日志
 
 默认情况下，Fuslogvw.exe 将记录普通的程序集绑定请求。 此外，还可以记录使用 [Ngen.exe（本机映像生成器）](ngen-exe-native-image-generator.md)创建的本机映像的程序集绑定。
 
-#### <a name="to-log-assembly-binds-for-native-images"></a>记录本机映像的程序集绑定
+### <a name="log-assembly-binds-for-native-images"></a>记录本机映像的程序集绑定
 
 - 在“日志类别”组中，选择“本机映像”选项按钮 。
 
@@ -185,23 +200,23 @@ Discarding native image.
 
 可以使用“日志设置”对话框执行下列操作。
 
-#### <a name="to-disable-logging"></a>禁用日志记录
+### <a name="to-disable-logging"></a>禁用日志记录
 
 - 选择“已禁用日志”选项按钮。  注意，默认情况下此选项处于选中状态。
 
-#### <a name="to-log-assembly-binds-in-exceptions"></a>记录程序集绑定异常
+### <a name="to-log-assembly-binds-in-exceptions"></a>记录程序集绑定异常
 
 - 选择“记录异常文本”选项按钮。 仅在异常文本中记录最低详细程度的合成日志信息。 若要查看完整信息，请使用其他设置之一。
 
   请参见有关以非特定域方式加载的程序集的“重要事项”说明。
 
-#### <a name="to-log-assembly-bind-failures"></a>记录程序集绑定失败
+### <a name="to-log-assembly-bind-failures"></a>记录程序集绑定失败
 
 - 选择“记录失败绑定到磁盘”选项按钮。
 
   请参见有关以非特定域方式加载的程序集的“重要事项”说明。
 
-#### <a name="to-log-all-assembly-binds"></a>记录所有程序集绑定
+### <a name="to-log-all-assembly-binds"></a>记录所有程序集绑定
 
 - 选择“记录所有绑定到磁盘”选项按钮。
 
@@ -210,7 +225,7 @@ Discarding native image.
 > [!IMPORTANT]
 > 当程序集以非特定域方式加载时（例如，将 <xref:System.AppDomainSetup.LoaderOptimization%2A> 属性设置为 <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> 或 <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>），打开日志记录可能会在某些情况下泄露内存。 如果在将非特定域的模块载入一个应用程序域中时记录日志条目，随后又卸载该应用程序域，则将可能出现这种情况。 在进程结束前可能不会释放该日志条目。 一些调试器会自动启用日志记录。
 
-#### <a name="to-enable-a-custom-log-path"></a>启用自定义日志路径
+### <a name="to-enable-a-custom-log-path"></a>启用自定义日志路径
 
 1. 选择“启用自定义日志路径”选项按钮。
 
@@ -219,9 +234,9 @@ Discarding native image.
 > [!NOTE]
 > [程序集绑定日志查看器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 使用 Internet Explorer (IE) 缓存来存储其绑定日志。 由于 IE 缓存中偶尔会出现损坏，因此[程序集绑定日志查看器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 有时会停止在查看窗口中显示新的绑定日志。 受此损坏的影响，.NET 绑定基础结构（合成）将无法写入或读取绑定日志。 （如果使用自定义日志路径，则不会遇到此问题。）若要修复损坏并允许合成再次显示绑定日志，请通过在 IE 的“Internet 选项”对话框中删除临时的 Internet 文件来清除 IE 缓存。
 >
-> 如果非托管应用程序通过实现 `IHostAssemblyManager` 和 `IHostAssemblyStore` 接口承载公共语言运行时，则不能将日志条目存储在 wininet 缓存中。  若要查看实现这些接口的自定义宿主的日志条目，你必须指定替代日志路径。
+> 如果非托管应用程序通过实现 `IHostAssemblyManager` 和 `IHostAssemblyStore` 接口承载公共语言运行时，则不能将日志条目存储在 wininet 缓存中。 若要查看实现这些接口的自定义宿主的日志条目，你必须指定替代日志路径。
 
-#### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>为运行在 Windows 应用程序容器中的应用程序启用日志记录
+### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>为运行在 Windows 应用程序容器中的应用程序启用日志记录
 
 1. 启用自定义日志路径，如上一过程所述。 默认情况下，在 Windows 应用程序容器中运行的应用程序对硬盘具有有限的访问权限。 你指定的目录将对应用程序容器中的所有应用程序具有读/写权限。
 
@@ -236,4 +251,4 @@ Discarding native image.
 - [工具](index.md)
 - [全局程序集缓存](../app-domains/gac.md)
 - [运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)
