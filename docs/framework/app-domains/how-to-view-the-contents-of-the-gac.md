@@ -12,12 +12,12 @@ helpviewer_keywords:
 - list of assemblies in global assembly cache
 - Global Assembly Cache tool
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
-ms.openlocfilehash: 8b81f78f4ea28b3b9fca374029fe49f809826d8e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a40c371e6f95f6c90ecbfbf28183226632a58e5b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558558"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258307"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>如何：查看全局程序集缓存的内容
 
@@ -25,20 +25,20 @@ ms.locfileid: "90558558"
 
 ## <a name="view-the-assemblies-in-the-gac"></a>查看 GAC 中的程序集
 
-要查看全局程序集缓存中的程序集列表，请打开 [Visual Studio 适用的开发人员命令提示](../tools/developer-command-prompt-for-vs.md)，然后输入以下命令：
+要查看全局程序集缓存中的程序集列表，请打开[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)，然后输入以下命令：
 
 ```shell
 gacutil -l
 ```
 
-\- 或 -
+- 或 -
 
 ```shell
 gacutil /l
 ```
 
 > [!NOTE]
-> 在 .NET Framework 的早期版本中，可通过 [Shfusion.dll](/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) Windows shell 扩展在文件资源管理器中查看全局程序集缓存。 从 .NET Framework 4 开始，Shfusion.dll 已淘汰。
+> 在 .NET Framework 的早期版本中，可通过 [Shfusion.dll](/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) Windows shell 扩展在文件资源管理器中查看全局程序集缓存。 从 .NET Framework 4 开始，Shfusion.dll 已过时。
 
 ## <a name="see-also"></a>请参阅
 

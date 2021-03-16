@@ -1,13 +1,13 @@
 ---
 title: 中断性变更：CA1416：平台兼容性
-description: 了解 .NET 5.0 中启用代码分析规则 CA1416 所致的中断性变更。
+description: 了解 .NET 5 中因启用代码分析规则 CA1416 而导致的中断性变更。
 ms.date: 09/29/2020
-ms.openlocfilehash: ec3fc809b8de382a2093fc9f2d33c2f96b91613d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0464e7bb5a494543c0201efa4630e82897b464c0
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759073"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257851"
 ---
 # <a name="warning-ca1416-platform-compatibility"></a>警告 CA1416：平台兼容性
 
@@ -15,9 +15,9 @@ ms.locfileid: "95759073"
 
 ## <a name="change-description"></a>更改说明
 
-从 .NET 5.0 开始，.NET SDK 包括 [.NET 源代码分析器](../../../../fundamentals/code-analysis/overview.md)。 其中一些规则会默认启用，包括 [CA1416](/visualstudio/code-quality/ca1416)。 如果项目包含违反此规则的代码，并已被配置为将警告视为错误，则此更改可能会中断生成。 当你在平台上下文未验证的位置使用特定于平台的 API 时，规则 CA1416 会通知你。
+从 .NET 5 开始，.NET SDK 包括 [.NET 源代码分析器](../../../../fundamentals/code-analysis/overview.md)。 其中一些规则会默认启用，包括 [CA1416](/visualstudio/code-quality/ca1416)。 如果项目包含违反此规则的代码，并已被配置为将警告视为错误，则此更改可能会中断生成。 当你在平台上下文未验证的位置使用特定于平台的 API 时，规则 CA1416 会通知你。
 
-规则 [CA1416](/visualstudio/code-quality/ca1416)（平台兼容性分析器）与 .NET 5.0 中新增的一些其他功能配合工作。 .NET 5.0 引入了 <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> 和 <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute>，可用于指定支持或不支持 API 的平台 。 如果没有这些属性，则假定所有平台都支持 API。 这些属性已应用于核心 .NET 库中特定于平台的 API。
+规则 [CA1416](/visualstudio/code-quality/ca1416)（平台兼容性分析器）与 .NET 5.0 中新增的一些其他功能配合工作。 .NET 5 引入了 <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> 和 <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute>，可用于指定支持或不支持 API 的平台 。 如果没有这些属性，则假定所有平台都支持 API。 这些属性已应用于核心 .NET 库中特定于平台的 API。
 
 在针对其所使用的 API 不可用的平台的项目中，规则 [CA1416](/visualstudio/code-quality/ca1416) 会标记任何未验证平台上下文的特定于平台的 API 调用。 现在，在不受支持的操作系统上调用 API 时，大多数用 <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> 和 <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> 属性修饰的 API 都会引发 <xref:System.PlatformNotSupportedException> 异常。 这些 API 被标记为特定于平台的 API 之后，规则 [CA1416](/visualstudio/code-quality/ca1416) 可以通过将 OS 检查添加到调用站点来帮助防止运行时 <xref:System.PlatformNotSupportedException> 异常。
 

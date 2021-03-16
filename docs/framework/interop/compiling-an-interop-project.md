@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
-ms.openlocfilehash: 1cf5bdbedd53227e812b0d2ed97778ab34a81444
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9621d2e060db38549dcaab2e55e7645179831767
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557092"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480180"
 ---
 # <a name="compiling-an-interop-project"></a>编译互操作项目
 
@@ -31,7 +31,7 @@ ms.locfileid: "90557092"
 
  有关如何使用 Visual Studio 嵌入互操作类型，请参阅[演练：在 Visual Studio 中嵌入托管程序集中的类型](../../standard/assembly/embed-types-visual-studio.md).
 
- 若要使用命令行编译器引用互操作程序集，并将类型信息嵌入可执行文件中，请使用 [-link（C# 编译器选项）](../../csharp/language-reference/compiler-options/link-compiler-option.md)或 [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 编译器开关并指定互操作程序集的名称。
+ 若要使用命令行编译器引用互操作程序集，并将类型信息嵌入可执行文件中，请使用 [-link（C# 编译器选项）](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes)或 [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 编译器开关并指定互操作程序集的名称。
 
 > [!NOTE]
 > Visual C++ 应用程序无法嵌入类型信息，但它们可以与应用程序或加载项进行互操作。

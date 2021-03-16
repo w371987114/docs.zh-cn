@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: a35577841765f7e6d5d5e8220bf3951f81d65832
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: b9a30076fdd67a90dc3e605a8014ead88141f43b
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258697"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477533"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
 
@@ -33,7 +33,7 @@ winmdexp [options] winmdmodule
   
 |自变量或选项|描述|  
 |------------------------|-----------------|  
-|`winmdmodule`|指定要导出的模块 (.winmdobj)。 仅允许一个模块。 若要创建此模块，请将 `/target` 编译器选项与 `winmdobj` 目标一起使用。 请参阅 [-target:winmdobj（C# 编译器选项）](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)或 [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)。|  
+|`winmdmodule`|指定要导出的模块 (.winmdobj)。 仅允许一个模块。 若要创建此模块，请将 `/target` 编译器选项与 `winmdobj` 目标一起使用。 请参阅 [-target:winmdobj（C# 编译器选项）](../../csharp/language-reference/compiler-options/output.md#targettype)或 [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)。|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|指定 Winmdexp.exe 将生成的输出 XML 文档文件。 在 .NET Framework 4.5 中，输出文件实质上与输入 XML 文档文件相同。|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|指定编译器使用 `winmdmodule` 生成的 XML 文档文件的名称。|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|指定包含 `winmdmodule` 的符号的程序数据库 (PDB) 文件的名称。|  

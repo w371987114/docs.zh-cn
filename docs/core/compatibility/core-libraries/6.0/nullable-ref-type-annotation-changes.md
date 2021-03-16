@@ -1,25 +1,25 @@
 ---
 title: 中断性变更：可以为 Null 的引用类型注释的更改
-description: 了解核心 .NET 库中的 .NET 6.0 中断性变更，在这些库中，一些可以为 Null 的引用类型注释已更改。
+description: 了解核心 .NET 库中的 .NET 6 中断性变更：一些可以为 null 的引用类型注释已更改。
 ms.date: 02/11/2021
-ms.openlocfilehash: a0133ce49ba33d0e835b718f3f2b19180526c61b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: fe56fd3006528238713bd08f353b5044092043a2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488192"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256928"
 ---
 # <a name="changes-to-nullable-reference-type-annotations"></a>对可以为 Null 的引用类型注释的更改
 
-在 .NET 6.0 中，.NET 库中的一些“为 Null 性”注释已更改。
+在 .NET 6 中，.NET 库中的一些“为 Null 性”注释已更改。
 
 ## <a name="change-description"></a>更改描述
 
-在以前的 .NET 版本中，一些可以为 Null 的引用类型注释不正确，并且生成警告要么缺失要么不正确。 从 .NET 6.0 开始，以前应用的一些注释已更新。 对于受影响的 API，将会生成新的生成警告，并且不再生成错误的生成警告。
+在以前的 .NET 版本中，一些可以为 Null 的引用类型注释不正确，并且生成警告要么缺失要么不正确。 从 .NET 6 开始，之前应用的一些注释已更新。 对于受影响的 API，将会生成新的生成警告，并且不再生成错误的生成警告。
 
-其中的某些更改被视为“中断性”变更，因为它们可能会导致新的生成时警告。 迁移到 .NET 6.0 时，需要更新引用这些 API 的代码。
+其中的某些更改被视为“中断性”变更，因为它们可能会导致新的生成时警告。 迁移到 .NET 6 时，需要更新引用这些 API 的代码。
 
-此页还介绍了其他不被视为中断性变更的更改。 任何引用已更新的 API 的代码都可以从删除不再必要的运算符或 pragma 中受益。
+此页还介绍了其他不被视为中断性变更的更改。 任何引用已更新的 API 的代码都可从删除不再必要的运算符或 pragma 中受益。
 
 ## <a name="version-introduced"></a>引入的版本
 
@@ -63,6 +63,12 @@ ms.locfileid: "100488192"
 | <xref:System.Data.IDataRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType> | `buffer` 参数类型可以为 Null | 重大 | 预览版 1 |
 | <xref:System.Data.Common.DbDataRecord.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)?displayProperty=nameWithType> | `buffer` 参数类型可以为 Null | 重大 | 预览版 1 |
 | <xref:System.Data.Common.DbDataRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType> | `buffer` 参数类型可以为 Null | 重大 | 预览版 1 |
+| <xref:System.Net.HttpListenerContext.AcceptWebSocketAsync%2A?displayProperty=fullName> | `subProtocol` 参数类型可以为 Null | 非中断性 | 预览版 2 |
+| 替代 <xref:System.Object.Equals(System.Object)?displayProperty=nameWithType> 的方法和[其他很多返回 `bool` 的方法](https://github.com/dotnet/runtime/pull/47598/files) | `[NotNullWhen(true)]` 已添加到第一个可为 null 的参数中 | 重大 | 预览版 2 |
+
+## <a name="see-also"></a>另请参阅
+
+- [ASP.NET Core 中可以为 null 的引用类型注释的更改](../../aspnet-core/6.0/nullable-reference-type-annotations-changed.md)
 
 <!--
 

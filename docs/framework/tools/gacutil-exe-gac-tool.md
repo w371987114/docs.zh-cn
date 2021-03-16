@@ -18,18 +18,18 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-ms.openlocfilehash: 1fe79a09aa99c9d91d8223e7642408a56da20dfe
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3cdc9e2b07ad176f2a46aa419920d5fa3f47f6e7
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166938"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259236"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe（全局程序集缓存工具）
 
 全局程序集缓存工具使你可以查看和操作全局程序集缓存和下载缓存的内容。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
 
 在命令提示符处，键入以下内容：
 
@@ -182,4 +182,4 @@ gacutil /l
 - [工具](index.md)
 - [全局程序集缓存](../app-domains/gac.md)
 - [Regasm.exe（程序集注册工具）](regasm-exe-assembly-registration-tool.md)
-- [命令提示](developer-command-prompt-for-vs.md)
+- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: 2019f113cdf5e854ad966ca616e116743197a24c
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 112e3880e76d4e81ab42cece592fcfd0f4dff312
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259481"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480799"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe（程序集链接器）
 
 程序集链接器从一个或多个文件（这些文件可以是模块或资源文件）生成一个具有程序集清单的文件。 模块是不含程序集清单的中间语言 (IL) 文件。
 
 > [!NOTE]
-> 从 Visual Studio 2008 开始，C# 和 Visual Basic 编译器都自动将 Win32 清单嵌入到程序集中。 有关详细信息，请参阅 [-win32manifest（C# 编译器选项）](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
+> 从 Visual Studio 2008 开始，C# 和 Visual Basic 编译器都自动将 Win32 清单嵌入到程序集中。 有关详细信息，请参阅 [-win32manifest（C# 编译器选项）](../../csharp/language-reference/compiler-options/resources.md#win32manifest)。
 
 此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请[对开发人员使用命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
 
@@ -40,7 +40,7 @@ al sources options
 | ------ | ----------- |
 |`file`[,`target`]|将 `file`（模块）的内容复制到 `target` 指定的文件名。 复制后，Al.exe 将 `target` 编译为程序集。|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|将 `file` 指定的资源嵌入到包含程序集清单的映像中；Al.exe 将 `file` 的内容复制到可移植的可执行 (PE) 映像中。<br /><br /> `name` 参数是资源的内部标识符。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由[资源文件生成器 (Resgen.exe)](resgen-exe-resource-file-generator.md) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 中的成员来访问它。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 <xref:System.Reflection.Assembly> 中的 `GetManifestResource*` 方法在运行时访问此资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集。|
-|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|将资源文件链接到程序集。 `file` 指定的资源成为程序集的组成部分；不复制该文件。 `file` 参数可以是任何文件格式。 例如，可以指定本机 DLL 作为 `file` 参数。 这将使本机 DLL 成为此程序集的组成部分，从而可将它安装到全局程序集缓存中，并且可从该程序集中的托管代码访问它。 也可以通过使用 **/linkresource** 编译器选项实现该目的。 有关详细信息，请参阅 [-linkresource（C# 编译器选项）](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)。<br /><br /> `name` 参数是资源的内部标识符。 `target` 参数指定 Al.exe 将 `file` 复制到其中的路径和文件名。 复制后，Al.exe 将 `target` 编译为程序集。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由资源文件生成器 (Resgen.exe) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 命名空间中的成员来访问它。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 <xref:System.Reflection.Assembly> 类中的 `GetManifestResource*` 方法在运行时访问资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集。|
+|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|将资源文件链接到程序集。 `file` 指定的资源成为程序集的组成部分；不复制该文件。 `file` 参数可以是任何文件格式。 例如，可以指定本机 DLL 作为 `file` 参数。 这将使本机 DLL 成为此程序集的组成部分，从而可将它安装到全局程序集缓存中，并且可从该程序集中的托管代码访问它。 也可以通过使用 **/linkresource** 编译器选项实现该目的。 有关详细信息，请参阅 [-linkresource（C# 编译器选项）](../../csharp/language-reference/compiler-options/resources.md#linkresources)。<br /><br /> `name` 参数是资源的内部标识符。 `target` 参数指定 Al.exe 将 `file` 复制到其中的路径和文件名。 复制后，Al.exe 将 `target` 编译为程序集。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由资源文件生成器 (Resgen.exe) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 命名空间中的成员来访问它。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 <xref:System.Reflection.Assembly> 类中的 `GetManifestResource*` 方法在运行时访问资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集。|
 
 可以指定以下 `options`；必须指定 **/out**。
 
