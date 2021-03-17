@@ -2,13 +2,13 @@
 title: 世界 20,000 英尺范围内
 description: 分布式应用程序的优点和挑战，同时探讨了单一和 SOA 方法。
 author: robvet
-ms.date: 02/07/2021
-ms.openlocfilehash: b857355880c3942526d751312d98f2b822704759
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: df182e81bcf95a84fc283dbb945d20f2218b0d0b
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401200"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623936"
 ---
 # <a name="the-world-is-distributed"></a>世界 20,000 英尺范围内
 
@@ -36,7 +36,7 @@ ms.locfileid: "102401200"
 - 构建
 - 测试
 - 部署
-- 故障排除
+- 疑难解答
 - 垂直缩放 (向上扩展) 
 
 但单一体系结构可能会带来重大挑战。
@@ -88,7 +88,7 @@ IT 专业人员调用此条件 `the Fear Cycle` 。 如果你已在技术业务�
 
 本书介绍了 Dapr。 Dapr 是分布式应用程序运行时。 它直接解决了分布式应用程序附带的许多挑战。 Dapr，它可能会对分布式应用程序开发产生深远的影响。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 在本章中，我们讨论了分布式应用程序的采用。 我们与分布式服务的一种单一系统方法相对比。 考虑分布式方法时，我们指出了许多常见的难题。
 

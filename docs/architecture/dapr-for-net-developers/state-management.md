@@ -2,14 +2,14 @@
 title: Dapr 状态管理构建基块
 description: 说明状态管理构建基块、功能、优点以及如何应用它。
 author: amolenk
-ms.date: 02/07/2021
+ms.date: 02/17/2021
 ms.reviewer: robvet
-ms.openlocfilehash: 05daf18ece1da377f3d5d6a91c4839f196f14f80
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 67b7f839ccbe24752281fb537b0473d4984d9e37
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401201"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623923"
 ---
 # <a name="the-dapr-state-management-building-block"></a>Dapr 状态管理构建基块
 
@@ -265,7 +265,7 @@ Dapr 还包括对支持 CRUD 操作的状态存储的支持，但不支持事务
 - Memcached
 - Zookeeper
 
-### <a name="configuration"></a>配置
+### <a name="configuration"></a>Configuration
 
 在为本地自承载开发初始化时，Dapr 将 Redis 注册为默认的状态存储。 下面是默认状态存储配置的示例。 请注意默认名称 `statestore` ：
 
@@ -326,7 +326,7 @@ curl -X POST http://localhost:3500/v1.0/state/statestore \
 
 输出显示数据的完整 Redis **键** `basketservice||basket1` 。 默认情况下，Dapr 使用 `application id` Dapr 实例的 `basketservice` 作为密钥的前缀 () 。 此命名约定允许多个 Dapr 实例共享相同的数据存储，而不会发生键名称冲突。 对于开发人员来说， `application id` 在运行具有 Dapr 的应用程序时，始终必须指定相同的。 如果省略，则 Dapr 将生成唯一的应用程序 ID。 如果 `application id` 更改，应用程序将无法再访问使用上一个密钥前缀存储的状态。
 
-也就是说，可以在状态存储组件文件的 "元数据" 字段中为密钥前缀配置 *常量值* `keyPrefix` 。 请考虑以下示例：
+也就是说，可以在状态存储组件文件的 "元数据" 字段中为密钥前缀配置 *常量值* `keyPrefix` 。 请看下面的示例：
 
 ```yaml
 spec:
@@ -444,7 +444,7 @@ auth:
 
 Dapr 实现还简化了基础数据存储的更改。 例如，若要切换到 Azure 表存储，只需更改配置文件的内容。 不需要更改代码。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 Dapr 状态管理构建块提供了一个 API，用于在各种数据存储区中存储键/值数据。 API 为以下内容提供支持：
 

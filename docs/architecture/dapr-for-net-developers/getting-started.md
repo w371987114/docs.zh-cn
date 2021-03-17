@@ -3,12 +3,12 @@ title: Dapr 入门
 description: 用于准备本地开发环境和使用 Dapr 构建你的第一个 .NET 应用程序的指南。
 author: amolenk
 ms.date: 02/25/2021
-ms.openlocfilehash: 68b1982c7283e0717ff7e1e254e5f313cd480d7b
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: 1b6ecd2cc2bf077375262155f0866cfef2dab708
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102401224"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623806"
 ---
 # <a name="get-started-with-dapr"></a>Dapr 入门
 
@@ -255,7 +255,7 @@ spec:
     }
     ```
 
-    对的调用会将 `AddDapr` 类注册到 `DaprClient` ASP.NET Core 依赖关系注入系统。 稍后将使用 `DaprClient` 类与 Dapr 挎斗进行通信。
+    对的调用会将 `AddDapr` 类注册到 `DaprClient` ASP.NET Core 依赖关系注入系统。 在注册客户端的情况下，你现在可以将的实例注入 `DaprClient` 到你的服务代码中，以便与 Dapr 挎斗、构建基块和组件通信。
 
 1. 将名为 *WeatherForecast* 的新 c # 类文件添加到 `DaprFrontEnd` 项目：
 
@@ -509,7 +509,7 @@ spec:
 
     若要了解有关本演练中使用的 Dapr 服务调用构建基块的详细信息，请参阅 [第6章](service-invocation.md)。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 在本章中，你有机会 *测试驱动器* Dapr。 使用 Dapr .NET SDK，可以看到 Dapr 如何与 .NET 应用程序平台集成。
 

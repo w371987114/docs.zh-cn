@@ -2,13 +2,13 @@
 title: Dapr 机密构建基块
 description: 机密构建基块、功能、权益和应用方法的描述
 author: edwinvw
-ms.date: 02/07/2021
-ms.openlocfilehash: 94942b396af947b2a3e49b918b2b082c15f4bb08
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: 52b899b4d496aab6762f69bbee99faecfcd23d59
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401206"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623741"
 ---
 # <a name="the-dapr-secrets-building-block"></a>Dapr 机密构建基块
 
@@ -168,7 +168,7 @@ public void GetCustomer(IConfiguration config)
 
 以下部分说明如何配置密钥存储。
 
-### <a name="configuration"></a>配置
+### <a name="configuration"></a>Configuration
 
 使用 Dapr 组件配置文件配置密钥存储。 文件的典型结构如下所示：
 
@@ -460,7 +460,7 @@ spec:
 
 为每个密钥存储指定作用域。 在上面的示例中，机密存储区命名为 `eshop-azurekv-secret-store` 。 使用以下属性配置对机密的访问：
 
-| 属性         | 值               | 描述                                                                                                                       |
+| 属性         | 值               | 说明                                                                                                                       |
 |------------------|---------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `defaultAccess`  | `allow` 或 `deny`   | 允许或拒绝对指定密钥存储中 *所有* 机密的访问。 此属性是可选的，默认值为 `allow` 。 |
 | `allowedSecrets` | 机密密钥列表 | 数组中指定的机密将可供访问。 此属性是可选的。                                                     |
@@ -544,7 +544,7 @@ auth:
 
 在前面的示例中，本地 Redis 存储用于引用机密。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 Dapr 机密构建块提供了存储和检索敏感配置设置（例如密码和连接字符串）的功能。 它将机密保密，防止无意中泄露机密。
 

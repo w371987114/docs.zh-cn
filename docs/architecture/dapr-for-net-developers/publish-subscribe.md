@@ -2,13 +2,13 @@
 title: Dapr publish & 订阅构建基块
 description: Dapr publish 的说明 & 订阅构造块以及如何应用它
 author: edwinvw
-ms.date: 02/07/2021
-ms.openlocfilehash: 4cb249bafc8241eb54153be2605c33d0a3adb619
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.date: 02/17/2021
+ms.openlocfilehash: 11898430d897ec85b7e367fa0e93ca912279784b
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604679"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623819"
 ---
 # <a name="the-dapr-publish--subscribe-building-block"></a>Dapr publish & 订阅构建基块
 
@@ -414,7 +414,7 @@ spec:
 
 最后，您可能会问： "为什么需要在一个应用程序中使用多个消息代理？"。 很多时候系统将处理具有不同特征的工作负荷。 一个事件可能一天发生10次，但另一个事件每秒发生5000次。 可以通过将消息传送流量分区给不同消息代理来受益。 使用 Dapr，可以添加多个 pub/sub 组件配置，每个配置都有不同的名称。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 Pub/sub 模式可帮助你分离分布式应用程序中的服务。 Dapr publish & 订阅构建基块可简化在应用程序中实现此行为。
 

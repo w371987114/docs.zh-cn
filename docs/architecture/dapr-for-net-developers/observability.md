@@ -2,14 +2,14 @@
 title: Dapr 可观察性构建基块
 description: 说明可观察性构建基块及其功能、优点以及如何应用它
 author: edwinvw
-ms.date: 02/07/2021
+ms.date: 02/17/2021
 ms.reviewer: robvet
-ms.openlocfilehash: 6add36b2030c3061ee522604b2e07f05875b98a9
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 745b9c07c31cc3ee11d5df945f2ccb87d0c9c2ed
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604705"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623975"
 ---
 # <a name="the-dapr-observability-building-block"></a>Dapr 可观察性构建基块
 
@@ -314,7 +314,7 @@ spec:
 
 Dapr 文档包含 [用于安装 Prometheus 和 Grafana 的教程](https://docs.dapr.io/operations/monitoring/metrics/grafana/)。
 
-### <a name="logging"></a>Logging
+### <a name="logging"></a>日志记录
 
 日志记录提供了在运行时服务发生的情况。 运行应用程序时，Dapr 会自动从 Dapr 分支和 Dapr 系统服务发出日志条目。 但是，在应用程序代码中检测到的日志记录项 **不** 会自动包括在内。 若要从应用程序代码发出日志记录，可以导入特定 SDK，如 [OPENTELEMETRY sdk for .net](https://opentelemetry.io/docs/net/)。 日志记录应用程序代码将在本章后面的 *使用 Dapr .NET SDK* 部分中介绍。  
 
@@ -488,7 +488,7 @@ EShopOnDapr 应用程序服务使用 [SeriLog](https://serilog.net/) 日志记�
 
 eShopOnDapr services 还使用适用于 .NET Core 的 Microsoft Application Insights SDK 将遥测直接发送到 Azure 应用程序 Insights。 有关详细信息，请参阅 Microsoft 文档中的 [Azure 应用程序 Insights for ASP.NET Core 应用程序](/azure/azure-monitor/app/asp-net-core) 。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 在生产环境中运行分布式系统时，良好的可观察性是至关重要的。
 

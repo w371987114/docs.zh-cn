@@ -2,13 +2,13 @@
 title: Dapr 服务调用构建基块
 description: 服务调用构建基块的说明、功能、优点以及应用方法
 author: amolenk
-ms.date: 02/07/2021
-ms.openlocfilehash: 2b64aa1e9b079a3fefe120e687cd6d395981c633
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: f6d5f10ae476d85a9925c4fa387a16d575cacf6a
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401203"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624092"
 ---
 # <a name="the-dapr-service-invocation-building-block"></a>Dapr 服务调用构建基块
 
@@ -436,7 +436,7 @@ public class BasketService : IBasketService
 
 在此示例中，这种情况下，仅使用标准 HttpClient 功能来调用服务。 这样，已经熟悉 HttpClient 的开发人员就可以重复使用其现有技能。 它甚至使现有的 HttpClient 代码可以使用 Dapr 服务调用，而无需进行任何更改。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 本章介绍了服务调用构建基块。 你已了解如何通过直接 HTTP 调用 Dapr 挎斗并使用 Dapr .NET SDK 调用远程方法。
 

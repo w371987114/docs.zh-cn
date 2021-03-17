@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 63fdf49ba688c0b3c4ee6653e1c2960c49f526ce
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e477a474ab850239068246057e94b94c983a99c8
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257114"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624196"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>跟踪应用程序和在应用程序中插入检测点
 
@@ -33,7 +33,7 @@ ms.locfileid: "96257114"
   
 - 性能计数器 - 可用于跟踪应用程序性能的组件。 有关详细信息，请参阅 [性能计时器](performance-counters.md)。  
   
-- 事件日志 - 可用于接收和跟踪应用程序执行过程中重要事件的组件。 有关更多信息，请参见 <xref:System.Diagnostics.EventLog> 类。  
+- **事件日志** -可用于接收和跟踪应用程序执行中的主要事件的组件。 有关更多信息，请参见 <xref:System.Diagnostics.EventLog> 类。  
   
  通过将跟踪语句置于代码中的关键位置来检测应用程序非常适合分布式应用程序。 通过使用跟踪语句，可检测应用程序，从而在出现故障时显示相关信息并监视应用程序的运行情况。  
   
@@ -127,7 +127,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 |方法|输出|  
 |------------|------------|  
-|`Assert`|指定的文本；若未指定，则为调用堆栈。 仅当在语句中指定为参数的条件为 false 时，才写入输出 `Assert` 。 **false**|  
+|`Assert`|指定的文本；若未指定，则为调用堆栈。 仅当在语句中指定为参数的条件为 false 时，才写入输出 `Assert` 。 |  
 |`Fail`|指定的文本；若未指定，则为调用堆栈。|  
 |`Write`|指定的文本。|  
 |`WriteIf`|如果满足指定为语句中的参数的条件，则为指定的文本 `WriteIf` 。|  
@@ -151,7 +151,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - [代码协定](code-contracts.md)
 - [C#, F#, and Visual Basic Project Types](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)（C#、F# 和 Visual Basic 项目类型）
 - [如何：向应用程序代码添加跟踪语句](how-to-add-trace-statements-to-application-code.md)
-- [如何：使用跟踪和调试进行条件编译](how-to-compile-conditionally-with-trace-and-debug.md)
+- [如何：使用跟踪和调试执行有条件编译](how-to-compile-conditionally-with-trace-and-debug.md)
 - [如何：创建、初始化和配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)
 - [如何：创建和初始化跟踪源](how-to-create-and-initialize-trace-sources.md)
 - [如何：将 TraceSource 和筛选器与跟踪侦听器一起使用](how-to-use-tracesource-and-filters-with-trace-listeners.md)

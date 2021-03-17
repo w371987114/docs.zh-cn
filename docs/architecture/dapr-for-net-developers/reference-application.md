@@ -2,13 +2,13 @@
 title: EShopOnDapr 参考应用程序简介
 description: EShopOnDapr 引用应用程序及其历史记录的概述。
 author: amolenk
-ms.date: 02/07/2021
-ms.openlocfilehash: d05d47399b9be539597778a4f7856e06d3b16a6c
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: 8fd0ccade45f4f6609046e00d22ffd5693c4a529
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401210"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623884"
 ---
 # <a name="dapr-reference-application"></a>Dapr 引用应用程序
 
@@ -113,7 +113,7 @@ EShopOnDapr 基本代码比 eShopOnContainers 基本代码更简单。 Dapr 构�
 > [!NOTE]
 > 本书的第一版中未介绍执行组件构建基块。 1.1 更新中将包含有关执行组件构建块及其与 eShopOnDapr 的集成的详尽章节。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 本章介绍了 eShopOnDapr 引用应用程序。 这是广泛流行的 eShopOnContainers 微服务 reference 应用程序的演变。 eShopOnDapr 使用 Dapr 构建基块和组件替换大量自定义功能，大大简化了生成微服务应用程序所需的复杂性。
 

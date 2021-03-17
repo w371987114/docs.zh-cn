@@ -2,13 +2,13 @@
 title: Dapr 绑定构建基块
 description: 绑定构建基块及其功能、优点和应用方法的说明
 author: edwinvw
-ms.date: 02/07/2021
-ms.openlocfilehash: 757d2560016407119fe9244c100a971977852cc5
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.date: 02/17/2021
+ms.openlocfilehash: d6f8b2aa90b15e5b9cd7b5c29938660d1b2907e9
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102401219"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623949"
 ---
 # <a name="the-dapr-bindings-building-block"></a>Dapr 绑定构建基块
 
@@ -236,7 +236,7 @@ public Task Handle(OrderStartedDomainEvent notification, CancellationToken cance
 
 如本示例中所示， `message` 包含消息正文。 `CreateEmailBody`方法只是将字符串的格式设置为正文文本。 指定电子邮件 `metadata` 发件人、收件人和电子邮件的主题。 如果这些值是静态的，则也可以将它们包含在配置文件的元数据字段中。 要调用的绑定的名称为 `sendmail` ，并且操作为 `create` 。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 Dapr 资源绑定使你可以与不同的外部资源和系统集成，而无需依赖于其库或 Sdk。 这些外部系统不一定必须是消息传递系统，例如服务总线或消息代理。 数据存储和 web 资源（如 Twitter 或 SendGrid）还存在绑定。
 

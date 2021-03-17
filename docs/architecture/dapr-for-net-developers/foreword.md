@@ -2,13 +2,13 @@
 title: 前言
 description: 前言 Dapr for .NET 开发人员通过标记 Russinovich
 author: markrussinovich
-ms.date: 02/14/2021
-ms.openlocfilehash: 5484d537ec949f168ea8eb752e354ed334be5d71
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.date: 02/17/2021
+ms.openlocfilehash: 611cccd7dee253959b06c77c8550b833eec9ddd7
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "102401016"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623962"
 ---
 # <a name="foreword"></a>前言
 

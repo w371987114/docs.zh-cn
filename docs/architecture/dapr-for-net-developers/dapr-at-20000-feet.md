@@ -2,13 +2,13 @@
 title: 均分布有 Dapr
 description: Dapr 是什么、它的作用以及它的工作原理的简要概述。
 author: robvet
-ms.date: 02/07/2021
-ms.openlocfilehash: f0efb4652aaa35961d59979cb561941e5280a575
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.date: 02/17/2021
+ms.openlocfilehash: 9f23e9822fd0d4b5eda648d2fc1359cce14cf59d
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604744"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624040"
 ---
 # <a name="dapr-at-20000-feet"></a>均分布有 Dapr
 
@@ -26,7 +26,9 @@ Dapr 或 *分布式应用程序运行时* 是一种用于构建新式分布式�
 
 Dapr 解决了新式分布式应用程序固有的巨大挑战： **复杂性**。
 
-通过可插入组件的体系结构，Dapr 大大简化了分布式应用程序背后的管道。 它提供一个使用 Dapr 运行时中的基础结构功能来绑定应用程序的 **动态胶水** 。 例如，你的应用程序可能需要状态存储。 可以编写自定义代码来面向 Redis 缓存，并在运行时将其插入服务中。 不过，Dapr 提供现成的分布式缓存功能，从而简化了你的体验。 服务调用通过 Dapr **配置** 动态绑定到 Redis 缓存 **组件** 的 Dapr **生成块**。 在此模型中，服务将对 Dapr 的调用委托，后者代表您调用 Redis。 你的服务没有 SDK、库或对 Redis 的直接引用。 针对常见的 Dapr 状态管理 API （而不是 Redis 缓存 API）进行编码。
+通过可插入组件的体系结构，Dapr 大大简化了分布式应用程序背后的管道。 它提供一个使用 Dapr 运行时中的基础结构功能来绑定应用程序的 **动态胶水** 。
+
+考虑是否需要使你的某个服务有状态？ 设计方式。 可以编写面向状态存储（如 Redis 缓存）的自定义代码。 但是，Dapr 提供现成的状态管理功能。 服务通过 Dapr **组件配置** yaml 文件调用动态绑定到状态存储 **组件** 的 Dapr 状态管理 **构建基块**。 Dapr 附带几个预建的状态存储组件，包括 Redis。 在此模型中，服务将状态管理委托给 Dapr 运行时。 你的服务没有 SDK、库或对基础组件的直接引用。 你甚至可以将状态存储（例如，Redis）更改为 MySQL 或 Cassandra，而不会更改代码。
 
 图2-1 显示了20000英尺的 Dapr。
 
@@ -208,6 +210,8 @@ gRPC 是一种新式的高性能框架， (RPC) 协议演变旧的 [远程过程
 - 同时发送客户端请求和服务器响应的双向全双工通信。
 - 内置流式处理可对大型数据集进行异步流式处理的请求和响应。
 
+若要了解详细信息，请参阅 Azure 电子书的[架构 Cloud-Native .Net 应用](https://docs.microsoft.com/dotnet/architecture/cloud-native/)中的[gRPC 概述](https://docs.microsoft.com/dotnet/architecture/cloud-native/grpc#what-is-grpc)。  
+
 ## <a name="dapr-and-service-meshes"></a>Dapr 和服务网格
 
 服务网格是针对分布式应用程序的另一种快速发展的技术。
@@ -220,7 +224,7 @@ gRPC 是一种新式的高性能框架， (RPC) 协议演变旧的 [远程过程
 
 **图 2-8**。 带有侧面汽车的服务网格。
 
-上图显示了通过与每个服务一起运行的代理来截获消息的方式。 每个代理都可以配置特定于该服务的流量规则。 它了解消息，并可以将消息路由到您的服务和外界。
+上图显示了通过与每个服务一起运行的挎斗代理来截获消息的方式。 每个代理都可以配置特定于该服务的流量规则。 它了解消息，并可以将消息路由到您的服务和外界。
 
 那么，问题变成 "正在 Dapr 服务网格？"。
 
@@ -234,9 +238,9 @@ gRPC 是一种新式的高性能框架， (RPC) 协议演变旧的 [远程过程
 
 **图 2-9**。 将 Dapr 和 service 网格组合在一起。
 
-在本书中， [学习 Dapr](https://www.amazon.com/Learning-Dapr-Building-Distributed-Applications/dp/1492072427/ref=sr_1_1?dchild=1&keywords=dapr&qid=1604794794&sr=8-1)、作者 Haishi Bai 和 Yaron Schneider，涵盖了 Dapr 和 service 网格的集成。
+[Dapr 联机文档](https://docs.dapr.io/concepts/faq/#networking-and-service-meshes)介绍 Dapr 和服务网格集成。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 本章介绍了 Dapr 的分布式应用程序运行时。
 
