@@ -2,13 +2,13 @@
 title: 面向 .NET 开发人员的 Dapr
 description: 可帮助 .NET 开发人员了解并充分利用 Microsoft 开源分散式应用程序运行时的全部功能的指南。
 author: robvet
-ms.date: 02/07/2021
-ms.openlocfilehash: fc38dd1a98570cc4d2b367d272a107e3ad67ead9
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.date: 02/17/2021
+ms.openlocfilehash: 2ab66257cca6f99074e2aa45a24869012b4976fe
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102206563"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623715"
 ---
 # <a name="dapr-for-net-developers"></a>面向 .NET 开发人员的 Dapr
 
