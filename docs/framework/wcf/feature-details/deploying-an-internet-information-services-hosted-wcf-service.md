@@ -3,12 +3,12 @@ title: 部署承载于 Internet 信息服务中的 WCF 服务
 description: 了解开发和部署在 IIS 中承载的 WCF 服务所需的任务（从验证组件安装开始）
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: ae01533efbeddba75efd159d187a896e2d97ec1a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: a51cf09309a5a5c9ac8c8a4cc4fecc0a203b7b3c
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259884"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653473"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
 
@@ -36,7 +36,7 @@ ms.locfileid: "102259884"
 
 如果计算机上已存在 IIS，则 .NET Framework 的安装过程会自动将 WCF 注册到 IIS。 如果在 .NET Framework 后安装 IIS，则需要执行其他步骤以将 WCF 注册到 IIS 和 ASP.NET。 根据您的操作系统，可以按如下所述执行此操作：
 
-- Windows 7 和 Windows Server 2003：使用 [ (ServiceModelReg.exe) ](../servicemodelreg-exe.md) 工具将 WCF 注册到 IIS。 若要使用此工具，请 `ServiceModelReg.exe /i /x` 在 [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)中输入。
+- Windows 7 和 Windows Server 2003：使用 [ (ServiceModelReg.exe) ](../servicemodelreg-exe.md) 工具将 WCF 注册到 IIS。 若要使用此工具，请 `ServiceModelReg.exe /i /x` 在 [visual studio 开发人员命令提示或 Visual Studio 开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)中输入。
 
 - Windows 7：最后，必须验证是否已将 ASP.NET 配置为使用 .NET Framework 版本4或更高版本。 可以通过使用选项运行 ASPNET_Regiis 工具来执行此操作 `–i` 。 有关详细信息，请参阅 [ASP.NET IIS 注册工具](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))。
 

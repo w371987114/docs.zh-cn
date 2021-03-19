@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: fc3b61c80cfd3b40d802c517cdca4085bc274197
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 2ba476b39b6aa441d8778ee0618dcc3dcf3f7ac8
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259429"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653272"
 ---
 # <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145：无法发出程序集： \<error message>
 
@@ -37,7 +37,7 @@ Visual Basic 编译器调用程序集链接器 (*Al.exe*（也称为 Alink) ）�
 
 2. 从项目中删除生成错误的 COM 引用。
 
-3. 打开 [开发人员命令行外壳](/visualstudio/ide/reference/command-prompt-powershell)。
+3. 打开 [Visual studio 开发人员命令提示或 Visual Studio 开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)。
 
 4. 将目录更改为要在其中放置程序集包装的目录。
 
