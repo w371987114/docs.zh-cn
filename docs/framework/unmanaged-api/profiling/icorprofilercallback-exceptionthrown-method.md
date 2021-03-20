@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1a23f3b-ac21-4905-8abf-8ea59f15af53
 topic_type:
 - apiref
-ms.openlocfilehash: 77ebca8fbc52ed0c46a4f76fb5cdf6cb2923edaf
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: aed3d6c4c3c45b546fa8af1db918a6f68eda9bde
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706131"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760400"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown 方法
 
@@ -37,11 +37,9 @@ HRESULT ExceptionThrown(
     [in] ObjectID thrownObjectId);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `thrownObjectId`
-
-  \[in] 导致引发异常的对象的 ID。
+`thrownObjectId` 中导致引发异常的对象的 ID。
   
 ## <a name="remarks"></a>备注  
 
@@ -59,6 +57,6 @@ HRESULT ExceptionThrown(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)

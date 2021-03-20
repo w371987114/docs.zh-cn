@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-ms.openlocfilehash: dca39d9d5269148fda12c50130f35bdeb10cb19d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 2db616509bf5dcb5b8aee9cea76a9841369ec49d
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648644"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759231"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper 函数
 
@@ -35,15 +35,11 @@ UINT_PTR __stdcall FunctionIDMapper (
 );  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `funcId`
+`funcId` 中要重新映射的函数标识符。
 
-  \[in] 要重新映射的函数标识符。
-
-- `pbHookFunction`
-
-  \[out] 指向探查器设置为的值的指针 `true` （如果它要接收 `FunctionEnter2` 、 `FunctionLeave2` 和 `FunctionTailcall2` 回调）; 否则，它会将此值设置为 `false` 。
+`pbHookFunction` 弄一个指针，指向探查器设置为的值 `true` `FunctionEnter2` `FunctionLeave2` `FunctionTailcall2` ; 否则，它会将此值设置为 `false` 。
 
 ## <a name="return-value"></a>返回值  
 
@@ -69,7 +65,7 @@ UINT_PTR __stdcall FunctionIDMapper (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SetFunctionIDMapper 方法](icorprofilerinfo-setfunctionidmapper-method.md)
 - [FunctionIDMapper2 函数](functionidmapper2-function.md)

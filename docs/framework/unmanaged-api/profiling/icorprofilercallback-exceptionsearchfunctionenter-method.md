@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bfd54573-b7e6-4bd1-a184-7f08a8b39fae
 topic_type:
 - apiref
-ms.openlocfilehash: 6e77ab5dc8c15a1d0785fb83310183c0a4693225
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d9989ef8b1ae50202ba6900b95504a7d50e10dfc
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706183"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759477"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>ICorProfilerCallback::ExceptionSearchFunctionEnter 方法
 
@@ -34,11 +34,9 @@ HRESULT ExceptionSearchFunctionEnter(
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `functionId`
-
-  \[in] 已输入的函数的 ID。
+`functionId` 中已输入的函数的 ID。
   
 ## <a name="requirements"></a>要求  
 
@@ -50,7 +48,7 @@ HRESULT ExceptionSearchFunctionEnter(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
 - [ExceptionSearchFunctionLeave 方法](icorprofilercallback-exceptionsearchfunctionleave-method.md)

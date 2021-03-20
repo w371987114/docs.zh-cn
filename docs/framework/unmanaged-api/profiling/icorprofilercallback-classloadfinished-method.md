@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: ba0a6a643ab49a4e7a0ed10dda0dadff5741234d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 52fd26c1efaf9b85caeb5af7184ae70e1d29b9ff
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706417"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760207"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished 方法
 
@@ -35,15 +35,11 @@ HRESULT ClassLoadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `classId`
+`classId` 中标识已加载的类。
 
-  \[in] 标识已加载的类。
-
-- `hrStatus`
-
-  \[在] 中指示是否已成功加载类的 HRESULT。
+`hrStatus` 中一个 HRESULT，指示类是否已成功加载。
 
 ## <a name="remarks"></a>备注  
 
@@ -61,7 +57,7 @@ HRESULT ClassLoadFinished(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
 - [ClassLoadStarted 方法](icorprofilercallback-classloadstarted-method.md)

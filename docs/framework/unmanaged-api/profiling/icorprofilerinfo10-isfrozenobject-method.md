@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 3b47204630056e2797b5cf126bd7c291830cea05
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: c4d31c96fd7470a153437ffb0125e81ca8ea77bd
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103447"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759750"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10：： IsFrozenObject 方法
 
@@ -30,15 +30,11 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
                         [out] BOOL *pbFrozen);
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `objectId`
+`objectId` 中要检查的对象。
 
-  \[in] 要检查的对象。
-
-- `pbFrozen`
-
-  \[out] 一个 `BOOL` 值，该值指示对象是否位于只读段中。
+`pbFrozen` 弄一个 `BOOL` ，该值指示对象是否位于只读段中。
 
 ## <a name="requirements"></a>要求
 

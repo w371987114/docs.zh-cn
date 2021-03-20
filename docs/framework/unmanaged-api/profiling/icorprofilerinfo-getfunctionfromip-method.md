@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f069802a-198f-46dd-9f09-4f77adffc9ba
 topic_type:
 - apiref
-ms.openlocfilehash: 1acea6943e74e65e4359c7da590d3888736dbd6c
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: b21b8ad10c76b2e9eaad773315122c3635845a78
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99647591"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760244"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP 方法
 
@@ -35,15 +35,11 @@ HRESULT GetFunctionFromIP(
     [out] FunctionID *pFunctionId);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `ip`
+`ip` 中托管代码中的指令指针。
 
-  \[in] 托管代码中的指令指针。
-
-- `pFunctionId`
-
-  \[out] 返回的函数 ID。
+`pFunctionId` 弄返回的函数 ID。
 
 ## <a name="requirements"></a>要求  
 
@@ -55,6 +51,6 @@ HRESULT GetFunctionFromIP(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)

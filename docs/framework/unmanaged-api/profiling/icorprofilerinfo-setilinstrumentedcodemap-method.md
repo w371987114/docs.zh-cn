@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: 0cf3b4ccf31076c2d1ea2df581003e3a07f0e795
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: f9ed01b91f740a8bd95f4ad049076feb02363b8f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99737345"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760387"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 方法
 
@@ -40,19 +40,15 @@ HRESULT SetILInstrumentedCodeMap(
     [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-`functionId`\
-中要为其设置代码图的函数的 ID。
+`functionId` 中要为其设置代码图的函数的 ID。
 
-`fStartJit`\
-中一个布尔值，该值指示对方法的调用是否为 `SetILInstrumentedCodeMap` 特定的第一个 `FunctionID` 。 `fStartJit` `true` 对于给定的，将在第一次调用中设置为 `SetILInstrumentedCodeMap` `FunctionID` ，并在 `false` 之后设置为。
+`fStartJit` 中一个布尔值，该值指示对方法的调用是否为 `SetILInstrumentedCodeMap` 特定的第一个 `FunctionID` 。 `fStartJit` `true` 对于给定的，将在第一次调用中设置为 `SetILInstrumentedCodeMap` `FunctionID` ，并在 `false` 之后设置为。
 
-`cILMapEntries`\
-中数组中元素的数目 `cILMapEntries` 。
+`cILMapEntries` 中数组中元素的数目 `cILMapEntries` 。
 
-`rgILMapEntries`\
-中COR_IL_MAP 结构的数组，其中每个结构指定 MSIL 偏移量。
+`rgILMapEntries` 中COR_IL_MAP 结构的数组，其中每个结构指定 MSIL 偏移量。
 
 ## <a name="remarks"></a>备注
 
@@ -96,6 +92,6 @@ HRESULT SetILInstrumentedCodeMap(
 
 **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo 接口](icorprofilerinfo-interface.md)

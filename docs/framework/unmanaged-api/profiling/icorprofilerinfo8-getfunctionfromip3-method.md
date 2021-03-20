@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 3ce0a0964e26254ab09e515826b6bceb657e07bc
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 1b753350f45f722d60099b17cfdd48bfd06e411a
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99783828"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759099"
 ---
 # <a name="icorprofilerinfo8getfunctionfromip3-method"></a>ICorProfilerInfo8：： GetFunctionFromIP3 方法
 
@@ -31,19 +31,13 @@ HRESULT GetFunctionFromIP3([in] LPCBYTE ip,
                            [out] ReJITID * pReJitId);
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `ip`
+`ip` 中托管代码中的指令指针。
 
-  \[in] 托管代码中的指令指针。
+`pFunctionId` 弄函数 ID。
 
-- `pFunctionId`
-
-  \[out] 函数 ID。
-
-- `pReJitId`
-
-  \[out] 函数的 JIT 重新编译版本的标识。
+`pReJitId` 弄函数的 JIT 重新编译版本的标识。
 
 ## <a name="remarks"></a>备注
 
@@ -59,6 +53,6 @@ HRESULT GetFunctionFromIP3([in] LPCBYTE ip,
 
 **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo8 接口](icorprofilerinfo8-interface.md)

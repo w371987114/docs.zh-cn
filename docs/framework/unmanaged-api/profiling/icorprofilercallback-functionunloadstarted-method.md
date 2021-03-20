@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: 3dd5d46a224c0c51dfee251cf5d0c6ae9320b630
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ce3cf406b8d2f91613bce878db8a4f9e0838c052
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705949"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760426"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted 方法
 
@@ -34,11 +34,9 @@ HRESULT FunctionUnloadStarted(
     [in] FunctionID functionId);
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `functionId`
-
-  \[in] 正在卸载的函数的 ID。
+`functionId` 中正在卸载的函数的 ID。
 
 ## <a name="remarks"></a>备注  
 
@@ -54,6 +52,6 @@ HRESULT FunctionUnloadStarted(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)

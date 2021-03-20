@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 8ab942e6919f8029ef0d1c20336917622a1d22ad
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 139edeed3e078668974382f1719c8e03f83e2a09
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646525"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759073"
 ---
 # <a name="icorprofilerinfo8isfunctiondynamic-method"></a>ICorProfilerInfo8：： IsFunctionDynamic 方法
 
@@ -30,15 +30,11 @@ HRESULT IsFunctionDynamic( [in]  FunctionID  functionId,
                            [out] BOOL        *isDynamic);
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `functionId`
+`functionId` 中 `FunctionID` 标识相关函数的。
 
-  \[in] `FunctionID` 标识相关函数的。
-
-- `isDynamic`
-
-  \[out] 指向的指针 `BOOL` ，它将包含一个值，该值指示该函数是否没有元数据。
+`isDynamic` 弄指向的指针 `BOOL` ，它将包含一个值，该值指示函数是否没有元数据。
 
 ## <a name="remarks"></a>备注
 
@@ -54,6 +50,6 @@ HRESULT IsFunctionDynamic( [in]  FunctionID  functionId,
 
 **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo8 接口](icorprofilerinfo8-interface.md)

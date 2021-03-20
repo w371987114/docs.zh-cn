@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5fa68a67-ced6-41c6-a2c0-467060fd0692
 topic_type:
 - apiref
-ms.openlocfilehash: 6a861f455e827258368764b80547c3b3e9c986cd
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 617ca023f58a180c198751fea9752fe737249331
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687410"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760075"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo 函数
 
@@ -34,15 +34,11 @@ void __stdcall FunctionLeave3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `functionIDOrClientID`
+`functionIDOrClientID` 中从中返回控件的函数的标识符。
 
-  \[in] 从中返回控件的函数的标识符。
-
-- `eltInfo`
-
-  \[in] 一个表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。
+`eltInfo` 中表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。
 
 ## <a name="remarks"></a>备注  
 
@@ -70,7 +66,7 @@ void __stdcall FunctionLeave3WithInfo(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [GetFunctionLeave3Info](icorprofilerinfo3-getfunctionleave3info-method.md)
 - [FunctionEnter3](functionenter3-function.md)

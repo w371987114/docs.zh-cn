@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: ae1ef56a1eb3b9b45c2165ecceb0af826cc7a2ea
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 7d4fd1c85d496b7adea0096b03520a14c2fab11c
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99657731"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759232"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished 方法
 
@@ -35,15 +35,11 @@ HRESULT ClassUnloadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `classId`
+`classId` 中标识已卸载的类。
 
-  \[in] 标识已卸载的类。
-
-- `hrStatus`
-
-  \[在] 中指示是否已成功卸载类的 HRESULT。
+`hrStatus` 中指示是否已成功卸载类的 HRESULT。
   
 ## <a name="remarks"></a>备注  
 
@@ -59,7 +55,7 @@ HRESULT ClassUnloadFinished(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
 - [ClassUnloadStarted 方法](icorprofilercallback-classunloadstarted-method.md)

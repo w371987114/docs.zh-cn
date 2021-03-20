@@ -9,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: d076307b9e57c27753297cad8eebc1b9aa9433f6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d610024af9959790b37a724c2bdbf4dabc89dd20
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99781709"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759815"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8：:D ynamicMethodJITCompilationFinished 方法
 
@@ -32,15 +32,14 @@ HRESULT DynamicMethodJITCompilationFinished(
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
 
-[in] `functionId`  
-开始 JIT 编译的内存中函数的标识符。
+`functionId`  
+中开始 JIT 编译的内存中函数的标识符。
 
-[in] `hrStatus` 一个值，该值指示 JIT 编译是否成功。
+`hrStatus` 中一个值，该值指示 JIT 编译是否成功。
 
-[in] `fIsSafeToBlock` 
- `true`指示阻止可能会导致运行时等待调用线程从该回调返回;`false`指示阻止操作不会影响运行时的操作。  
+`fIsSafeToBlock` [in] `true` 指示阻止可能会导致运行时等待调用线程从该回调返回; `false` 指示阻止操作不会影响运行时的操作。  
 
 ## <a name="remarks"></a>备注  
 
@@ -59,7 +58,7 @@ HRESULT DynamicMethodJITCompilationFinished(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [DynamicMethodJITCompilationStarted 方法](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8 接口](icorprofilercallback8-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: efa8b2e965ba4a365bbd72db4c5af69db006f6d5
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d84cac19acb8a1d696030fe372d29c655c5f97a6
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648488"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760790"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 函数
 
@@ -34,15 +34,11 @@ void __stdcall FunctionTailcall3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
 
-- `functionIDOrClientID`
+`functionIDOrClientID` 中要进行尾调用的当前正在执行的函数的标识符。
 
-  \[in] 要进行尾调用的当前正在执行的函数的标识符。
-
-- `eltInfo`
-
-  \[in] 一个表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。
+`eltInfo` 中表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。
 
 ## <a name="remarks"></a>备注  
 
@@ -70,7 +66,7 @@ void __stdcall FunctionTailcall3WithInfo(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [FunctionEnter3](functionenter3-function.md)
 - [FunctionLeave3](functionleave3-function.md)

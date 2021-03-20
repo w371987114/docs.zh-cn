@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 925a61bf2521950cad7fb0dce8f1484198f3f806
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3d85537030e042d53bb4ff859eb1d2c3a24a45a5
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106509"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760777"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10：： RequestReJITWithInliners 方法
 
@@ -32,23 +32,15 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
                                   [in, size_is(cFunctions)]  mdMethodDef methodIds[]);
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `dwRejitFlags`
+`dwRejitFlags` 中 [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md)的位掩码。
 
-  \[in] [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md)的位掩码。
+`cFunctions` 中要重新编译的函数的数目。
 
-- `cFunctions`
+`moduleIds` 中指定 `moduleId` (的部分 `module` ，) 对，用于 `methodDef` 标识要重新编译的函数。
 
-  \[in] 要重新编译的函数的数目。
-
-- `moduleIds`
-
-  \[in] 指定 `moduleId` (的部分 `module` ，) 对，用于 `methodDef` 标识要重新编译的函数。
-
-- `methodIds`
-
-  \[in] 指定 `methodId` (的部分 `module` ，) 对，用于 `methodDef` 标识要重新编译的函数。
+`methodIds` 中指定 `methodId` (的部分 `module` ，) 对，用于 `methodDef` 标识要重新编译的函数。
 
 ## <a name="remarks"></a>备注
 

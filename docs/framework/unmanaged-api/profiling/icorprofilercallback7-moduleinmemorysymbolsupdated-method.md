@@ -10,12 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-ms.openlocfilehash: 74adf7edc5269824a924933eb3284a5964e1bac1
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fa6056beb5685ca9ce9545efea567ca0df6029ce
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99781722"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759854"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7：： ModuleInMemorySymbolsUpdated 方法
 
@@ -31,10 +31,10 @@ HRESULT ModuleInMemorySymbolsUpdated(
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
 
- [in] `moduleId`  
- 已更新其符号流的内存中模块的标识符。  
+ `moduleId`  
+ 中已更新其符号流的内存中模块的标识符。  
   
 ## <a name="remarks"></a>备注  
 
@@ -55,7 +55,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ModuleLoadFinished 方法](icorprofilercallback-moduleloadfinished-method.md)
 - [SetEventMask2 方法](icorprofilerinfo5-seteventmask2-method.md)

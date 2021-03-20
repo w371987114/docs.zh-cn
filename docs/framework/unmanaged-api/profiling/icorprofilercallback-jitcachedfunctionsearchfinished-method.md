@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 3c325c82-cddd-4b00-b3da-e450c36abf62
 topic_type:
 - apiref
-ms.openlocfilehash: b5025a7d33800047bb6244b82308ba2ab158cea7
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 3dc655c2a049a2cac08f6e4856aab98ee690b9df
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705845"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759952"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a>ICorProfilerCallback::JITCachedFunctionSearchFinished 方法
 
-通知探查器搜索已完成先前使用本机映像生成器编译的函数 ( # A0) 。  
+通知探查器搜索已完成先前使用本机映像生成器编译的函数)  (NGen.exe。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +35,11 @@ HRESULT JITCachedFunctionSearchFinished(
     [in] COR_PRF_JIT_CACHE result);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `functionId`
+`functionId` 中执行搜索的函数的 ID。
 
-  \[in] 执行搜索的函数的 ID。
-
-- `result`
-
-  \[in] 指示搜索结果的 [COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md) 枚举的值。
+`result` 中指示搜索结果的 [COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md) 枚举的值。
 
 ## <a name="remarks"></a>备注  
 
@@ -59,6 +55,6 @@ HRESULT JITCachedFunctionSearchFinished(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)

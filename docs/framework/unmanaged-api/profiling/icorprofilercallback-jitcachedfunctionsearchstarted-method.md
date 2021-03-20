@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-ms.openlocfilehash: 1faaf8fbc1e0fee9ce76850cfedcd4e8cf934371
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 3f384c1a02da1747b28701d2eba994b56a85c18f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705754"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759945"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted 方法
 
-通知探查器搜索已开始使用本机映像生成器 ( # A0) 编译的函数。  
+通知探查器搜索已开始使用本机映像生成器编译的函数)  (NGen.exe。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +35,11 @@ HRESULT JITCachedFunctionSearchStarted(
     [out] BOOL *pbUseCachedFunction);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `functionId`
+`functionId` 中正在为其执行搜索的函数的 ID。
 
-  \[in] 要为其执行搜索的函数的 ID。
-
-- `pbUseCachedFunction`
-
-  \[out] `true` 如果执行引擎应使用函数的缓存版本 (如果可用) ，则为; 否则为 `false` 。 如果值为 `false` ，则执行引擎将对函数进行 JIT 编译，而不是使用未进行 JIT 编译的版本。
+`pbUseCachedFunction` [out] `true` 如果执行引擎应使用函数的缓存版本 (如有) ，则为;否则为 `false` 。 如果值为 `false` ，则执行引擎将对函数进行 JIT 编译，而不是使用未进行 JIT 编译的版本。
 
 ## <a name="remarks"></a>备注  
 
@@ -65,6 +61,6 @@ HRESULT JITCachedFunctionSearchStarted(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)

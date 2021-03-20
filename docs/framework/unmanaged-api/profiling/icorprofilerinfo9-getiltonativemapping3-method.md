@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 867375d57f9d166ed08bf68ada81fb5cdbb8afe3
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 865545e2352209447b3942da3a62f3733c165b35
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646512"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759321"
 ---
 # <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9：： GetILToNativeMapping3 方法
 
@@ -32,23 +32,15 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
                                [out] COR_DEBUG_IL_TO_NATIVE_MAP map[]);
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `pNativeCodeStartAddress`
+`pNativeCodeStartAddress` 中指向本机函数开头的指针。
 
-  \[in] 指向本机函数开头的指针。
+`cMap` 中数组的最大大小 `map` 。
 
-- `cMap`
+`pcMap` 弄可用 COR_DEBUG_IL_TO_NATIVE_MAP 结构的总数。
 
-  \[in] 数组的最大大小 `map` 。
-
-- `pcMap`
-
-  \[out] 可用 COR_DEBUG_IL_TO_NATIVE_MAP 结构的总数。
-
-- `map`
-
-  \[out] [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) 结构的数组，其中每个结构都指定了偏移量。 `GetILToNativeMapping3` 方法返回后，`map` 将包含部分或全部 `COR_DEBUG_IL_TO_NATIVE_MAP` 结构。
+`map` 弄 [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) 结构的数组，其中每个结构都指定了偏移量。 `GetILToNativeMapping3` 方法返回后，`map` 将包含部分或全部 `COR_DEBUG_IL_TO_NATIVE_MAP` 结构。
 
 ## <a name="remarks"></a>备注
 
@@ -62,8 +54,8 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 **库：** CorGuids.lib
 
-**.NET Framework 版本：**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Framework 版本：**[!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo9 接口](icorprofilerinfo9-interface.md)

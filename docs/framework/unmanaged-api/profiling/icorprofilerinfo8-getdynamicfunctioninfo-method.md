@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 48c8dbe20ccafb3fb23e9e289f728d5e3370613a
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: b38bd7a4f440edba0a7156176f223ba38c9807cf
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646577"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759112"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8：： GetDynamicFunctionInfo 方法
 
@@ -35,35 +35,21 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
                                 [out] WCHAR                   wszName[]);
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `functionId`
+`functionId` 中要为其检索信息的函数的 ID。
 
-  \[in] 要为其检索信息的函数的 ID。
+`moduleId` 中指向定义函数父类的模块的指针。
 
-- `moduleId`
+`ppvSig` 弄指向函数的签名的指针。
 
-  \[in] 一个指针，指向在其中定义函数父类的模块。
+`pbSig` 弄指向函数签名的字节计数的指针。
 
-- `ppvSig`
+`cchName` 中数组的最大大小 `wszName` 。
 
-  \[out] 指向函数的签名的指针。
+`pcchName` 弄数组中的字符数 `wszName` 。
 
-- `pbSig`
-
-  \[out] 指向函数签名的字节计数的指针。
-
-- `cchName`
-
-  \[in] 数组的最大大小 `wszName` 。
-
-- `pcchName`
-
-  \[out] 数组中的字符数 `wszName` 。
-
-- `wszName`
-
-  \[out] 作为 `WCHAR` 函数名称（如果存在）的数组。
+`wszName` 弄一个数组 `WCHAR` ，它是函数的名称（如果存在）。
 
 ## <a name="remarks"></a>备注
 
@@ -81,6 +67,6 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo8 接口](icorprofilerinfo8-interface.md)

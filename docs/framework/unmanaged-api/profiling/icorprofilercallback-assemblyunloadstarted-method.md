@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: e9c72d481df7242f305b5efa6f747866984b31f7
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 91c0b6a600a1c7c12905a7a9817e6e7e9601c3c0
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99657822"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759464"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted 方法
 
@@ -34,11 +34,9 @@ HRESULT AssemblyUnloadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `assemblyId`
-
-  \[in] 标识正在卸载的程序集。
+`assemblyId` 中标识正在卸载的程序集。
 
 ## <a name="remarks"></a>备注  
 
@@ -54,7 +52,7 @@ HRESULT AssemblyUnloadStarted(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
 - [AssemblyUnloadFinished 方法](icorprofilercallback-assemblyunloadfinished-method.md)

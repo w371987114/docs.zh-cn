@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 466ad51b-8f0c-41d9-81f7-371aac3374cb
 topic_type:
 - apiref
-ms.openlocfilehash: 1fd6680ffaa7b28e679dc3eaeb9840981ead5c45
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 8d1b2de62e75665de7116b28a4aa68246dda7bbd
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648566"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759529"
 ---
 # <a name="functionidmapper2-function"></a>FunctionIDMapper2 函数
 
@@ -36,19 +36,13 @@ UINT_PTR __stdcall FunctionIDMapper2 (
 );  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `funcId`
+`funcId` 中要重新映射的函数标识符。
 
-  \[in] 要重新映射的函数标识符。
+`clientData` 中指向用于消除运行时之间的歧义的数据的指针。
 
-- `clientData`
-
-  \[in] 一个指向用于消除运行时之间的歧义的数据的指针。
-
-- `pbHookFunction`
-
-  \[out] 指向一个值的指针，探查器将其设置为 `true` （如果它要接收 `FunctionEnter3` 、 `FunctionLeave3` 、和）、、 `FunctionTailcall3` `FunctionEnter3WithInfo` `FunctionLeave3WithInfo` 和 `FunctionTailcall3WithInfo` 回调; 否则，它会将此值设置为 `false` 。
+`pbHookFunction` 弄一个指针，指向探查器设置为的值（ `true` 如果它要接收 `FunctionEnter3` 、 `FunctionLeave3` 、和 `FunctionTailcall3` ）、 `FunctionEnter3WithInfo` 、 `FunctionLeave3WithInfo` 和 `FunctionTailcall3WithInfo` 回调; 否则，它会将此值设置为 `false` 。
 
 ## <a name="return-value"></a>返回值  
 
@@ -68,7 +62,7 @@ UINT_PTR __stdcall FunctionIDMapper2 (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo::SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
 - [ICorProfilerInfo3::SetFunctionIDMapper2](icorprofilerinfo3-setfunctionidmapper2-method.md)

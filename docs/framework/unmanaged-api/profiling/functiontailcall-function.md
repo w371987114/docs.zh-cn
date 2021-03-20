@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: 8da3efde7d925fdb02232ca98662f8d6a6fd0adf
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: aeb6e7dcbf52fc57ebb7b6dca22331c27cadc186
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687306"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760023"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 函数
 
@@ -37,11 +37,9 @@ void __stdcall FunctionTailcall (
 );  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `funcID`
-
-  \[in] 要进行尾调用的当前正在执行的函数的标识符。
+`funcID` 中要进行尾调用的当前正在执行的函数的标识符。
 
 ## <a name="remarks"></a>备注  
 
@@ -69,7 +67,7 @@ void __stdcall FunctionTailcall (
   
  **.NET Framework 版本：** 1.1、1。0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [FunctionEnter2 函数](functionenter2-function.md)
 - [FunctionLeave2 函数](functionleave2-function.md)

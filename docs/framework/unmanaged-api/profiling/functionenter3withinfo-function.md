@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-ms.openlocfilehash: 573326c05275192a7b324377237ba057fb54bffb
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 9bcebba724f7ebb405bb3d404f028e3ebca3e0d7
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648709"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759307"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 函数
 
@@ -34,15 +34,11 @@ void __stdcall FunctionEnter3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `functionIDOrClientID`
+`functionIDOrClientID` 中要传递控制的函数的标识符。
 
-  \[in] 控件传递到的函数的标识符。
-
-- `eltInfo`
-
-  \[in] 一个表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。
+`eltInfo` 中表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。
 
 ## <a name="remarks"></a>备注  
 
@@ -70,7 +66,7 @@ void __stdcall FunctionEnter3WithInfo(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md)
 - [FunctionEnter3](functionenter3-function.md)

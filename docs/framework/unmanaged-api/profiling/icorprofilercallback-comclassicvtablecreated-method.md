@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 134ca44cbcd7a275e3ad61a3dd4decaa92668b5b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 04ba37b9c1307539c9fdf299f4667e7026d571be
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99657679"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760569"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated 方法
 
@@ -37,23 +37,15 @@ HRESULT COMClassicVTableCreated(
     [in] ULONG   cSlots);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `wrappedClasId`
+`wrappedClasId` 中已为其创建 vtable 的类的 ID。
 
-  \[in] 已为其创建 vtable 的类的 ID。
+`implementedIID` 中类实现的接口的 ID。 如果接口仅限内部接口，此值可能为 NULL。
 
-- `implementedIID`
+`pVTable` 中指向 vtable 开头的指针。
 
-  \[in] 类实现的接口的 ID。 如果接口仅限内部接口，此值可能为 NULL。
-
-- `pVTable`
-
-  \[in] 指向 vtable 开头的指针。
-
-- `cSlots`
-
-  \[in] vtable 中的槽数。
+`cSlots` 中Vtable 中的槽数。
 
 ## <a name="remarks"></a>备注  
 
@@ -71,7 +63,7 @@ HRESULT COMClassicVTableCreated(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
 - [COMClassicVTableDestroyed 方法](icorprofilercallback-comclassicvtabledestroyed-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: 07b91a81480e453be16e840b89fa822cb91002ba
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 0f5c9f0dde405aaadf50a7da476bbae664ef8ef7
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99788951"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759373"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 函数
 
@@ -37,11 +37,9 @@ void __stdcall FunctionEnter (
 );  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `funcID`
-
-  \[in] 控件传递到的函数的标识符。
+`funcID` 中要传递控制的函数的标识符。
 
 ## <a name="remarks"></a>备注  
 
@@ -67,7 +65,7 @@ void __stdcall FunctionEnter (
   
  **.NET Framework 版本：** 1.1、1。0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [FunctionEnter2 函数](functionenter2-function.md)
 - [FunctionLeave2 函数](functionleave2-function.md)

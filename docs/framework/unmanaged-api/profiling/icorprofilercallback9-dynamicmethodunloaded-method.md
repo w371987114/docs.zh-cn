@@ -9,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 243660d3159e3c8c1d052c08e9c7499e7065d301
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: bc7f95b5101658c93eeb9fcef51e9c0f1bd2f2bd
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99753323"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760192"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9：:D ynamicMethodUnloaded 方法
 
@@ -30,10 +30,9 @@ HRESULT DynamicMethodUnloaded(
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
 
-[in] `functionId`  
-已被垃圾回收和卸载的内存中函数的标识符。
+`functionId` 中已被垃圾回收和卸载的内存中函数的标识符。
 
 ## <a name="requirements"></a>要求  
 
@@ -45,7 +44,7 @@ HRESULT DynamicMethodUnloaded(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback8. DynamicMethodJITCompilationStarted 方法](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8. DynamicMethodJITCompilationFinished 方法](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)

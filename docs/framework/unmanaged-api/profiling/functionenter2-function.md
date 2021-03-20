@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 8b8061b213d02efd845e214c1177db4e5351869b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: f68aeffdd63222cd78d7dc361f09e0b4c3e5af51
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99788977"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759386"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 函数
 
@@ -37,27 +37,19 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `funcId`
+`funcId` 中要传递控制的函数的标识符。
 
-  \[in] 控件传递到的函数的标识符。
-
-- `clientData`
-
-  \[in] 重新映射的函数标识符，该标识符以前使用 [FunctionIDMapper](functionidmapper-function.md) 函数指定了探查器。
+`clientData` 中使用 [FunctionIDMapper](functionidmapper-function.md) 函数之前指定的探查器的重新映射函数标识符。
   
-- `func`
-
-  \[in] 一个 `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。
+`func` 中一个 `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。
   
-  探查器应将此视为不透明的句柄，该句柄可传递回 [ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 方法中的执行引擎。  
+探查器应将此视为不透明的句柄，该句柄可传递回 [ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 方法中的执行引擎。  
   
-- `argumentInfo`
+`argumentInfo` 中指向 [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) 结构的指针，该结构指定函数参数在内存中的位置。
 
-  \[in] 一个指向 [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) 结构的指针，该结构指定函数参数在内存中的位置。
-
-  为了访问参数信息， `COR_PRF_ENABLE_FUNCTION_ARGS` 必须设置标志。 探查器可以使用 [ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md) 方法来设置事件标志。
+为了访问参数信息， `COR_PRF_ENABLE_FUNCTION_ARGS` 必须设置标志。 探查器可以使用 [ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md) 方法来设置事件标志。
 
 ## <a name="remarks"></a>备注  
 
@@ -85,7 +77,7 @@ void __stdcall FunctionEnter2 (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [FunctionLeave2 函数](functionleave2-function.md)
 - [FunctionTailcall2 函数](functiontailcall2-function.md)

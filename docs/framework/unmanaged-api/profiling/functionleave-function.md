@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: cc0db68df8976ce86197cc9b7570b00c6f662cb5
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 619c1ecd92d2cc53512687d542becb3a2636b8af
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648475"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759490"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 函数
 
@@ -37,11 +37,9 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `funcID`
-
-  \[in] 返回的函数的标识符。
+`funcID` 中返回的函数的标识符。
 
 ## <a name="remarks"></a>备注  
 
@@ -67,7 +65,7 @@ void __stdcall FunctionLeave (
   
  **.NET Framework 版本：** 1.1、1。0  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [FunctionEnter2 函数](functionenter2-function.md)
 - [FunctionLeave2 函数](functionleave2-function.md)

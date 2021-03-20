@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 1ca686cef4a45ebb9e05190fa790ed5300c0d816
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 062aebf6d5bed208ea71b215bd9f857b82483673
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646486"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759036"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9：： GetNativeCodeStartAddresses 方法
 
@@ -33,27 +33,17 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
                                      [out] UINT_PTR codeStartAddresses[]);
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `functionId`
+`functionId` 中应返回其本机代码起始地址的函数的 ID。
 
-  \[in] 应返回其本机代码起始地址的函数的 ID。
+`reJitId` 中JIT 重新编译的函数的标识。
 
-- `reJitId`
+`cCodeStartAddresses` 中数组的最大大小 `codeStartAddresses` 。
 
-  \[in] JIT 重新编译的函数的标识。
+`pcCodeStartAddresses` 弄可用地址的数目。
 
-- `cCodeStartAddresses`
-
-  \[in] 数组的最大大小 `codeStartAddresses` 。
-
-- `pcCodeStartAddresses`
-
-  \[out] 可用地址的数量。
-
-- `codeStartAddresses`
-
-  \[out] 的数组 `UINT_PTR` ，其中每个都是指定函数的本机正文的开始地址。
+`codeStartAddresses` 弄的数组 `UINT_PTR` ，其中每个都是指定函数的本机正文的开始地址。
 
 ## <a name="remarks"></a>备注
 
@@ -67,8 +57,8 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 **库：** CorGuids.lib
 
-**.Net 版本：**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.Net 版本：**[!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo9 接口](icorprofilerinfo9-interface.md)

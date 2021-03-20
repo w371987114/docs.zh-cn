@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 11b53b39d3332d1f72304352fad525e5881e05a6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 00ae5ca76462d8800a77c2869ef73703a4f1d980
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648449"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760764"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 方法
 
@@ -39,31 +39,19 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `dwProfileeProcessID`
+`dwProfileeProcessID` 中应将探查器附加到的进程的进程 ID。 在 64 位计算机上，被分析进程的位数必须匹配调用 `AttachProfiler` 的触发进程的位数。 如果调用 `AttachProfiler` 的用户帐户具有管理特权，则目标进程可能是系统上的任何进程。 否则，相同的用户帐户必须拥有目标进程。
 
-  \[in] 应将探查器附加到的进程的进程 ID。 在 64 位计算机上，被分析进程的位数必须匹配调用 `AttachProfiler` 的触发进程的位数。 如果调用 `AttachProfiler` 的用户帐户具有管理特权，则目标进程可能是系统上的任何进程。 否则，相同的用户帐户必须拥有目标进程。
-
-- `dwMillisecondsMax`
-
-  \[in] 完成的持续时间（以毫秒为单位） `AttachProfiler` 。 触发器进程应传递一个特定探查器足以完成其初始化的已知超时。
+`dwMillisecondsMax` 中完成的持续时间（以毫秒为单位） `AttachProfiler` 。 触发器进程应传递一个特定探查器足以完成其初始化的已知超时。
   
-- `pClsidProfiler`
+`pClsidProfiler` 中一个指针，指向要加载的探查器的 CLSID。 `AttachProfiler` 返回后，触发器进程可重用此内存。
 
-  \[in] 一个指针，指向要加载的探查器的 CLSID。 `AttachProfiler` 返回后，触发器进程可重用此内存。
+`wszProfilerPath` 中要加载的探查器的 DLL 文件的完整路径。 此字符串应包含不超过 260 个字符，包括 null 终止符。 如果 `wszProfilerPath` 为 null 或为空字符串，公共语言运行时 (CLR) 将通过在 `pClsidProfiler` 指向的 CLSID 的注册表中查找探查器的 DLL 文件的位置。
 
-- `wszProfilerPath`
+`pvClientData` 中指向由 [ICorProfilerCallback3：： InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 方法传递到探查器的数据的指针。 `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。
 
-  \[in] 要加载的探查器 DLL 文件的完整路径。 此字符串应包含不超过 260 个字符，包括 null 终止符。 如果 `wszProfilerPath` 为 null 或为空字符串，公共语言运行时 (CLR) 将通过在 `pClsidProfiler` 指向的 CLSID 的注册表中查找探查器的 DLL 文件的位置。
-
-- `pvClientData`
-
-  \[in] 一个指针，指向由 [ICorProfilerCallback3：： InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 方法传递到探查器的数据。 `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。
-
-- `cbClientData`
-
-  \[in] 指向的数据的大小（以字节为单位） `pvClientData` 。
+`cbClientData` 中指向的数据的大小（以字节为单位） `pvClientData` 。
 
 ## <a name="return-value"></a>返回值  
 
@@ -100,7 +88,7 @@ HRESULT AttachProfiler(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 接口](icorprofilerinfo3-interface.md)

@@ -3,12 +3,12 @@ description: 了解详细信息： ICorProfilerInfo6：： EnumNgenModuleMethods
 title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 方法
 ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-ms.openlocfilehash: bd43dcecabe9a75f7ce3a94996727b192574e321
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 236aaa820162dcc1d5c6c8ade1e8da78f5f4acb0
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99737163"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759125"
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 方法
 
@@ -26,22 +26,17 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
 );
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-`inlinersModuleId`\
-中NGen 模块的标识符。
+`inlinersModuleId` 中NGen 模块的标识符。
 
-`inlineeModuleId`\
-中定义的模块的标识符 `inlineeMethodId` 。 有关详细信息，请参阅备注部分。
+`inlineeModuleId` 中定义的模块的标识符 `inlineeMethodId` 。 有关详细信息，请参阅备注部分。
 
-`inlineeMethodId`\
-中内联方法的标识符。 有关详细信息，请参阅备注部分。
+`inlineeMethodId` 中内联方法的标识符。 有关详细信息，请参阅备注部分。
 
-`incompleteData`\
-弄一个标志，该标志指示是否 `ppEnum` 将所有方法内联到给定方法。  有关详细信息，请参阅备注部分。
+`incompleteData` 弄一个标志，该标志指示是否 `ppEnum` 将所有方法内联到给定方法。  有关详细信息，请参阅备注部分。
 
-`ppEnum`\
-弄指向枚举器地址的指针
+`ppEnum` 弄指向枚举器地址的指针
 
 ## <a name="remarks"></a>备注
 
@@ -82,6 +77,6 @@ Simple.Add(int a, int b)
 
 **.NET Framework 版本：**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo6 接口](icorprofilerinfo6-interface.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-ms.openlocfilehash: 40114f6e1d80719eceaf2dbc398b74c1e790c76a
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ded43da029fe0b4c2a645823e62ca66b480f095c
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99788665"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760270"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences 方法
 
@@ -38,19 +38,15 @@ HRESULT ConditionalWeakTableElementReferences(
 );
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-`cRootRefs`\
-[in] `keyRefIds`、`valueRefIds` 和 `rootIds` 数组中的元素数。
+`cRootRefs` 中 `keyRefIds`、和数组中的元素数 `valueRefIds` `rootIds` 。
 
-`keyRefIds`\
-[in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中主要元素的 `ObjectID`。
+`keyRefIds` 中对象 Id 的数组，其中每个对象 Id 都包含 `ObjectID` 相关句柄对中的主元素的。
 
-`valueRefIds`\
-[in] 一个包含对象 ID 的数组，其中每个对象 ID 都包含相关句柄对中次要元素的 `ObjectID`。  (`keyRefIds[i]` 保持 `valueRefIds[i]` 活动状态 ) 
+`valueRefIds` 中对象 Id 的数组，其中每个对象 Id 都包含 `ObjectID` 相关句柄对中的第二个元素的。  (`keyRefIds[i]` 保持 `valueRefIds[i]` 活动状态 ) 
 
-`rootIds`\
-[in] 一个包含 `GCHandleID` 值的数组，这些值指向包含有关垃圾回收根的附加信息的整数。
+`rootIds` 中一个 `GCHandleID` 值的数组，这些值指向一个整数，该整数包含有关垃圾回收根的其他信息。
 
 在该回调本身中，由 `ObjectID` 方法返回的任何 `ConditionalWeakTableElementReferences` 值都无效，因为垃圾回收器可能正处于将对象从旧位置移到新位置的过程中。 因此，探查器不应在 `ConditionalWeakTableElementReferences` 调用期间尝试检查对象。 在 `GarbageCollectionFinished` 时，已经将所有对象都移动到其新位置，并且检查可能已完成。
 
@@ -91,6 +87,6 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback5 接口](icorprofilercallback5-interface.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-ms.openlocfilehash: 7a76c49aaa301ba45c41fb2eb3f7770539dcc6c0
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 176830cac519f22864ba004b176cb575d80e50e2
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99798883"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760231"
 ---
 # <a name="profiling-structures"></a>分析结构
 
@@ -40,6 +40,12 @@ ms.locfileid: "99798883"
   
  [COR_PRF_GC_GENERATION_RANGE 结构](cor-prf-gc-generation-range-structure.md)  
  描述一个正进行垃圾回收的内存范围（即块）。  
+
+ [COR_PRF_EVENTPIPE_PROVIDER_CONFIG 结构](cor-prf-eventpipe-provider-config-structure.md) 描述配置 EventPipe 提供程序所必需的字段。
+
+ [COR_PRF_EVENTPIPE_PARAM_DESC 结构](cor-prf-eventpipe-param-desc-structure.md) 描述 EventPipe 事件的参数名称和类型。
+
+ [COR_PRF_EVENT_DATA 结构](cor-prf-event-data-structure.md) 描述要写入的 EventPipe 事件的事件数据。
   
 ## <a name="related-sections"></a>相关章节  
 

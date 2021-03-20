@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-ms.openlocfilehash: b3ff579dee384b331450aa54aace39890febfe30
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c7138a1a39a1d32c751c205a86c00e6070a236b3
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705936"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760413"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize 方法
 
@@ -34,11 +34,9 @@ HRESULT Initialize(
     [in] IUnknown     *pICorProfilerInfoUnk);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `pICorProfilerInfoUnk`
-
-  \[in] 指向 [IUnknown](/cpp/atl/iunknown) 接口的指针，探查器必须查询 [ICorProfilerInfo](icorprofilerinfo-interface.md) 接口指针。  
+`pICorProfilerInfoUnk` 中指向 [IUnknown](/cpp/atl/iunknown) 接口的指针，探查器必须查询该接口的 [ICorProfilerInfo](icorprofilerinfo-interface.md) 接口指针。  
 
 ## <a name="remarks"></a>备注  
 
@@ -54,7 +52,7 @@ HRESULT Initialize(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
 - [Shutdown 方法](icorprofilercallback-shutdown-method.md)

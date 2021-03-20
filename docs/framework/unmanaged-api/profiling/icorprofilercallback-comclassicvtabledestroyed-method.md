@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-ms.openlocfilehash: 91ed5bb65d3a64f1f85a09a710b507974f51c79b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e8ed6be2519a9f8959ac4f59313f73f13d6c569b
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706375"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760556"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed 方法
 
@@ -39,19 +39,13 @@ HRESULT COMClassicVTableDestroyed(
     [in] void    *pVTable);  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `wrappedClassId`
+`wrappedClassId` 中为其创建了此 vtable 的类的 ID。
 
-  \[in] 为其创建了此 vtable 的类的 ID。
+`implementedIID` 中类实现的接口的 ID。 如果接口仅限内部接口，此值可能为 NULL。
 
-- `implementedIID`
-
-  \[in] 类实现的接口的 ID。 如果接口仅限内部接口，此值可能为 NULL。
-
-- `pVTable`
-
-  \[in] 指向 vtable 开头的指针。
+`pVTable` 中指向 vtable 开头的指针。
 
 ## <a name="remarks"></a>备注  
 
@@ -69,7 +63,7 @@ HRESULT COMClassicVTableDestroyed(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerCallback 接口](icorprofilercallback-interface.md)
 - [COMClassicVTableCreated 方法](icorprofilercallback-comclassicvtablecreated-method.md)

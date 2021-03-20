@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: 03547537d43a76f26d6946666589f38ca4e02ec4
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e06c3bde7ad0700de3d7f08b33159032b31eae8a
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687423"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760062"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 函数
 
@@ -36,21 +36,15 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `funcId`
+`funcId` 中要进行尾调用的当前正在执行的函数的标识符。
 
-  \[in] 要进行尾调用的当前正在执行的函数的标识符。
-
-- `clientData`
-
-  \[in] 重映射的函数标识符，该标识符之前通过 [FunctionIDMapper](functionidmapper-function.md)指定的探查器将进行尾调用。
+`clientData` 中探查器前面通过 [FunctionIDMapper](functionidmapper-function.md)指定的函数标识符，当前正在执行的函数将进行尾调用。
   
-- `func`
+`func` 中一个 `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。
 
-  \[in] 一个 `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。
-
-  探查器应将此视为不透明的句柄，该句柄可传递回 [ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 方法中的执行引擎。
+探查器应将此视为不透明的句柄，该句柄可传递回 [ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 方法中的执行引擎。
 
 ## <a name="remarks"></a>备注  
 
@@ -80,7 +74,7 @@ void __stdcall FunctionTailcall2 (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [FunctionEnter2 函数](functionenter2-function.md)
 - [FunctionLeave2 函数](functionleave2-function.md)

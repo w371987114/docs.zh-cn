@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 765f3dfee6c56148eb7807b0606e79d4b3a2e7a1
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c7897e266fbb84d44df719c127e24bd375b560bb
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99783802"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759086"
 ---
 # <a name="icorprofilerinfo9getcodeinfo4-method"></a>ICorProfilerInfo9：： GetCodeInfo4 方法
 
@@ -32,23 +32,15 @@ HRESULT GetCodeInfo4( [in]  UINT_PTR pNativeCodeStartAddress,
                       [out] COR_PRF_CODE_INFO codeInfos[]);
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-- `pNativeCodeStartAddress`
+`pNativeCodeStartAddress` 中指向本机函数开头的指针。
 
-  \[in] 指向本机函数开头的指针。
+`cCodeInfos` 中数组的大小 `codeInfos` 。
 
-- `cCodeInfos`
+`pcCodeInfos` 弄指向可用 [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) 结构总数的指针。
 
-  \[in] 数组的大小 `codeInfos` 。
-
-- `pcCodeInfos`
-
-  \[out] 指向可用 [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) 结构总数的指针。
-
-- `codeInfos`
-
-  \[out] 调用方提供的缓冲区。 返回此方法后，它包含一个 `COR_PRF_CODE_INFO` 结构数组，每个结构描述一个本机代码块。
+`codeInfos` 弄调用方提供的缓冲区。 返回此方法后，它包含一个 `COR_PRF_CODE_INFO` 结构数组，每个结构描述一个本机代码块。
 
 ## <a name="remarks"></a>备注
 
@@ -71,8 +63,8 @@ HRESULT GetCodeInfo4( [in]  UINT_PTR pNativeCodeStartAddress,
 
 **库：** CorGuids.lib
 
-**.Net 版本：**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.Net 版本：**[!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorProfilerInfo9 接口](ICorProfilerInfo9-interface.md)
