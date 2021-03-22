@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 49817f9ad712e50669bab958296946c06d5c19eb
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 305a440634120395dba6881584b2ff46646da211
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679411"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653577"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教程：在 ML.NET 中使用 ONNX 检测对象
 
@@ -39,7 +39,7 @@ ms.locfileid: "90679411"
 
 ## <a name="onnx-object-detection-sample-overview"></a>ONNX 对象检测示例概述
 
-此示例创建一个 .NET 核心控制台应用程序，该应用程序使用预训练的深度学习 ONNX 模型检测图像中的对象。 此示例的代码可以在 GitHub 上的 [dotnet/machinelearning-samples 存储库](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)找到。
+此示例创建一个 .NET 核心控制台应用程序，该应用程序使用预训练的深度学习 ONNX 模型检测图像中的对象。 此示例的代码可以在 GitHub 上的 [dotnet/machinelearning-samples 存储库](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)找到。
 
 ## <a name="what-is-object-detection"></a>什么是对象检测？
 
@@ -88,19 +88,19 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
 1. 创建名为 ObjectDetection 的 .NET Core 控制台应用程序。
 
-1. 安装“Microsoft.ML NuGet 包”：
+1. 安装“Microsoft.ML NuGet 包”  ：
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    - 在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。
+    - 在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。
     - 选择“nuget.org”作为“包源”，选择“浏览”选项卡，再搜索“Microsoft.ML”。
-    - 选择“安装”按钮。
+    - 选择“安装”按钮  。
     - 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。
     - 对 Microsoft.ML.ImageAnalytics、Microsoft.ML.OnnxTransformer 和 Microsoft.ML.OnnxRuntime 重复这些步骤  。
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>准备你的数据和预训练的模型
 
-1. 下载并解压缩[项目资产目录 zip 文件](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/assets.zip)。
+1. 下载并解压缩[项目资产目录 zip 文件](https://github.com/dotnet/machinelearning-samples/raw/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/assets.zip)。
 
 1. 将 `assets` 目录复制到 ObjectDetection 项目目录中。 此目录及其子目录包含本教程所需的图像文件（Tiny YOLOv2 模型除外，将在下一步中下载并添加此模型）。
 
@@ -139,7 +139,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 在新创建的“DataStructures”目录中创建输入数据类。
 
 1. 在“解决方案资源管理器”中，右键单击“DataStructures”目录，然后选择“添加” > “新项” 。
-1. 在“添加新项”对话框中，选择“类”，并将“名称”字段更改为“ImageNetData.cs”  。 然后，选择“添加”按钮。
+1. 在“添加新项”对话框中，选择“类”，并将“名称”字段更改为“ImageNetData.cs”  。 然后，选择“添加”  按钮。
 
     此时，将在代码编辑器中打开 ImageNetData.cs 文件。 将下面的 `using` 语句添加到 ImageNetData.cs 顶部：
 
@@ -159,7 +159,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 在“DataStructures”目录中创建预测类。
 
 1. 在“解决方案资源管理器”中，右键单击“DataStructures”目录，然后选择“添加” > “新项” 。
-1. 在“添加新项”对话框中，选择“类”，并将“名称”字段更改为“ImageNetPrediction.cs”  。 然后，选择“添加”按钮。
+1. 在“添加新项”对话框中，选择“类”，并将“名称”字段更改为“ImageNetPrediction.cs”  。 然后，选择“添加”  按钮。
 
     此时，将在代码编辑器中打开 ImageNetPrediction.cs 文件。 将下面的 `using` 语句添加到 ImageNetPrediction.cs 顶部：
 
@@ -207,7 +207,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 模型输出的数据包含图像中对象边界框的坐标和维度。 创建维度的基类。
 
 1. 在“解决方案资源管理器”中，右键单击“YoloParser”目录，然后选择“添加” > “新项” 。
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“DimensionsBase.cs”  。 然后，选择“添加”按钮。
+1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“DimensionsBase.cs”  。 然后，选择“添加”  按钮。
 
     此时，将在代码编辑器中打开 DimensionsBase.cs 文件。 删除所有 `using` 语句和现有类定义。
 
@@ -225,7 +225,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 接下来，为边界框创建一个类。
 
 1. 在“解决方案资源管理器”中，右键单击“YoloParser”目录，然后选择“添加” > “新项” 。
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“YoloBoundingBox.cs”  。 然后，选择“添加”按钮。
+1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“YoloBoundingBox.cs”  。 然后，选择“添加”  按钮。
 
     此时，将在代码编辑器中打开 YoloBoundingBox.cs 文件。 将下面的 `using` 语句添加到 YoloBoundingBox.cs 顶部：
 
@@ -252,7 +252,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 创建维度和边界框的类之后，接下来创建分析器。
 
 1. 在“解决方案资源管理器”中，右键单击“YoloParser”目录，然后选择“添加” > “新项” 。
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“YoloOutputParser.cs”  。 然后，选择“添加”按钮。
+1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“YoloOutputParser.cs”  。 然后，选择“添加”  按钮。
 
     此时，将在代码编辑器中打开 YoloOutputParser.cs 文件。 将下面的 `using` 语句添加到 YoloOutputParser.cs 顶部：
 
@@ -457,7 +457,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 就像后处理一样，评分步骤也有几个步骤。 为此，请向项目添加包含评分逻辑的类。
 
 1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“OnnxModelScorer.cs”  。 然后，选择“添加”按钮。
+1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“OnnxModelScorer.cs”  。 然后，选择“添加”  按钮。
 
     此时，将在代码编辑器中打开 OnnxModelScorer.cs 文件。 将下面的 `using` 语句添加到 OnnxModelScorer.cs 顶部：
 
@@ -709,7 +709,7 @@ person and its Confidence score: 0.5551759
 
 祝贺你！ 现已通过重用 ML.NET 中的预训练 `ONNX` 模型，成功生成了对象检测机器学习模型。
 
-可以在 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) 存储库中找到本教程的源代码。
+可以在 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) 存储库中找到本教程的源代码。
 
 在本教程中，你将了解：
 > [!div class="checklist"]
@@ -722,4 +722,4 @@ person and its Confidence score: 0.5551759
 
 请查看机器学习示例 GitHub 存储库，以探索扩展的对象检测示例。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub 存储库](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)
+> [dotnet/machinelearning-samples GitHub 存储库](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)

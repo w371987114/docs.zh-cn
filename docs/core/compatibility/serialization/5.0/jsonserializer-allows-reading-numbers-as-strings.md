@@ -2,12 +2,12 @@
 title: 中断性变更：ASP.NET Core 应用允许反序列化带引号的数字
 description: 了解 .NET 5 中的中断性变更：ASP.NET Core 应用将成功反序列化以 JSON 字符串表示的数字，而不会引发异常。
 ms.date: 10/21/2020
-ms.openlocfilehash: f541af5bf5f0a519fd5205f44d68a9b401569909
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: bc1531bb9b159bfd9e80eafacafb50aa509973cc
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102256304"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624144"
 ---
 # <a name="aspnet-core-apps-allow-deserializing-quoted-numbers"></a>ASP.NET Core 应用允许反序列化带引号的数字
 
@@ -41,7 +41,7 @@ ms.locfileid: "102256304"
 
 ```csharp
 services.AddControllers()
-   .AddJsonOptions(options.NumberHandling = JsonNumberHandling.Strict);
+   .AddJsonOptions(options => options.JsonSerializerOptions.NumberHandling = JsonNumberHandling.Strict);
 ```
 
 ## <a name="affected-apis"></a>受影响的 API

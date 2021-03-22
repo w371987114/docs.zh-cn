@@ -7,12 +7,12 @@ no-loc:
 - dotnet list package
 ms.topic: how-to
 ms.date: 01/28/2021
-ms.openlocfilehash: 9f5f814d0b4dc7aa3ff1a938c172475169a55bf2
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 03311902e99962553b5b740a285021f27d94bfbc
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216123"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759698"
 ---
 # <a name="manage-dependencies-in-net-applications"></a>管理 .NET 应用程序中的依赖项
 
@@ -79,5 +79,5 @@ dotnet remove package Microsoft.EntityFrameworkCore
 
 ## <a name="see-also"></a>请参阅
 
-* [项目文件中的包引用](../project-sdk/msbuild-props.md#reference-properties-and-items)
+* [项目文件中的包引用](../project-sdk/msbuild-props.md#reference-properties)
 * [dotnet list package 命令](dotnet-list-package.md)

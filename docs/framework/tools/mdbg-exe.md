@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line debugger [.NET Framework]
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
-ms.openlocfilehash: 927547a9ab2da43462038b01405a8046d89a184e
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 6118e20293f6076d080402b4e6ce52bd0e86e5cd
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258938"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653941"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe（.NET Framework 命令行调试程序）
 
@@ -109,4 +109,3 @@ mdbg>
 ## <a name="see-also"></a>请参阅
 
 - [工具](index.md)
-- [开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)
