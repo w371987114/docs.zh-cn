@@ -2,16 +2,16 @@
 title: C# 中的异步编程
 description: 对使用 async、await、Task 和 Task<T> 的异步编程的 C# 语言支持的概述
 ms.date: 06/04/2020
-ms.openlocfilehash: 02290e374aa97cb5d5ec6410c917751066949b23
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: ffc2289f3b5abfe3865e1a096ee91e2e649a6427
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438107"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624235"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>使用 Async 和 Await 的异步编程
 
-[基于任务的异步编程模型 (TAP)](task-asynchronous-programming-model.md) 提供了异步代码的抽象化。 你只需像往常一样将代码编写为一连串语句即可。 就如每条语句在下一句开始之前完成一样，你可以流畅地阅读代码。 编译器将执行若干转换，因为其中一些语句可能会开始运行并返回表示正在运行中的 <xref:System.Threading.Tasks.Task>。
+[基于任务的异步编程模型 (TAP)](task-asynchronous-programming-model.md) 提供了异步代码的抽象化。 你只需像往常一样将代码编写为一连串语句即可。 就如每条语句在下一句开始之前完成一样，你可以流畅地阅读代码。 编译器将执行许多转换，因为其中一些语句可能会开始运行并返回表示正在进行的工作的 <xref:System.Threading.Tasks.Task>。
 
 这就是此语法的目标：支持读起来像一连串语句的代码，但会根据外部资源分配和任务完成时间以更复杂的顺序执行。 这与人们为包含异步任务的流程给予指令的方式类似。 在本文中，你将通过做早餐的指令示例来查看如何使用 `async` 和 `await` 关键字更轻松地推断包含一系列异步指令的代码。 你可能会写出与以下列表类似的指令来解释如何做早餐：
 
@@ -45,7 +45,7 @@ ms.locfileid: "91438107"
 
 这些问题对即将编写的程序而言至关重要。 编写客户端程序时，你希望 UI 能够响应用户输入。 从 Web 下载数据时，你的应用程序不应让手机出现卡顿。 编写服务器程序时，你不希望线程受到阻塞。 这些线程可以用于处理其他请求。 存在异步替代项的情况下使用同步代码会增加你进行扩展的成本。 你需要为这些受阻线程付费。
 
-成功的现代应用程序需要异步代码。 在没有语言支持的情况下，编写异步代码需要回调、完成事件，或其他掩盖代码原始意图的方法。 同步代码的优点是，它是循序渐进的操作，从而易于扫描和理解。 传统的异步模型迫使你侧重于代码的异步性质，而不是代码的基本操作。
+成功的现代应用程序需要异步代码。 在没有语言支持的情况下，编写异步代码需要回调、完成事件，或其他掩盖代码原始意图的方法。 同步代码的优点是，它的分步操作使其易于扫描和理解。 传统的异步模型迫使你侧重于代码的异步性质，而不是代码的基本操作。
 
 ## <a name="dont-block-await-instead"></a>不要阻塞，而要 await
 
@@ -53,7 +53,7 @@ ms.locfileid: "91438107"
 
 我们首先更新此代码，使线程在任务运行时不会阻塞。 `await` 关键字提供了一种非阻塞方式来启动任务，然后在此任务完成时继续执行。 “做早餐”代码的简单异步版本类似于以下片段：
 
-:::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" ID="SnippetMain":::
 
 > [!IMPORTANT]
 > 总运行时间和最初同步版本大致相同。 此代码尚未利用异步编程的某些关键功能。
@@ -123,9 +123,9 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-:::image type="content" source="media/asynchronous-breakfast.png" alt-text="同步早餐":::
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="异步早餐":::
 
-异步准备的早餐大约花费了 20 分钟，这是因为一些任务可以并发运行。
+异步准备的早餐大约花费了 20 分钟，由于一些任务并发运行，因此节约了时间。
 
 上述代码效果更好。 你可以一次启动所有的异步任务。 你仅在需要结果时才会等待每项任务。 上述代码可能类似于 Web 应用程序中请求各种微服务，然后将结果合并到单个页面中的代码。 你将立即发出所有请求，然后 `await` 所有这些任务并组成 Web 页面。
 
@@ -138,13 +138,82 @@ Console.WriteLine("Breakfast is ready!");
 
 上述代码展示了可以使用 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 对象来保存运行中的任务。 你首先需要 `await` 每项任务，然后再使用它的结果。 下一步是创建表示其他工作组合的方式。 在提供早餐之前，你希望等待表示先烤面包再添加黄油和果酱的任务完成。 你可以使用以下代码表示此工作：
 
-:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetComposeToastTask":::
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" ID="SnippetComposeToastTask":::
 
 上述方式的签名中具有 `async` 修饰符。 它会向编译器发出信号，说明此方法包含 `await` 语句；也包含异步操作。 此方法表示先烤面包，然后再添加黄油和果酱的任务。 此方法返回表示这三个操作的组合的 <xref:System.Threading.Tasks.Task%601>。 主要代码块现在变成了：
 
-:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetMain":::
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" ID="SnippetMain":::
 
 上述更改说明了使用异步代码的一项重要技术。 你可以通过将操作分离到一个返回任务的新方法中来组合任务。 可以选择等待此任务的时间。 可以同时启动其他任务。
+
+## <a name="asynchronous-exceptions"></a>异步异常
+
+至此，已隐式假定所有这些任务都已成功完成。 异步方法会引发异常，就像对应的同步方法一样。 对异常和错误处理的异步支持通常与异步支持追求相同的目标：你应该编写读起来像一系列同步语句的代码。 当任务无法成功完成时，它们将引发异常。 当启动的任务为 `awaited` 时，客户端代码可捕获这些异常。 例如，假设烤面包机在烤面包时着火了。 可通过修改 `ToastBreadAsync` 方法来模拟这种情况，以匹配以下代码：
+
+```csharp
+private static async Task<Toast> ToastBreadAsync(int slices)
+{
+    for (int slice = 0; slice < slices; slice++)
+    {
+        Console.WriteLine("Putting a slice of bread in the toaster");
+    }
+    Console.WriteLine("Start toasting...");
+    await Task.Delay(2000);
+    Console.WriteLine("Fire! Toast is ruined!");
+    throw new InvalidOperationException("The toaster is on fire");
+    await Task.Delay(1000);
+    Console.WriteLine("Remove toast from toaster");
+
+    return new Toast();
+}
+```
+
+> [!NOTE]
+> 在编译前面的代码时，你将收到一个关于无法访问的代码的警告。 这是故意的，因为一旦烤面包机着火，操作就不会正常进行。
+
+执行这些更改后，运行应用程序，输出将类似于以下文本：
+
+```console
+Pouring coffee
+coffee is ready
+Warming the egg pan...
+putting 3 slices of bacon in the pan
+cooking first side of bacon...
+Putting a slice of bread in the toaster
+Putting a slice of bread in the toaster
+Start toasting...
+Fire! Toast is ruined!
+flipping a slice of bacon
+flipping a slice of bacon
+flipping a slice of bacon
+cooking the second side of bacon...
+cracking 2 eggs
+cooking the eggs ...
+Put bacon on plate
+Put eggs on plate
+eggs are ready
+bacon is ready
+Unhandled exception. System.InvalidOperationException: The toaster is on fire
+   at AsyncBreakfast.Program.ToastBreadAsync(Int32 slices) in Program.cs:line 65
+   at AsyncBreakfast.Program.MakeToastWithButterAndJamAsync(Int32 number) in Program.cs:line 36
+   at AsyncBreakfast.Program.Main(String[] args) in Program.cs:line 24
+   at AsyncBreakfast.Program.<Main>(String[] args)
+```
+
+请注意，从烤面包机着火到发现异常，有相当多的任务要完成。 当异步运行的任务引发异常时，该任务出错。 Task 对象包含 <xref:System.Threading.Tasks.Task.Exception?displayProperty=nameWithType> 属性中引发的异常。 出错的任务在等待时引发异常。
+
+需要理解两个重要机制：异常在出错的任务中的存储方式，以及在代码等待出错的任务时解包并重新引发异常的方式。
+
+当异步运行的代码引发异常时，该异常存储在 `Task` 中。 <xref:System.Threading.Tasks.Task.Exception?displayProperty=nameWithType> 属性为 <xref:System.AggregateException?displayProperty=nameWithType>，因为异步工作期间可能会引发多个异常。 引发的任何异常都将添加到 <xref:System.AggregateException.InnerExceptions?displayProperty=nameWithType> 集合中。 如果该 `Exception` 属性为 NULL，则将创建一个新的 `AggregateException` 且引发的异常是该集合中的第一项。
+
+对于出错的任务，最常见的情况是 `Exception` 属性只包含一个异常。 当代码 `awaits` 出错的任务时，将重新引发 <xref:System.AggregateException.InnerExceptions?displayProperty=nameWithType> 集合中的第一个异常。 因此，此示例的输出显示 `InvalidOperationException` 而不是 `AggregateException`。 提取第一个内部异常使得使用异步方法与使用其对应的同步方法尽可能相似。 当你的场景可能生成多个异常时，可在代码中检查 `Exception` 属性。
+
+继续之前，在 `ToastBreadAsync` 方法中注释禁止这两行。 你不想再引起火灾：
+
+```csharp
+Console.WriteLine("Fire! Toast is ruined!");
+throw new InvalidOperationException("The toaster is on fire");
+```
 
 ## <a name="await-tasks-efficiently"></a>高效地等待任务
 
@@ -184,13 +253,13 @@ while (breakfastTasks.Count > 0)
 进行所有这些更改之后，代码的最终版本将如下所示：<a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
-:::image type="content" source="media/whenany-async-breakfast.png" alt-text="同步早餐":::
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="when any 异步早餐":::
 
-异步准备的早餐的最终版本大约花费了 15 分钟，这是因为一些任务能够同时运行，并且该代码能够同时监视多个任务，只在需要时才执行操作。
+异步准备的早餐的最终版本大约花费了 15 分钟，因为一些任务并行运行，并且代码同时监视多个任务，只在需要时才执行操作。
 
 此最终代码是异步的。 它更为准确地反映了一个人做早餐的流程。 将上述代码与本文中的第一个代码示例进行比较。 阅读代码时，核心操作仍然很明确。 你可以按照阅读本文开始时早餐制作说明的相同方式阅读此代码。 `async` 和 `await` 的语言功能支持每个人做出转变以遵循这些书面指示：尽可能启动任务，不要在等待任务完成时造成阻塞。
 
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [了解基于任务的异步编程模型](task-asynchronous-programming-model.md)
+> [探索异步程序的真实场景](../../../async.md)

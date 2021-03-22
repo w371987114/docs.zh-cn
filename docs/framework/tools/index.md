@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 06311e977619418c5b3fb69be518353de51e6bd5
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 606ead6010ddfd223e4ed38e0271642d36079bcc
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258772"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654085"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 
@@ -23,7 +23,7 @@ ms.locfileid: "102258772"
 
 你可以从命令行运行除程序集缓存查看器 (Shfusion.dll) 之外的所有工具。 必须从文件资源管理器访问 Shfusion.dll  。
   
-运行命令行工具的最佳方法是使用 Visual Studio 安装的其中一个开发人员 shell。 使用这些实用程序可以轻松运行工具，而不需要导航到安装文件夹。 有关详细信息，请参阅[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
+运行命令行工具的最佳方法是使用 Visual Studio 安装的其中一个开发人员 shell。 使用这些实用程序可以轻松运行工具，而不需要导航到安装文件夹。 有关详细信息，请参阅[开发人员命令提示和开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)。
 
 > [!NOTE]
 > 某些工具特定于 32 位或 64 位计算机。 确保为你的计算机运行适当的工具版本。
